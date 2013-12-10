@@ -84,7 +84,7 @@ exports.findAllViews = function(req, res) {
         });
     });
 };
-
+//
 //exports.findAllViewFields = function(req, res) {
 //    var id = req.params.id;
 //    var viewname = req.params.viewname;
