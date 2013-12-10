@@ -1,0 +1,61 @@
+[
+    {
+        "name" : "Project",
+        "description": "Default Project Object ...",
+        "type" : "project",
+        "template" : "true",
+        "fields" : [{"name" : "Title", "type" : "Text","req" : "y"},
+            {"name" : "Description", "type" : "Note","req" : "n"},
+            {"name" : "Start", "type" : "Date","req" : "n"},
+            {"name" : "End", "type" : "Date","req" : "n"},
+            {"name" : "Status", "type" : "List","req" : "n","values" :["a","b","c"]},
+            {"name" : "Owner", "type" : "user","req" : "n"}
+        ],
+        "views" : [{ "name" : "Create",
+            "fields" :  [{"name" : "Title", "type" : "Text","req" : "y"},
+                {"name" : "Description", "type" : "Note","req" : "n"},
+                {"name" : "Start", "type" : "Date","req" : "n"},
+                {"name" : "Owner", "type" : "user","req" : "n"}]
+        },
+            { "name" : "Show",
+                "fields" :  [{"name" : "Title", "type" : "Text","req" : "y"},
+                    {"name" : "Description", "type" : "Note","req" : "n"},
+                    {"name" : "Start", "type" : "Date","req" : "n"},
+                    {"name" : "End", "type" : "Date","req" : "n"},
+                    {"name" : "Status", "type" : "List","req" : "n","values" :["a","b","c"]},
+                    {"name" : "Owner", "type" : "user","req" : "n"}]
+            }]
+    },
+    {
+        "name" : "Milestone",
+        "description": "Default Milestone Object ...",
+        "type": "milestone",
+        "template" : "true"
+    },
+    {
+        "name" : "Task",
+        "description": "Default Task Object ...",
+        "type" : "task",
+        "template" : "true"
+    },
+    {
+        "name" : "Asset",
+        "description": "Default Asset Object ...",
+        "type" : "asset",
+        "template" : "true"
+    },
+    {
+        "name" : "Lookup",
+        "description": "Default Lookup Object ...",
+        "type" : "lookup",
+        "template" : "true"
+    },
+    {
+        "name" : "Will be deleted",
+        "description": "Record to be deleted ...",
+        "type" : "lookup",
+        "template" : "true"
+    }
+
+
+]

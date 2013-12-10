@@ -7,26 +7,31 @@ var Server = mongo.Server,
 var server = new Server('localhost', 27017, {auto_reconnect: true});
 db = new Db('blueprintdb', server);
 
-
 db.open(function(err, db) {
-    if(!err) {
-        console.log("Connected to 'blueprintdb' database");
-        db.collection('kaboodleobjects').remove({},function(err,numberRemoved){
-            console.log("inside remove call back" + numberRemoved);
-        });
-        db.collection('kaboodleobjects', {strict:true}, function(err, collection) {
-            populateDB();
+    if (!err) {
+        console.log("Connected to blueprint database");
+        db.collection('kaboodleobjects', {strict: true}, function(err, collection) {
+            if (err) {
+                console.log("The objects collection is empty...");
+            }
         });
     }
 });
 
-//populateDB();
-/*--------------------------------------------------------------------------------------------------------------------*/
-// Populate database with sample data
+exports.emptyDB = function(req,res) {
+    console.log("Connected to 'blueprintdb' database");
+    db.collection('kaboodleobjects').remove({},function(err,numberRemoved){
+        console.log("inside remove call back" + numberRemoved);
+    });
+    db.collection('kaboodleobjects', {strict:true}, function(err, collection) {
+        populateDB();
+        res.send('Database Reset');
+    });
+};
 
 var populateDB = function() {
     var fs = require('fs');
-    var file = 'kaboodleobjects.json';
+    var file = './app/controllers/testData/kaboodleobjects.json';
 
     fs.readFile(file, 'utf8', function(err, data) {
         if (err) {
@@ -46,9 +51,3 @@ var populateDB = function() {
         });
     });
 };
-
-
-
-/**
- * Created by dibster on 11/18/13.
- */

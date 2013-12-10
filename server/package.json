@@ -16,13 +16,15 @@
         "grunt-bower-task": "latest"
     },
     "devDependencies": {
-        "supertest": "latest",
         "should": "latest",
+        "supertest" : "latest",
+        "methods":"0.0.1",
+
         "grunt-contrib-watch": "latest",
         "grunt-contrib-jshint": "latest",
         "grunt-nodemon": "latest",
-        "grunt-concurrent": "latest",
-        "grunt-mocha-test": "latest"
+        "grunt-concurrent": "latest"
+
     },
     "engines": {
         "node": "0.8.4",
