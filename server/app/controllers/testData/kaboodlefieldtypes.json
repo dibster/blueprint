@@ -1,0 +1,28 @@
+[
+    {
+        "name" : "Text",
+        "description": "Text Field One Line"
+    },
+    {
+        "name" : "Note",
+        "description": "Text Field Multi Line"
+    },
+    {
+        "name" : "Number",
+        "description": "Text Field Multi Line"
+    },
+    {
+        "name" : "Money",
+        "description": "Text Field Multi Line"
+    },
+    {
+        "name" : "Choice",
+        "description": "Text Field Multi Line"
+    },
+    {
+        "name" : "Lookup",
+        "description": "Date Field"
+    }
+
+
+]

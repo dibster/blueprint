@@ -11,14 +11,26 @@ var fetchrecordId;
 var updaterecordId;
 var deleterecordId;
 
+describe('Empty DB', function() {
+    it('should reset data and return string Database Reset ', function() {
+
+        request(url)
+            .get('/api/resetDB')
+            .expect(200)
+            .end(function(err, res) {
+                if (err) {
+                    throw err;
+                }
+                res.text.should.contain('Database Reset');
+            });
+
+    });
+});
+
 
 describe('API', function() {
     // get a record ID for theID based tests
     before(function(done){
-        request(url)
-            .get('api/resetDB')
-            .expect(200);
-
         request(url)
             .get('/api/objects')
             .expect(200)
@@ -31,7 +43,7 @@ describe('API', function() {
                 deleterecordId = res.body[5]._id;
                 done();
             });
-    })
+    });
 
 
     describe('Count the number of base objects', function() {

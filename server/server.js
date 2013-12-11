@@ -1,6 +1,7 @@
 var express = require('express'),
-    objects = require('./app/controllers/objects');
-    emptyDBTests = require('./app/controllers/resetDBforTests');
+    objects = require('./app/controllers/admin/objects');
+    fieldtypes = require('./app/controllers/admin/fieldtypes');
+    emptyDBTests = require('./app/controllers/testData/resetDatabaseForTests');
 
 var app = express();
 
@@ -27,13 +28,16 @@ app.get('/api/objects/:id/views', objects.findAllViews);
 
 
 
-// routs by type
+// routes by type
 
 app.get('/api/projects', objects.findProjects);
 app.get('/api/assets', objects.findAssets);
 app.get('/api/milestones', objects.findMilestones);
 app.get('/api/tasks', objects.findTasks);
 app.get('/api/lookups', objects.findLookups);
+
+// admin routes
+app.get('/api/fieldtypes', fieldtypes.findAll);
 
 
 

@@ -21,7 +21,10 @@ db.open(function(err, db) {
 exports.emptyDB = function(req,res) {
     console.log("Connected to 'blueprintdb' database");
     db.collection('kaboodleobjects').remove({},function(err,numberRemoved){
-        console.log("inside remove call back" + numberRemoved);
+        console.log("remove kaboodle objects");
+    });
+    db.collection('kaboodlefieldtypes').remove({},function(err,numberRemoved){
+        console.log("remove kaboodle field types");
     });
     db.collection('kaboodleobjects', {strict:true}, function(err, collection) {
         populateDB();
@@ -31,14 +34,33 @@ exports.emptyDB = function(req,res) {
 
 var populateDB = function() {
     var fs = require('fs');
-    var file = './app/controllers/testData/kaboodleobjects.json';
+    var projecttypes = './app/controllers/testData/kaboodleobjects.json';
 
-    fs.readFile(file, 'utf8', function(err, data) {
+    fs.readFile(projecttypes, 'utf8', function(err, data) {
         if (err) {
             throw err;
         }
         var objects = JSON.parse(data);
         db.collection('kaboodleobjects', function(err, collection) {
+            if (err) {
+                throw err;
+            }
+            collection.insert(objects, {safe: true}, function(err, result) {
+                if (err) {
+                    throw err;
+                }
+                db.close();
+            });
+        });
+    });
+
+    var fieldtypes = './app/controllers/testData/kaboodlefieldtypes.json';
+    fs.readFile(fieldtypes, 'utf8', function(err, data) {
+        if (err) {
+            throw err;
+        }
+        var objects = JSON.parse(data);
+        db.collection('kaboodlefieldtypes', function(err, collection) {
             if (err) {
                 throw err;
             }

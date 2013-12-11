@@ -2,32 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51ac86f2-a104-4d81-a8bd-7f817e81fc09" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/should/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/should/.idea/codeStyleSettings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/should/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/should/.idea/jsLibraryMappings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/should/.idea/libraries/Node_js_Dependencies_for_should_js.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/should/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/should/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/should/.idea/scopes/scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/should/.idea/should.js.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/should/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/should/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/should/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/should/History.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/should/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/should/Readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/should/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/should/lib/eql.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/should/lib/http.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/should/lib/should.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/should/lib/util.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/should/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/should/should.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/tests/ObjectCRUD.tests.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/tests/ObjectUpdateSIngleColumn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/tests/projectTests.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app/controllers/objects.js" afterPath="$PROJECT_DIR$/server/app/controllers/objects.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/app/controllers/admin/fieldtypes.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/tests/fieldtypes.test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/app/controllers/testData/kaboodlefieldtypes.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/server/app/controllers/objects.js" afterPath="$PROJECT_DIR$/server/app/controllers/admin/objects.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/server/app/controllers/resetDBforTests.js" afterPath="$PROJECT_DIR$/server/app/controllers/testData/resetDatabaseForTests.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/server/tests/emptyDBTests.js" afterPath="$PROJECT_DIR$/server/tests/projecttemplates.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/dibster.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/dibster.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/server.js" afterPath="$PROJECT_DIR$/server/server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="blueprint.iws" />
@@ -51,19 +33,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="objects.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/app/controllers/objects.js">
+      <file leaf-file-name="objects.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/app/controllers/admin/objects.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="2" selection-start="2637" selection-end="2637" vertical-scroll-proportion="0.3617021" vertical-offset="1550" max-vertical-offset="3280">
+            <state line="2" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="3280">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="emptyDBTests.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/tests/emptyDBTests.js">
+      <file leaf-file-name="fieldtypes.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/app/controllers/admin/fieldtypes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="166" column="0" selection-start="4670" selection-end="4670" vertical-scroll-proportion="0.0" vertical-offset="3170" max-vertical-offset="3760">
+            <state line="1" column="0" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="280">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="projecttemplates.test.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/tests/projecttemplates.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="115" column="35" selection-start="3136" selection-end="3136" vertical-scroll-proportion="0.3321976" vertical-offset="2105" max-vertical-offset="4000">
               <folding />
             </state>
           </provider>
@@ -72,7 +63,7 @@
       <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="782" selection-end="782" vertical-scroll-proportion="0.0" vertical-offset="110" max-vertical-offset="960">
+            <state line="15" column="45" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1040">
               <folding />
             </state>
           </provider>
@@ -87,10 +78,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="resetDBforTests.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app/controllers/resetDBforTests.js">
+      <file leaf-file-name="resetDatabaseForTests.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/app/controllers/testData/resetDatabaseForTests.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1180">
+            <state line="47" column="67" selection-start="1525" selection-end="1525" vertical-scroll-proportion="0.0" vertical-offset="745" max-vertical-offset="1620">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fieldtypes.test.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/tests/fieldtypes.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="0" selection-start="370" selection-end="812" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1200">
               <folding />
             </state>
           </provider>
@@ -101,6 +101,21 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="11" column="41" selection-start="529" selection-end="529" vertical-scroll-proportion="-7.586207" vertical-offset="0" max-vertical-offset="1320">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kaboodlefieldtypes.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/app/controllers/testData/kaboodlefieldtypes.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="1" selection-start="508" selection-end="508" vertical-scroll-proportion="-13.827586" vertical-offset="139" max-vertical-offset="660">
+              <folding>
+                <marker date="1386670327748" expanded="true" signature="0:508" placeholder="[...]" />
+                <marker date="1386670327748" expanded="true" signature="89:168" placeholder="{&quot;name&quot;: &quot;Note&quot;...}" />
+                <marker date="1386670327748" expanded="true" signature="174:255" placeholder="{&quot;name&quot;: &quot;Number&quot;...}" />
+                <marker date="1386670327748" expanded="true" signature="261:341" placeholder="{&quot;name&quot;: &quot;Money&quot;...}" />
+                <marker date="1386670327748" expanded="true" signature="347:428" placeholder="{&quot;name&quot;: &quot;Choice&quot;...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,11 +152,15 @@
         <option value="$PROJECT_DIR$/server/package.json" />
         <option value="$PROJECT_DIR$/server/tests/ObjectsApi.test.js" />
         <option value="$PROJECT_DIR$/server/utilities/kaboodleobjects.json" />
-        <option value="$PROJECT_DIR$/server/app/controllers/resetDBforTests.js" />
         <option value="$PROJECT_DIR$/server/app/controllers/testData/kaboodleobjects.json" />
+        <option value="$PROJECT_DIR$/server/app/controllers/testData/kaboodlefieldtypes.json" />
         <option value="$PROJECT_DIR$/server/tests/emptyDBTests.js" />
-        <option value="$PROJECT_DIR$/server/server.js" />
         <option value="$PROJECT_DIR$/server/app/controllers/objects.js" />
+        <option value="$PROJECT_DIR$/server/app/controllers/testData/fieldtypes.js" />
+        <option value="$PROJECT_DIR$/server/app/controllers/resetDBforTests.js" />
+        <option value="$PROJECT_DIR$/server/server.js" />
+        <option value="$PROJECT_DIR$/server/tests/fieldtypes.test.js" />
+        <option value="$PROJECT_DIR$/server/tests/projecttemplates.test.js" />
       </list>
     </option>
   </component>
@@ -196,6 +215,90 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blueprint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blueprint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blueprint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blueprint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blueprint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blueprint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testData" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blueprint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blueprint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -204,18 +307,22 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="JavaScript.Libraries" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/app/controllers/admin" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/server/app/controllers" />
+      <recent name="$PROJECT_DIR$/server/app/controllers/testData" />
       <recent name="$PROJECT_DIR$/server/tests" />
       <recent name="$PROJECT_DIR$/server/utilities" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server/app/controllers/admin" />
       <recent name="$PROJECT_DIR$/server/app/controllers/testData" />
+      <recent name="$PROJECT_DIR$/server/tests" />
+      <recent name="$PROJECT_DIR$/server/app/controllers" />
       <recent name="$PROJECT_DIR$/server" />
     </key>
   </component>
@@ -282,17 +389,23 @@
       <created>1385657519800</created>
       <updated>1385657519800</updated>
     </task>
+    <task id="LOCAL-00001" summary="recommit">
+      <created>1386663201534</created>
+      <updated>1386663201534</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="48" y="-4" width="1873" height="1085" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32985386" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47807932" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44572026" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959914" sideWeight="0.5219207" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959914" sideWeight="0.67014617" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24986738" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -333,12 +446,15 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="recommit" />
+    <MESSAGE value="backend working and Unit tested ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="backend working and Unit tested ok" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/app/controllers/objects.js">
+    <entry file="file://$PROJECT_DIR$/server/app/controllers/admin/objects.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="2180">
           <folding />
@@ -389,30 +505,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/controllers/resetDBforTests.js">
+    <entry file="file://$PROJECT_DIR$/server/app/controllers/testData/kaboodlefieldtypes.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1180">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/tests/emptyDBTests.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="0" selection-start="4670" selection-end="4670" vertical-scroll-proportion="0.0" vertical-offset="3170" max-vertical-offset="3760">
-          <folding />
+        <state line="27" column="1" selection-start="508" selection-end="508" vertical-scroll-proportion="-13.827586" vertical-offset="139" max-vertical-offset="660">
+          <folding>
+            <marker date="1386670327748" expanded="true" signature="0:508" placeholder="[...]" />
+            <marker date="1386670327748" expanded="true" signature="89:168" placeholder="{&quot;name&quot;: &quot;Note&quot;...}" />
+            <marker date="1386670327748" expanded="true" signature="174:255" placeholder="{&quot;name&quot;: &quot;Number&quot;...}" />
+            <marker date="1386670327748" expanded="true" signature="261:341" placeholder="{&quot;name&quot;: &quot;Money&quot;...}" />
+            <marker date="1386670327748" expanded="true" signature="347:428" placeholder="{&quot;name&quot;: &quot;Choice&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="782" selection-end="782" vertical-scroll-proportion="0.0" vertical-offset="110" max-vertical-offset="960">
+        <state line="15" column="45" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1040">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/controllers/objects.js">
+    <entry file="file://$PROJECT_DIR$/server/tests/fieldtypes.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="2" selection-start="2637" selection-end="2637" vertical-scroll-proportion="0.3617021" vertical-offset="1550" max-vertical-offset="3280">
+        <state line="19" column="0" selection-start="370" selection-end="812" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/controllers/admin/objects.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3280">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/controllers/admin/fieldtypes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="280">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/controllers/testData/resetDatabaseForTests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="67" selection-start="1525" selection-end="1525" vertical-scroll-proportion="0.0" vertical-offset="745" max-vertical-offset="1620">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/tests/projecttemplates.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="35" selection-start="3136" selection-end="3136" vertical-scroll-proportion="0.3321976" vertical-offset="2105" max-vertical-offset="4000">
           <folding />
         </state>
       </provider>
