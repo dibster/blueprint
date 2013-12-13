@@ -1,1 +1,11 @@
-<p>This is the partial for view 1.</p>
+<h3>All Objects</h3>
+
+<table class="table table-striped">
+    <tr>
+        <th>Name</th>
+    </tr>
+    <tr ng-repeat="object in data.objects">
+        <td>{{object.name}}</td>
+    </tr>
+</table>
+
