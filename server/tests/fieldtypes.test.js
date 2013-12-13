@@ -10,13 +10,6 @@ var url = 'http://localhost:3000';
 
 describe('API', function() {
 
-//    before(function(){
-//        console.log('reset data');
-//        request(url)
-//            .get('/api/resetDB')
-//            .expect(200);
-//    });
-
     describe('Empty DB', function() {
         it('should reset data and return string Database Reset ', function() {
 
@@ -43,7 +36,6 @@ describe('API', function() {
                     if (err) {
                         throw err;
                     }
-
                     res.body[0].should.have.property('name');
                     res.body[5].should.have.property('name');
                 });
