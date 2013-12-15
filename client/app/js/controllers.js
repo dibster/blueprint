@@ -3,17 +3,20 @@
 /* Controllers */
 
 angular.module('myApp.controllers', [])
-    .controller('MyCtrl1', ['$scope', 'KaboodleObjects', function($scope, KaboodleObjects) {
-        // Instantiate an object to store your scope data in (Best Practices)
+    .controller('ObjectsCtrl', ['$scope', 'KaboodleObjects',  function($scope, KaboodleObjects) {
+
         $scope.data = {};
 
         KaboodleObjects.query(function(response) {
             // Assign the response INSIDE the callback
             $scope.data.objects = response;
-            console.log(response);
-
         });
     }])
 
-    .controller('MyCtrl2', [function() {
+    .controller('ProjectsCtrl', ['$scope', 'KaboodleProjects', function($scope, KaboodleProjects) {
+        $scope.data = {};
+
+        KaboodleProjects.query(function(response) {
+            $scope.data.projects = response;
+        });
     }]);

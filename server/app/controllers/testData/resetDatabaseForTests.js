@@ -72,4 +72,23 @@ var populateDB = function() {
             });
         });
     });
+
+    var kaboodletypes = './app/controllers/testData/kaboodletypes.json';
+    fs.readFile(kaboodletypes, 'utf8', function(err, data) {
+        if (err) {
+            throw err;
+        }
+        var objects = JSON.parse(data);
+        db.collection('kaboodletypes', function(err, collection) {
+            if (err) {
+                throw err;
+            }
+            collection.insert(objects, {safe: true}, function(err, result) {
+                if (err) {
+                    throw err;
+                }
+                db.close();
+            });
+        });
+    })
 };

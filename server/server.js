@@ -1,6 +1,7 @@
 var express = require('express'),
     objects = require('./app/controllers/admin/objects');
     fieldtypes = require('./app/controllers/admin/fieldtypes');
+    kaboodletypes = require('./app/controllers/admin/kaboodletypes');
     emptyDBTests = require('./app/controllers/testData/resetDatabaseForTests');
 
 var app = express();
@@ -55,6 +56,7 @@ app.get('/api/lookups', objects.findLookups);
 
 // admin routes
 app.get('/api/fieldtypes', fieldtypes.findAll);
+app.get('/api/kaboodletypes', kaboodletypes.findAll);
 
 
 

@@ -1,0 +1,22 @@
+[
+    {
+        "name" : "Project",
+        "description": "Projects"
+    },
+    {
+        "name" : "Task",
+        "description": "Task"
+    },
+    {
+        "name" : "Milestone",
+        "description": "Milestone"
+    },
+    {
+        "name" : "Asset",
+        "description": "Asset"
+    },
+    {
+        "name" : "Lookup",
+        "description": "Lookup"
+    }
+]

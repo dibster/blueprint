@@ -1,0 +1,15 @@
+<table class="table table">
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Fields</th>
+        <th>Views</th>
+    </tr>
+    <tr ng-repeat="object in data.objects">
+        <td>{{object.name}}</td>
+        <td>{{object.type}}</td>
+        <td><span class="badge">{{object.fields.length}}</span>     </td>
+        <td><span class="badge">{{object.views.length}}</span>     </td>
+    </tr>
+</table>
+
