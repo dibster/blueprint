@@ -8,13 +8,17 @@ angular.module('myApp', [
   'myApp.services',
   'myApp.directives',
   'myApp.controllers'
-]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/objects', {
-      templateUrl: 'partials/allobjects.html',
-      controller: 'ObjectsCtrl'});
-  $routeProvider.when('/projects', {
-      templateUrl: 'partials/projects.html',
-      controller: 'ProjectsCtrl'});
-  $routeProvider.otherwise({redirectTo: '/objects'});
+])
+.config(['$routeProvider', function($routeProvider) {
+  $routeProvider
+      .when('/objects', {
+          templateUrl: 'partials/allobjects.html',
+          controller: 'ObjectsCtrl'})
+      .when('/objects/:id/edit', {
+          templateUrl: 'partials/objectedit.html',
+          controller: 'ObjectsCtrl'})
+      .when('/projects', {
+          templateUrl: 'partials/objectedit.html',
+          controller: 'ProjectsCtrl'})
+      .otherwise({redirectTo: '/objects'});
 }]);

@@ -1,15 +1,23 @@
-<table class="table table">
+<select ng-model="q" autofocus>
+    <option data-ng-repeat="type in data.types">{{type.name}}</option>
+</select>
+
+<table class="table table-condensed">
     <tr>
-        <th>Name</th>
-        <th>Type</th>
+        <th style="width: 30%">Name</th>
+        <th style="width: 30%">Type</th>
         <th>Fields</th>
         <th>Views</th>
     </tr>
-    <tr ng-repeat="object in data.objects">
-        <td>{{object.name}}</td>
+    <tr ng-repeat="object in data.objects| filter:q">
+        <td>
+            <a data-ng-href="#/objects/{{object._id}}/edit">{{object.name}}</a>
+        </td>
         <td>{{object.type}}</td>
         <td><span class="badge">{{object.fields.length}}</span>     </td>
         <td><span class="badge">{{object.views.length}}</span>     </td>
     </tr>
 </table>
+
+
 

@@ -2,7 +2,7 @@
     {
         "name" : "Project",
         "description": "Default Project Object ...",
-        "type" : "project",
+        "type" : "Project",
         "template" : "true",
         "fields" : [{"name" : "Title", "type" : "Text","req" : "y"},
             {"name" : "Description", "type" : "Note","req" : "n"},
@@ -29,31 +29,31 @@
     {
         "name" : "Milestone",
         "description": "Default Milestone Object ...",
-        "type": "milestone",
+        "type": "Milestone",
         "template" : "true"
     },
     {
         "name" : "Task",
         "description": "Default Task Object ...",
-        "type" : "task",
+        "type" : "Task",
         "template" : "true"
     },
     {
         "name" : "Asset",
         "description": "Default Asset Object ...",
-        "type" : "asset",
+        "type" : "Asset",
         "template" : "true"
     },
     {
         "name" : "Lookup",
         "description": "Default Lookup Object ...",
-        "type" : "lookup",
+        "type" : "Lookup",
         "template" : "true"
     },
     {
         "name" : "Will be deleted",
         "description": "Record to be deleted ...",
-        "type" : "lookup",
+        "type" : "Lookup",
         "template" : "true"
     }
 
