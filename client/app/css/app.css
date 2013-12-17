@@ -1,4 +1,12 @@
 /* app css stylesheet */
+body {
+    margin: 10px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    background-color: #ffffff;
+}
 
 .menu {
   list-style: none;

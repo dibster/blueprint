@@ -1,6 +1,20 @@
-<select ng-model="q" autofocus>
-    <option data-ng-repeat="type in data.types">{{type.name}}</option>
-</select>
+<div class="row-fluid">
+    <div class="span6">
+        <form class="form-inline" role="form" data-ng-submit="create()">
+            <div class="form-group">
+                <input type="text" data-ng-model="object.name" class="form-control" id="name" autofocus="autofocus" value="{{object.name}}">
+            </div>
+        </form>
+    </div>
+
+    <div class="span6">
+        <select class="pull-right" ng-model="data.selectedType">
+            <option data-ng-repeat="type in data.types">{{type.name}}</option>
+        </select>
+    </div>
+</div>
+
+
 
 <table class="table table-condensed">
     <tr>
@@ -9,7 +23,7 @@
         <th>Fields</th>
         <th>Views</th>
     </tr>
-    <tr ng-repeat="object in data.objects| filter:q">
+    <tr ng-repeat="object in data.objects| filter:data.selectedType">
         <td>
             <a data-ng-href="#/objects/{{object._id}}/edit">{{object.name}}</a>
         </td>

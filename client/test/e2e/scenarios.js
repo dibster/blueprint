@@ -14,16 +14,18 @@ describe('my app', function() {
   });
 
 
-  describe('view1', function() {
+  describe('objects', function() {
 
     beforeEach(function() {
-      browser().navigateTo('#/view1');
+      browser().navigateTo('#/objects');
     });
 
 
-    it('should render view1 when user navigates to /view1', function() {
-      expect(element('[ng-view] p:first').text()).
-        toMatch(/partial for view 1/);
+    it('should render objects when user navigates to /objects', function() {
+        input('user').enter('jacksparrow');
+        expect(repeater('ul li').count()).toEqual(10);
+        input('filterText').enter('Bees');
+        expect(repeater('ul li').count()).toEqual(1)
     });
 
   });
