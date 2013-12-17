@@ -4,7 +4,7 @@
 
 angular.module('myApp.services', ['ngResource'])
     .factory('KaboodleObjects', function($resource){
-        return $resource('http://localhost:3000/api/objects', {})
+        return $resource('http://localhost:3000/api/objects/:id', {})
     })
     .factory('KaboodleProjects', function($resource){
         return $resource('http://localhost:3000/api/projects', {})

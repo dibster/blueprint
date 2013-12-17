@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51ac86f2-a104-4d81-a8bd-7f817e81fc09" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/partials/objectedit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/partials/allobjects.html" afterPath="$PROJECT_DIR$/client/app/partials/allobjects.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/js/app.js" afterPath="$PROJECT_DIR$/client/app/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/js/controllers.js" afterPath="$PROJECT_DIR$/client/app/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/index.html" afterPath="$PROJECT_DIR$/client/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app/controllers/testData/kaboodleobjects.json" afterPath="$PROJECT_DIR$/server/app/controllers/testData/kaboodleobjects.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app/controllers/testData/resetDatabaseForTests.js" afterPath="$PROJECT_DIR$/server/app/controllers/testData/resetDatabaseForTests.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/partials/objectedit.html" afterPath="$PROJECT_DIR$/client/app/partials/objectedit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/js/services.js" afterPath="$PROJECT_DIR$/client/app/js/services.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -45,7 +40,7 @@
       <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="14" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+            <state line="15" column="0" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
               <folding />
             </state>
           </provider>
@@ -72,19 +67,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="41" selection-start="784" selection-end="784" vertical-scroll-proportion="0.6766917" vertical-offset="40" max-vertical-offset="980">
+            <state line="21" column="29" selection-start="804" selection-end="804" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="940">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="objectedit.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="projects.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/partials/projects.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="42" selection-start="180" selection-end="180" vertical-scroll-proportion="-4.827586" vertical-offset="0" max-vertical-offset="420">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="objectedit.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/app/partials/objectedit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="27" selection-start="27" selection-end="27" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="640">
+            <state line="2" column="0" selection-start="47" selection-end="47" vertical-scroll-proportion="0.07751938" vertical-offset="0" max-vertical-offset="660">
               <folding />
             </state>
           </provider>
@@ -116,14 +120,14 @@
         <option value="$PROJECT_DIR$/server/tests/kaboodletypes.test.js" />
         <option value="$PROJECT_DIR$/server/app/controllers/testData/kaboodletypes.json" />
         <option value="$PROJECT_DIR$/server/server.js" />
-        <option value="$PROJECT_DIR$/client/app/js/services.js" />
         <option value="$PROJECT_DIR$/server/app/controllers/testData/resetDatabaseForTests.js" />
         <option value="$PROJECT_DIR$/server/app/controllers/testData/kaboodleobjects.json" />
         <option value="$PROJECT_DIR$/client/app/js/app.js" />
         <option value="$PROJECT_DIR$/client/app/index.html" />
         <option value="$PROJECT_DIR$/client/app/partials/allobjects.html" />
-        <option value="$PROJECT_DIR$/client/app/partials/objectedit.html" />
+        <option value="$PROJECT_DIR$/client/app/js/services.js" />
         <option value="$PROJECT_DIR$/client/app/js/controllers.js" />
+        <option value="$PROJECT_DIR$/client/app/partials/objectedit.html" />
       </list>
     </option>
   </component>
@@ -384,7 +388,11 @@
       <created>1387142563925</created>
       <updated>1387142563925</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="still working on Object Edit">
+      <created>1387160586590</created>
+      <updated>1387160586590</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -442,7 +450,8 @@
     <MESSAGE value="backend working and Unit tested ok" />
     <MESSAGE value="angular attaching to API :-)  fixed CORS" />
     <MESSAGE value="added kaboodletypes server" />
-    <option name="LAST_COMMIT_MESSAGE" value="added kaboodletypes server" />
+    <MESSAGE value="still working on Object Edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="still working on Object Edit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -467,13 +476,6 @@
     <entry file="file://$PROJECT_DIR$/server/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="0" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="1420">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/partials/projects.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="42" selection-start="180" selection-end="180" vertical-scroll-proportion="-4.827586" vertical-offset="0" max-vertical-offset="420">
           <folding />
         </state>
       </provider>
@@ -537,20 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/js/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="14" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/partials/objectedit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="27" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="640">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="43" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="600">
@@ -558,9 +546,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/js/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="41" selection-start="784" selection-end="784" vertical-scroll-proportion="0.6766917" vertical-offset="40" max-vertical-offset="980">
+        <state line="21" column="29" selection-start="804" selection-end="804" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="940">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/partials/projects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="42" selection-start="180" selection-end="180" vertical-scroll-proportion="-4.827586" vertical-offset="0" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/partials/objectedit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="47" selection-end="47" vertical-scroll-proportion="0.07751938" vertical-offset="0" max-vertical-offset="660">
           <folding />
         </state>
       </provider>

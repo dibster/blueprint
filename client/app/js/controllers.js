@@ -14,13 +14,11 @@ angular.module('myApp.controllers', [])
             $scope.data.types = response;
         });
 
+        $scope.objectId = $routeParams.id;
+        console.log($scope.objectId);
+
         $scope.findOne = function() {
-            console.log('In Objects find one');
-            console.log($routeParams.id);
-            KaboodleObjects.get({
-                projectId: $routeParams.id
-            }, function(object) {
-                console.log(object);
+            KaboodleObjects.get({id : $scope.objectId},function(object) {
                 $scope.object = object;
             });
         };
