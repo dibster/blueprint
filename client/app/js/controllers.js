@@ -3,16 +3,14 @@
 /* Controllers */
 
 angular.module('myApp.controllers', [])
-    .controller('ObjectsCtrl', ['$scope', 'KaboodleObjects', 'KaboodleTypes', '$routeParams',  function($scope, KaboodleObjects, KaboodleTypes, $routeParams) {
+    .controller('ObjectsCtrl', ['$scope', 'KaboodleObjects', 'KaboodleTypes', '$routeParams', function($scope, KaboodleObjects, KaboodleTypes, $routeParams) {
         $scope.data = {};
         $scope.data.selectedType="";
 
         KaboodleObjects.query(function(response) {
-            // Assign the response INSIDE the callback
             $scope.data.objects = response;
         });
         KaboodleTypes.query(function(response) {
-            // Assign the response INSIDE the callback
             $scope.data.types = response;
         });
 
@@ -26,22 +24,29 @@ angular.module('myApp.controllers', [])
         };
 
         $scope.create = function() {
-            $scope.updateRequired='true';
+
             var object = new KaboodleObjects({
                 name: this.object.name,
                 type: this.data.selectedType
             });
 
-
-            $scope.data.objects.push({
-                name: this.object.name,
-                type : this.data.selectedType});
-
-            object.$save(function(response) {
-                $location.path("objects");
+            $scope.data.object = object.$save(function(response) {
+                return response;
+                }).then(function(response){
+                    $scope.object = response;
+                    $scope.data.objects.push($scope.object);
             });
 
             this.object.name = "";
+        };
+
+        $scope.copySelectedObject = function(selectedItem) {
+            this.object.fields = selectedItem.fields;
+            this.object.views = selectedItem.views;
+            this.object.$update(function(response) {
+                console.log('saved');
+            });
+
 
         };
 
