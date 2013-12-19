@@ -6,9 +6,9 @@
             <fieldset>
                 <legend>Object Data</legend>
                 <div class="form-group">
-                    <input type="text" data-ng-model="object.name" class="form-control" id="title" required autofocus="autofocus" value="{{object.name}}">
+                    <input type="text" data-ng-model="object.name" class="form-control" id="title" required value="{{object.name}}">
                     <div class="dropdown pull-right">
-                        <button type="button" class="btn dropdown-toggle">Copy</button>
+                        <button type="button" class="btn dropdown-toggle">Copy Fields</button>
                         <ul class="dropdown-menu">
                             <li ng-repeat="copyobject in data.objects">
                                 <a data-ng-click="copySelectedObject(copyobject)">{{copyobject.name}}</a>
@@ -21,41 +21,8 @@
     </div>
 </div>
 
-<div class="col-md-12">
-
-    <form class="form-inline">
-        <fieldset>
-            <legend>Fields</legend>
-            <table>
-                <tr>
-                    <th style="width: 30%">
-                        <input type="text" data-ng-model="newfield.name" class="form-control pull-left" autofocus id="newfieldname" >
-                    </th>
-                    <th style="width: 25%">
-                        <select class="pull-left" ng-model="newfield.type">
-                            <option data-ng-repeat="fieldtype in data.fieldtypes">{{fieldtype.name}}</option>
-                        </select>
-                    </th>
-                    <th style="width: 15%">
-                        <select class="pull-left" ng-model="newfield.required">
-                            <option selected>Optional</option>
-                            <option>Required</option>
-                        </select>
-                    </th>
-                    <th style="width: 15%">
-                        <input type="text" data-ng-model="newfield.length" class="form-control" id="newfieldlength" >
-                    </th>
-                    <th style="width: 15%">
-                        <button type="button" class="btn pull-left"> Add</button>
-                    </th>
-                </tr>
-
-
-            </table>
-        </fieldset>
-    </form>
-
-
+<div class="col-md-12" data-ng-init="focusInput=true">
+    <!--<button class="btn" >show form and focus input</button>-->
     <table class="table">
         <tr>
             <th style="width: 30%">Name</th>
@@ -64,7 +31,29 @@
             <th style="width: 15%">Length</th>
             <th style="width: 15%">Action</th>
         </tr>
-
+        <!--Input new fields-->
+        <tr>
+            <td>
+                <input type="text" required data-ng-model="newfield.name" class="form-control pull-left"  id="newfieldname" focus-me="focusInput" >
+            </td>
+            <td>
+                <select required class="pull-left" ng-model="newfield.type">
+                    <option data-ng-repeat="fieldtype in data.fieldtypes">{{fieldtype.name}}</option>
+                </select>
+            </td>
+            <td>
+                <select reequired class="pull-left" ng-model="newfield.req">
+                    <option selected>n</option>
+                    <option>y</option>
+                </select>
+            </td>
+            <td>
+                <input type="text" data-ng-model="newfield.length" class="form-control" id="newfieldlength" >
+            </td>
+            <td>
+                <button type="button" class="btn btn-small" data-ng-click="addField(newfield);focusInput=true"><i class="icon-black icon-circle-arrow-down"></i> Add</button>
+            </td>
+        </tr>
         <tr data-ng-repeat="column in object.fields" data-ng-model="object.fields">
             <td><a data-ng-href="#!/fields/{{column._id}}">{{column.name}}</a></td>
             <td>{{column.type}}</td>
@@ -76,26 +65,7 @@
     </table>
 </div>
 
-<!--<select ng-model="q" autofocus>-->
-    <!--<option data-ng-repeat="type in data.types">{{type.name}}</option>-->
-<!--</select>-->
 
-<!--<table class="table table-condensed">-->
-    <!--<tr>-->
-        <!--<th style="width: 30%">Name</th>-->
-        <!--<th style="width: 30%">Type</th>-->
-        <!--<th>Fields</th>-->
-        <!--<th>Views</th>-->
-    <!--</tr>-->
-    <!--<tr ng-repeat="object in data.objects| filter:q">-->
-        <!--<td>-->
-            <!--<a data-ng-href="#!/objects/{{object._id}}">{{object.name}}</a>-->
-        <!--</td>-->
-        <!--<td>{{object.type}}</td>-->
-        <!--<td><span class="badge">{{object.fields.length}}</span>     </td>-->
-        <!--<td><span class="badge">{{object.views.length}}</span>     </td>-->
-    <!--</tr>-->
-<!--</table>-->
 
 
 
