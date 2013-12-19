@@ -4,12 +4,15 @@
 
 angular.module('myApp.services', ['ngResource'])
     .factory('KaboodleObjects', function($resource){
-        return $resource('http://localhost:3000/api/objects/:id', {})
+        return $resource('http://localhost:3000/api/objects/:id', {id:'@_id'}, {update:{method: 'PUT'}})
     })
     .factory('KaboodleProjects', function($resource){
         return $resource('http://localhost:3000/api/projects', {})
     })
     .factory('KaboodleTypes', function($resource){
         return $resource('http://localhost:3000/api/kaboodletypes', {})
+    })
+    .factory('KaboodleFieldTypes', function($resource){
+        return $resource('http://localhost:3000/api/fieldtypes', {})
     })
     .value('version', '0.1');

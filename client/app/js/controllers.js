@@ -3,9 +3,12 @@
 /* Controllers */
 
 angular.module('myApp.controllers', [])
-    .controller('ObjectsCtrl', ['$scope', 'KaboodleObjects', 'KaboodleTypes', '$routeParams', function($scope, KaboodleObjects, KaboodleTypes, $routeParams) {
-        $scope.data = {};
+    .controller('ObjectsCtrl', ['$scope', 'KaboodleObjects', 'KaboodleTypes', 'KaboodleFieldTypes', '$routeParams', function($scope, KaboodleObjects, KaboodleTypes, KaboodleFieldTypes,  $routeParams) {
+                                                                                                                                                    $scope.data = {};
+        $scope.newfield = {};
         $scope.data.selectedType="";
+        $scope.newfield.required = "Optional";
+
 
         KaboodleObjects.query(function(response) {
             $scope.data.objects = response;
@@ -14,8 +17,12 @@ angular.module('myApp.controllers', [])
             $scope.data.types = response;
         });
 
+        KaboodleFieldTypes.query(function(response) {
+            $scope.data.fieldtypes = response;
+        });
+
         $scope.objectId = $routeParams.id;
-        console.log($scope.objectId);
+
 
         $scope.findOne = function() {
             KaboodleObjects.get({id : $scope.objectId},function(object) {
@@ -46,16 +53,12 @@ angular.module('myApp.controllers', [])
             this.object.$update(function(response) {
                 console.log('saved');
             });
-
-
         };
-
     }])
 
     .controller('KaboodleTypesCtrl', ['$scope', 'KaboodleTypes',  function($scope, KaboodleTypes) {
         $scope.data = {};
         KaboodleTypes.query(function(response) {
-            // Assign the response INSIDE the callback
             $scope.data.types = response;
         });
     }])

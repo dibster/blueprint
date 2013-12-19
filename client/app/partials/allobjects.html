@@ -2,13 +2,13 @@
     <div class="span6">
         <form class="form-inline" role="form" data-ng-submit="create()">
             <div class="form-group">
-                <input type="text" data-ng-model="object.name" class="form-control" id="name" autofocus="autofocus" value="{{object.name}}">
+                <input data-ng-show="data.selectedType" type="text" data-ng-model="object.name" class="form-control" id="name" autofocus="autofocus" value="{{object.name}}">
             </div>
         </form>
     </div>
 
     <div class="span6">
-        <select class="pull-right" ng-model="data.selectedType">
+        <select class="pull-right" ng-model="data.selectedType" autofocus>
             <option data-ng-repeat="type in data.types">{{type.name}}</option>
         </select>
     </div>
