@@ -3,12 +3,13 @@
 /* Controllers */
 
 angular.module('myApp.controllers', [])
-    .controller('ObjectsCtrl', ['$scope', 'KaboodleObjects', 'KaboodleTypes', 'KaboodleFieldTypes', '$routeParams', function($scope, KaboodleObjects, KaboodleTypes, KaboodleFieldTypes,  $routeParams) {
-                                                                                                                                                    $scope.data = {};
+    .controller('ObjectsCtrl', ['$scope', 'KaboodleObjects', 'KaboodleTypes', 'KaboodleFieldTypes', '$routeParams', '$location', function($scope, KaboodleObjects, KaboodleTypes, KaboodleFieldTypes,  $routeParams, $location) {
+        $scope.data = {};
+        $scope.newobject = {};
         $scope.newfield = {};
         $scope.data.selectedType="";
         $scope.newfield.required = "Optional";
-
+//        $scope.focusInput="true";
 
         KaboodleObjects.query(function(response) {
             $scope.data.objects = response;
@@ -20,6 +21,9 @@ angular.module('myApp.controllers', [])
         KaboodleFieldTypes.query(function(response) {
             $scope.data.fieldtypes = response;
         });
+
+        $scope.newfield.req = 'n';
+        $scope.newfield.type = 'Text';
 
         $scope.objectId = $routeParams.id;
 
@@ -33,7 +37,7 @@ angular.module('myApp.controllers', [])
         $scope.create = function() {
 
             var object = new KaboodleObjects({
-                name: this.object.name,
+                name: this.newobject.name,
                 type: this.data.selectedType
             });
 
@@ -44,7 +48,24 @@ angular.module('myApp.controllers', [])
                     $scope.data.objects.push($scope.object);
             });
 
-            this.object.name = "";
+            this.newobject.name = "";
+        };
+
+        $scope.removeObject = function(object) {
+            var index = this.data.objects.indexOf(object);
+            this.data.objects.splice(index, 1);
+            object.$remove();
+        };
+
+        $scope.addField = function(addnewfield) {
+            this.object._id = $routeParams.id
+            this.object.fields.push(addnewfield);
+            this.object.$update(function(response) {
+                console.log('saved');
+            });
+            $scope.newfield = {};
+            $scope.newfield.req = 'n';
+            $scope.newfield.type = 'Text';
         };
 
         $scope.copySelectedObject = function(selectedItem) {
@@ -52,6 +73,16 @@ angular.module('myApp.controllers', [])
             this.object.views = selectedItem.views;
             this.object.$update(function(response) {
                 console.log('saved');
+            });
+        };
+
+        $scope.removeField = function(column) {
+            this.object._id = $routeParams.id;
+            var index = this.object.fields.indexOf(column);
+            this.object.fields.splice(index, 1);
+
+            this.object.$update(function(response) {
+                console.log(response);
             });
         };
     }])
