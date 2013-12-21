@@ -8,6 +8,18 @@
         "description": "Text Field Multi Line"
     },
     {
+        "name" : "Date",
+        "description": "Text Field Multi Line"
+    },
+    {
+        "name" : "Time",
+        "description": "Text Field Multi Line"
+    },
+    {
+        "name" : "Date and Time",
+        "description": "Text Field Multi Line"
+    },
+    {
         "name" : "Number",
         "description": "Text Field Multi Line"
     },

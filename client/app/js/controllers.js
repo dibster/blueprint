@@ -6,9 +6,11 @@ angular.module('myApp.controllers', [])
     .controller('ObjectsCtrl', ['$scope', 'KaboodleObjects', 'KaboodleTypes', 'KaboodleFieldTypes', '$routeParams', '$location', function($scope, KaboodleObjects, KaboodleTypes, KaboodleFieldTypes,  $routeParams, $location) {
         $scope.data = {};
         $scope.newobject = {};
+        $scope.object = {};
         $scope.newfield = {};
         $scope.data.selectedType="";
         $scope.newfield.required = "Optional";
+        $scope.viewfields = {};
 //        $scope.focusInput="true";
 
         KaboodleObjects.query(function(response) {
@@ -31,8 +33,22 @@ angular.module('myApp.controllers', [])
         $scope.findOne = function() {
             KaboodleObjects.get({id : $scope.objectId},function(object) {
                 $scope.object = object;
+                console.log($scope.object);
             });
         };
+
+        $scope.viewPage = function() {
+            KaboodleObjects.get({id : $scope.objectId},function(object) {
+                $scope.object = object;
+                console.log($scope.object);
+            });
+        };
+
+        $scope.viewProcessing = function(viewname) {
+            console.log(this.object.name);
+            $scope.viewfields = _.find(this.object.views, function(vobj){return vobj.name == $scope.viewname; console.log(vobj.name); });
+        };
+
 
         $scope.create = function() {
 

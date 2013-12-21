@@ -17,7 +17,23 @@
                 {"name" : "Start", "type" : "Date","req" : "n"},
                 {"name" : "Owner", "type" : "user","req" : "n"}]
         },
+            { "name" : "Edit",
+                "fields" :  [{"name" : "Title", "type" : "Text","req" : "y"},
+                    {"name" : "Description", "type" : "Note","req" : "n"},
+                    {"name" : "Start", "type" : "Date","req" : "n"},
+                    {"name" : "End", "type" : "Date","req" : "n"},
+                    {"name" : "Status", "type" : "List","req" : "n","values" :["a","b","c"]},
+                    {"name" : "Owner", "type" : "user","req" : "n"}]
+            },
             { "name" : "Show",
+                "fields" :  [{"name" : "Title", "type" : "Text","req" : "y"},
+                    {"name" : "Description", "type" : "Note","req" : "n"},
+                    {"name" : "Start", "type" : "Date","req" : "n"},
+                    {"name" : "End", "type" : "Date","req" : "n"},
+                    {"name" : "Status", "type" : "List","req" : "n","values" :["a","b","c"]},
+                    {"name" : "Owner", "type" : "user","req" : "n"}]
+            },
+            { "name" : "Dashboard",
                 "fields" :  [{"name" : "Title", "type" : "Text","req" : "y"},
                     {"name" : "Description", "type" : "Note","req" : "n"},
                     {"name" : "Start", "type" : "Date","req" : "n"},

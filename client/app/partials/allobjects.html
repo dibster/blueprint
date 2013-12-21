@@ -2,7 +2,7 @@
     <div class="span6">
         <form class="form-inline" role="form" data-ng-submit="create()">
             <div class="form-group">
-                <input data-ng-show="data.selectedType" type="text" data-ng-model="object.name" class="form-control" id="name" autofocus="autofocus" value="{{object.name}}">
+                <input data-ng-show="data.selectedType" type="text" data-ng-model="newobject.name" class="form-control" id="name" autofocus="autofocus" value="{{newobject.name}}">
             </div>
         </form>
     </div>
@@ -22,14 +22,17 @@
         <th style="width: 30%">Type</th>
         <th>Fields</th>
         <th>Views</th>
+        <th></th>
+
     </tr>
     <tr ng-repeat="object in data.objects| filter:data.selectedType">
         <td>
             <a data-ng-href="#/objects/{{object._id}}/edit">{{object.name}}</a>
         </td>
         <td>{{object.type}}</td>
-        <td><span class="badge">{{object.fields.length}}</span>     </td>
-        <td><span class="badge">{{object.views.length}}</span>     </td>
+        <td><span class="badge">{{object.fields.length}}</span></td>
+        <td><span class="badge">{{object.views.length}}</span></td>
+        <td><button type="button"  class="btn btn-small" data-ng-click="removeObject(object)"><i class="icon-black icon-trash"></i> Delete</button></td>
     </tr>
 </table>
 

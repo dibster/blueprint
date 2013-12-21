@@ -1,0 +1,71 @@
+<div data-ng-init="viewPage()"></div>
+<h3> {{object.name}} Views</h3>
+<div class="row-fluid">
+
+    <div class="span2">
+        <table class="table">
+            <tr>
+                <th style="width: 20%">Fields</th>
+            </tr>
+            <tr data-ng-repeat="field in object.fields" data-ng-model="object.fields">
+                <td>{{field.name}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="span2">
+
+        <table class="table">
+            <tr>
+                <th style="width: 20%">Create</th>
+                <!--<th style="width: 20%">Edit</th>-->
+            <tr data-ng-repeat="field in object.views[0].fields" data-ng-model="object.createview.fields">
+                <td>{{field.name}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="span2">
+
+        <table class="table">
+            <tr>
+                <th style="width: 20%">Edit</th>
+                <!--<th style="width: 20%">Edit</th>-->
+            <tr data-ng-repeat="field in object.views[1].fields" data-ng-model="object.editview.fields">
+                <td>{{field.name}}</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div class="span2">
+
+        <table class="table">
+            <tr>
+                <th style="width: 20%">Show</th>
+                <!--<th style="width: 20%">Edit</th>-->
+            <tr data-ng-repeat="field in object.views[2].fields" data-ng-model="object.showview.fields">
+                <td>{{field.name}}</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div class="span2">
+
+        <table class="table">
+            <tr>
+                <th style="width: 20%">Dashboard</th>
+                <!--<th style="width: 20%">Edit</th>-->
+            <tr data-ng-repeat="field in object.views[3].fields" data-ng-model="object.compactview.fields">
+                <td>{{field.name}}</td>
+            </tr>
+        </table>
+    </div>
+
+
+</div>
+
+
+
+
