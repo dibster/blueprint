@@ -8,7 +8,7 @@
                 <th style="width: 20%">Fields</th>
             </tr>
             <tr data-ng-repeat="field in object.fields" data-ng-model="object.fields">
-                <td>{{field.name}}</td>
+                <td draggable='field'><span class="pull-left"><i class="icon-gray icon-align-justify"></i></span>{{field.name}}</td>
             </tr>
         </table>
     </div>

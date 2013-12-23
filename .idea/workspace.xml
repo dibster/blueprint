@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51ac86f2-a104-4d81-a8bd-7f817e81fc09" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/js/app.js" afterPath="$PROJECT_DIR$/client/app/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/js/controllers.js" afterPath="$PROJECT_DIR$/client/app/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/dibster.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/dibster.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/index.html" afterPath="$PROJECT_DIR$/client/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/partials/objectedit.html" afterPath="$PROJECT_DIR$/client/app/partials/objectedit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/partials/objectviews.html" afterPath="$PROJECT_DIR$/client/app/partials/objectviews.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -30,10 +28,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="47" selection-start="3194" selection-end="3194" vertical-scroll-proportion="0.29411766" vertical-offset="1785" max-vertical-offset="2880">
+            <state line="103" column="47" selection-start="3194" selection-end="3194" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2880">
               <folding />
             </state>
           </provider>
@@ -42,7 +40,7 @@
       <file leaf-file-name="objectviews.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/partials/objectviews.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="0" selection-start="1875" selection-end="1875" vertical-scroll-proportion="-18.62069" vertical-offset="480" max-vertical-offset="1540">
+            <state line="10" column="25" selection-start="347" selection-end="347" vertical-scroll-proportion="-6.8965516" vertical-offset="0" max-vertical-offset="1540">
               <folding>
                 <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#1;n#div#1;n#!!top" expanded="true" />
@@ -57,7 +55,7 @@
       <file leaf-file-name="objectedit.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/partials/objectedit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="74" selection-start="2668" selection-end="2703" vertical-scroll-proportion="-20.448277" vertical-offset="647" max-vertical-offset="1540">
+            <state line="8" column="66" selection-start="259" selection-end="259" vertical-scroll-proportion="-5.5172415" vertical-offset="0" max-vertical-offset="1540">
               <folding>
                 <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#2;n#!!top" expanded="true" />
@@ -78,6 +76,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="directives.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/js/directives.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="6" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="520">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -90,7 +97,7 @@
       <file leaf-file-name="angular-common.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/bower_components/angular-common/build/angular-common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="337" column="26" selection-start="11492" selection-end="11504" vertical-scroll-proportion="-6.730769" vertical-offset="6565" max-vertical-offset="20780">
+            <state line="398" column="10" selection-start="11852" selection-end="13959" vertical-scroll-proportion="-24.961538" vertical-offset="7311" max-vertical-offset="20780">
               <folding>
                 <marker date="1387608030000" expanded="false" signature="29204:29214" placeholder="..." />
                 <marker date="1387608030000" expanded="false" signature="29331:29345" placeholder="..." />
@@ -101,10 +108,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="73" selection-start="1475" selection-end="1475" vertical-scroll-proportion="-28.275862" vertical-offset="0" max-vertical-offset="1000">
+            <state line="32" column="0" selection-start="955" selection-end="955" vertical-scroll-proportion="0.60264903" vertical-offset="94" max-vertical-offset="1060">
               <folding />
             </state>
           </provider>
@@ -153,15 +160,15 @@
         <option value="$PROJECT_DIR$/server/app/controllers/admin/objects.js" />
         <option value="$PROJECT_DIR$/client/app/partials/allobjects.html" />
         <option value="$PROJECT_DIR$/server/app/controllers/testData/kaboodlefieldtypes.json" />
-        <option value="$PROJECT_DIR$/client/app/js/directives.js" />
-        <option value="$PROJECT_DIR$/client/app/partials/objectedit.html" />
         <option value="$PROJECT_DIR$/server/tests/projecttemplates.test.js" />
         <option value="$PROJECT_DIR$/server/app/controllers/testData/kaboodleobjects.json" />
-        <option value="$PROJECT_DIR$/client/app/index.html" />
         <option value="$PROJECT_DIR$/client/app/js/app.js" />
         <option value="$PROJECT_DIR$/client/app/js/services.js" />
-        <option value="$PROJECT_DIR$/client/app/partials/objectviews.html" />
         <option value="$PROJECT_DIR$/client/app/js/controllers.js" />
+        <option value="$PROJECT_DIR$/client/app/partials/objectedit.html" />
+        <option value="$PROJECT_DIR$/client/app/js/directives.js" />
+        <option value="$PROJECT_DIR$/client/app/partials/objectviews.html" />
+        <option value="$PROJECT_DIR$/client/app/index.html" />
       </list>
     </option>
   </component>
@@ -288,72 +295,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blueprint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blueprint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blueprint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blueprint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blueprint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blueprint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -591,7 +532,11 @@
       <created>1387640281625</created>
       <updated>1387640281625</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Views added dragdrop factory (no codee yet) but am deletimng view fields">
+      <created>1387795659765</created>
+      <updated>1387795659765</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -679,7 +624,8 @@
     <MESSAGE value="some formattinmg again" />
     <MESSAGE value="Adding new fields and focus on field that was a right pain in the ass" />
     <MESSAGE value="Started work on View Configuration, have layout now need to add drag and drop ....." />
-    <option name="LAST_COMMIT_MESSAGE" value="Started work on View Configuration, have layout now need to add drag and drop ....." />
+    <MESSAGE value="Views added dragdrop factory (no codee yet) but am deletimng view fields" />
+    <option name="LAST_COMMIT_MESSAGE" value="Views added dragdrop factory (no codee yet) but am deletimng view fields" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -687,13 +633,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/app/js/directives.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="520">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/bower_components/underscore/underscore.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="155" column="0" selection-start="5597" selection-end="5597" vertical-scroll-proportion="0.0" vertical-offset="2856" max-vertical-offset="25580">
@@ -750,25 +689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="2" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="700">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/bower_components/angular-common/build/angular-common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="337" column="26" selection-start="11492" selection-end="11504" vertical-scroll-proportion="-6.730769" vertical-offset="6565" max-vertical-offset="20780">
-          <folding>
-            <marker date="1387608030000" expanded="false" signature="29204:29214" placeholder="..." />
-            <marker date="1387608030000" expanded="false" signature="29331:29345" placeholder="..." />
-            <marker date="1387608030000" expanded="false" signature="29382:29414" placeholder="..." />
-            <marker date="1387608030000" expanded="false" signature="29683:29705" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/app/controllers/testData/kaboodleobjects.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="34" selection-start="1028" selection-end="1028" vertical-scroll-proportion="-11.137931" vertical-offset="97" max-vertical-offset="1860">
@@ -776,16 +696,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="73" selection-start="1475" selection-end="1475" vertical-scroll-proportion="-28.275862" vertical-offset="0" max-vertical-offset="1000">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/partials/objectedit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="74" selection-start="2668" selection-end="2703" vertical-scroll-proportion="-20.448277" vertical-offset="647" max-vertical-offset="1540">
+        <state line="8" column="66" selection-start="259" selection-end="259" vertical-scroll-proportion="-5.5172415" vertical-offset="0" max-vertical-offset="1540">
           <folding>
             <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#2;n#!!top" expanded="true" />
@@ -796,9 +709,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="47" selection-start="3194" selection-end="3194" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="2880">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/bower_components/angular-common/build/angular-common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="398" column="10" selection-start="11852" selection-end="13959" vertical-scroll-proportion="-24.961538" vertical-offset="7311" max-vertical-offset="20780">
+          <folding>
+            <marker date="1387608030000" expanded="false" signature="29204:29214" placeholder="..." />
+            <marker date="1387608030000" expanded="false" signature="29331:29345" placeholder="..." />
+            <marker date="1387608030000" expanded="false" signature="29382:29414" placeholder="..." />
+            <marker date="1387608030000" expanded="false" signature="29683:29705" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/js/directives.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="6" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="520">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="2" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="700">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/partials/objectviews.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="0" selection-start="1875" selection-end="1875" vertical-scroll-proportion="-18.62069" vertical-offset="480" max-vertical-offset="1540">
+        <state line="10" column="25" selection-start="347" selection-end="347" vertical-scroll-proportion="-6.8965516" vertical-offset="0" max-vertical-offset="1540">
           <folding>
             <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#1;n#div#1;n#!!top" expanded="true" />
@@ -809,9 +755,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
+    <entry file="file://$PROJECT_DIR$/client/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="47" selection-start="3194" selection-end="3194" vertical-scroll-proportion="0.29411766" vertical-offset="1785" max-vertical-offset="2880">
+        <state line="32" column="0" selection-start="955" selection-end="955" vertical-scroll-proportion="0.60264903" vertical-offset="94" max-vertical-offset="1060">
           <folding />
         </state>
       </provider>
