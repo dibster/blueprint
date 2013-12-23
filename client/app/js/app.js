@@ -8,7 +8,8 @@ angular.module('myApp', [
   'myApp.services',
   'myApp.directives',
   'myApp.controllers',
-   'ui.bootstrap'
+  'ui.bootstrap',
+  'common.master'
 ])
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider

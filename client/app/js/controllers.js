@@ -3,7 +3,17 @@
 /* Controllers */
 
 angular.module('myApp.controllers', [])
-    .controller('ObjectsCtrl', ['$scope', 'KaboodleObjects', 'KaboodleTypes', 'KaboodleFieldTypes', '$routeParams', '$location', function($scope, KaboodleObjects, KaboodleTypes, KaboodleFieldTypes,  $routeParams, $location) {
+    .controller('ObjectsCtrl',
+        ['$scope',
+         'KaboodleObjects',
+         'KaboodleTypes',
+         'KaboodleFieldTypes',
+         '$routeParams',
+         'DragDropHandler',
+         '$location',
+
+        function($scope, KaboodleObjects, KaboodleTypes, KaboodleFieldTypes,  $routeParams, DragDropHandler,  $location) {
+
         $scope.data = {};
         $scope.newobject = {};
         $scope.object = {};
@@ -33,7 +43,6 @@ angular.module('myApp.controllers', [])
         $scope.findOne = function() {
             KaboodleObjects.get({id : $scope.objectId},function(object) {
                 $scope.object = object;
-                console.log($scope.object);
             });
         };
 
@@ -97,6 +106,16 @@ angular.module('myApp.controllers', [])
             var index = this.object.fields.indexOf(column);
             this.object.fields.splice(index, 1);
 
+            this.object.$update(function(response) {
+                console.log(response);
+            });
+        };
+
+        $scope.removeViewField = function(viewcolumn, viewnumber) {
+            console.log(viewnumber);
+            this.object._id = $routeParams.id;
+            var index = this.object.views[viewnumber].fields.indexOf(viewcolumn);
+            this.object.views[viewnumber].fields.splice(index, 1);
             this.object.$update(function(response) {
                 console.log(response);
             });
