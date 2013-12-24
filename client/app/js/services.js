@@ -15,4 +15,17 @@ angular.module('myApp.services', ['ngResource'])
     .factory('KaboodleFieldTypes', function($resource){
         return $resource('http://localhost:3000/api/fieldtypes', {})
     })
+    .service('PrepareRecord', function() {
+        this.getRecord = function(formData, type) {
+            var jsonrecord = {"type" : type};
+            formData.forEach(function(field) {
+                if (field.content != null) {
+                    var fieldname = field.name;
+                    jsonrecord[fieldname] = field.content;
+                };
+            });
+            return jsonrecord;
+        };
+    })
     .value('version', '0.1');
+

@@ -8,29 +8,28 @@
                 <th style="width: 20%">Fields</th>
             </tr>
             <tr data-ng-repeat="field in object.fields" data-ng-model="object.fields">
-                <td draggable='field'><span class="pull-left"><i class="icon-gray icon-align-justify"></i></span>{{field.name}}</td>
+                <td><span class="pull-right" data-ng-click="addFieldToViews(field)"><i class="icon-gray icon-arrow-right"></i></span>{{field.name}}</td>
             </tr>
         </table>
     </div>
 
     <div class="span2">
 
-        <table class="table">
-            <tr>
-                <th style="width: 20%">Create</th>
-                <!--<th style="width: 20%">Edit</th>-->
-            <tr data-ng-repeat="field in object.views[0].fields" data-ng-model="object.createview.fields">
-                <td>{{field.name}}<span class="pull-right"><i class="icon-black icon-remove-sign"  data-ng-click="removeViewField(field,'0')"></i></span></td>
-            </tr>
-        </table>
+        <h5>Create</h5>
+
+        <ul data-ng-update = "updateCreateView()" class="unstyled" ui-sortable="sortableOptions" ng-model="createview">
+            <li ng-repeat="item in createview">{{ item }}<span class="pull-right"><i class="icon-black icon-remove-sign" data-ng-click="removeViewField(item,'0')"></i></span></li>
+        </ul>
+
     </div>
+
+
 
     <div class="span2">
 
         <table class="table">
             <tr>
                 <th style="width: 20%">Edit</th>
-                <!--<th style="width: 20%">Edit</th>-->
             <tr data-ng-repeat="field in object.views[1].fields" data-ng-model="object.editview.fields">
                 <td>{{field.name}}<span class="pull-right"><i class="icon-black icon-remove-sign" data-ng-click="removeViewField(field,'1')"></i></span></td>
             </tr>

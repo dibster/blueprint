@@ -1,15 +1,30 @@
-<table class="table table">
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Fields</th>
-        <th>Views</th>
-    </tr>
-    <tr ng-repeat="object in data.projects" >
-        <td>{{object.name}}</td>
-        <td>{{object.type}}</td>
-        <td><span class="badge">{{object.fields.length}}</span></td>
-        <td><span class="badge">{{object.views.length}}</span></td>
-    </tr>
-</table>
+<h3>Projects</h3>
+
+<div class="row-fluid">
+    <div class="span4">
+        <ul class="unstyled" >
+            <li ng-repeat="type in data.projects"><a ng-href="#/projects" data-ng-click="projectFieldsForCreate(type)">{{ type.name }}</a></li>
+        </ul>
+    </div>
+
+    <div class="span8">
+        <form>
+            <button data-ng-click="saveFormDetails(formItems)">Save</button>
+            <fieldset>
+                <legend>Enter Data</legend>
+                    <div ng-repeat="formItem in formItems">
+                        <div ng-switch on="formItem.type">
+                            <label>{{formItem.name}}</label>
+                            <input type="text" ng-switch-when="Text" data-ng-model="formItem.content">
+                            <input type="number" ng-switch-when="Number" data-ng-model="formItem.content">
+                            <select ng-switch-when="list" data-ng-model="formItem.content" ng-options="option for option in formItem.options"/>
+                            <input type="checkbox" ng-switch-when="boolean" data-ng-model="formItem.content">
+                        </div>
+                    </div>
+            </fieldset>
+            <!--<button data-ng-click="saveFormDetails(formItems)">Save</button>-->
+        </form>
+    </div>
+
+</div>
 

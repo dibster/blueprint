@@ -22,7 +22,7 @@ db.open(function(err, db) {
 
 exports.findProjects = function(req,res) {
     db.collection('kaboodleobjects', function(err, collection) {
-        collection.find({'type' : 'project'}).toArray(function(err, items) {
+        collection.find({'type' : 'Project'}).toArray(function(err, items) {
             res.send(items);
         });
     });

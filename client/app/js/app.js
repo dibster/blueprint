@@ -9,7 +9,7 @@ angular.module('myApp', [
   'myApp.directives',
   'myApp.controllers',
   'ui.bootstrap',
-  'common.master'
+  'ui.sortable'
 ])
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider
@@ -23,7 +23,7 @@ angular.module('myApp', [
           templateUrl: 'partials/objectviews.html',
           controller: 'ObjectsCtrl'})
       .when('/projects', {
-          templateUrl: 'partials/objectedit.html',
+          templateUrl: 'partials/projects.html',
           controller: 'ProjectsCtrl'})
       .otherwise({redirectTo: '/objects'});
 }]);
