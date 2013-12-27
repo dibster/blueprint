@@ -2,6 +2,7 @@ var express = require('express'),
     objects = require('./app/controllers/admin/objects');
     fieldtypes = require('./app/controllers/admin/fieldtypes');
     kaboodletypes = require('./app/controllers/admin/kaboodletypes');
+    kaboodleprojects = require('./app/controllers/admin/kaboodleprojects');
     emptyDBTests = require('./app/controllers/testData/resetDatabaseForTests');
 
 var app = express();
@@ -40,6 +41,16 @@ app.get('/api/objects/:id', objects.findById);
 app.post('/api/objects', objects.add);
 app.put('/api/objects/:id', objects.update);
 app.delete('/api/objects/:id', objects.remove);
+
+// Kaboodle Project Routes
+
+app.get('/api/kaboodleprojects', kaboodleprojects.findAll);
+app.get('/api/kaboodleprojects/:id', kaboodleprojects.findById);
+app.post('/api/kaboodleprojects', kaboodleprojects.add);
+app.put('/api/kaboodleprojects/:id', kaboodleprojects.update);
+app.delete('/api/kaboodleprojects/:id', kaboodleprojects.remove);
+
+
 
 app.get('/api/objects/:id/fields', objects.findAllFields);
 app.get('/api/objects/:id/views', objects.findAllViews);

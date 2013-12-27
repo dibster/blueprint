@@ -29,6 +29,9 @@ exports.emptyDB = function(req,res) {
     db.collection('kaboodletypes').remove({},function(err,numberRemoved){
         console.log("remove kaboodle types");
     });
+    db.collection('kaboodleprojects').remove({},function(err,numberRemoved){
+        console.log("remove kaboodle projects");
+    });
     db.collection('kaboodleobjects', {strict:true}, function(err, collection) {
         populateDB();
         res.send('Database Reset');
