@@ -163,9 +163,10 @@ angular.module('myApp.controllers', [])
         });
     }])
 
-    .controller('ProjectsCtrl', ['$scope', 'KaboodleProjects','PrepareRecord', function($scope, KaboodleProjects,PrepareRecord) {
+    .controller('ProjectsCtrl', ['$scope', 'KaboodleProjects','PrepareRecord', 'KaboodleProjectInstances', function($scope, KaboodleProjects,PrepareRecord, KaboodleProjectInstances) {
         $scope.data = {};
         $scope.formItems = {};
+        $scope.selectedType = "";
 
         KaboodleProjects.query(function(response) {
             $scope.data.projects = response;
@@ -173,12 +174,24 @@ angular.module('myApp.controllers', [])
         });
 
         $scope.projectFieldsForCreate = function(selectedObject) {
+            $scope.selectedType = selectedObject.name;
+
             $scope.formItems = selectedObject.fields;
         };
 
         $scope.saveFormDetails = function(formData) {
-            var myRecord = PrepareRecord.getRecord(formData,'Vector');
+            var myRecord = PrepareRecord.getRecord(formData,$scope.selectedType);
             console.log(myRecord);
+
+            // save on Mongo
+
+            var kaboodleproject = new KaboodleProjectInstances(myRecord);
+
+            $scope.data.project = kaboodleproject.$save(function(response) {
+                return response;
+            });
+
+
         };
 
     }]);

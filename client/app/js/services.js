@@ -2,12 +2,17 @@
 
 /* Services */
 
+//todo add real project route call other adminproject admin milestone etc
+
 angular.module('myApp.services', ['ngResource'])
     .factory('KaboodleObjects', function($resource){
         return $resource('http://localhost:3000/api/objects/:id', {id:'@_id'}, {update:{method: 'PUT'}})
     })
     .factory('KaboodleProjects', function($resource){
         return $resource('http://localhost:3000/api/projects', {})
+    })
+    .factory('KaboodleProjectInstances', function($resource){
+        return $resource('http://localhost:3000/api/kaboodleprojects', {})
     })
     .factory('KaboodleTypes', function($resource){
         return $resource('http://localhost:3000/api/kaboodletypes', {})

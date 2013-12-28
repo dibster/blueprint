@@ -2,7 +2,7 @@ var express = require('express'),
     objects = require('./app/controllers/admin/objects');
     fieldtypes = require('./app/controllers/admin/fieldtypes');
     kaboodletypes = require('./app/controllers/admin/kaboodletypes');
-    kaboodleprojects = require('./app/controllers/admin/kaboodleprojects');
+    kaboodleprojects = require('./app/controllers/kaboodle/kaboodleprojects');
     emptyDBTests = require('./app/controllers/testData/resetDatabaseForTests');
 
 var app = express();
