@@ -31,10 +31,10 @@ describe('Add a record', function() {
     it('should add it and return 200', function() {
 
         var newObject = {
-            "name" : "FIFA 10",
-            "description": "FIFA 10 Project...",
-            "type" : "Campaign",
-            "status" : "Open"};
+            "Title" : "FIFA 10",
+            "Description": "FIFA 10 Project...",
+            "Type" : "Campaign",
+            "Status" : "Open"};
 
         request(url)
             .post('/api/kaboodleprojects')
@@ -54,12 +54,11 @@ describe('Add a record different type', function() {
     it('should add it and return 200', function() {
 
         var newObject = {
-            "name" : "FaceBook Project",
-            "description": "Facebook Channel",
-            "type" : "Channel",
+            "Title" : "FaceBook Project",
+            "Description": "Facebook Channel",
             "Channel Type " : "Facebook",
-            "type" : "Social Media",
-            "status" : "Open"};
+            "Type" : "Social Media",
+            "Status" : "Open"};
 
         request(url)
             .post('/api/kaboodleprojects')
@@ -103,7 +102,7 @@ describe('API', function() {
                     if (err) {
                         throw err;
                     }
-                    res.body[0].should.have.property('name');
+                    res.body[0].should.have.property('Title');
                     res.body.length.should.eql(2);
                 });
         });
@@ -177,7 +176,7 @@ describe('API', function() {
                     if (err) {
                         throw err;
                     }
-                    res.body[0].should.have.property('name');
+                    res.body[0].should.have.property('Title');
                     res.body.length.should.eql(1);
                 });
         });

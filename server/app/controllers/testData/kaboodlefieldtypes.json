@@ -4,6 +4,10 @@
         "description": "Text Field One Line"
     },
     {
+        "name" : "Yes or No",
+        "description": "Text Field Multi Line"
+    },
+    {
         "name" : "Note",
         "description": "Text Field Multi Line"
     },

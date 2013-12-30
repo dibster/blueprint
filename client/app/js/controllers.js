@@ -21,6 +21,10 @@ angular.module('myApp.controllers', [])
         $scope.newfield.required = "Optional";
         $scope.viewfields = {};
         $scope.createview = [];
+        $scope.editview = [];
+        $scope.showview = [];
+        $scope.dashboardview = [];
+        $scope.listview = [];
 
 //        $scope.focusInput="true";
 
@@ -52,8 +56,11 @@ angular.module('myApp.controllers', [])
             KaboodleObjects.get({id : $scope.objectId},function(object) {
                 $scope.object = object;
                 $scope.createview = _.pluck($scope.object.views[0].fields, 'name');
+                $scope.editview = _.pluck($scope.object.views[1].fields, 'name');
+                $scope.showview = _.pluck($scope.object.views[2].fields, 'name');
+                $scope.dashboardview = _.pluck($scope.object.views[3].fields, 'name');
+                $scope.listview = _.pluck($scope.object.views[4].fields, 'name');
 
-                console.log($scope.createview);
             });
         };
 
@@ -115,6 +122,7 @@ angular.module('myApp.controllers', [])
             this.object.views[1].fields.push(selectedItem);
             this.object.views[2].fields.push(selectedItem);
             this.object.views[3].fields.push(selectedItem);
+            this.object.views[4].fields.push(selectedItem);
             this.object.$update(function(response) {
                 console.log('saved');
             });
@@ -167,25 +175,34 @@ angular.module('myApp.controllers', [])
         $scope.data = {};
         $scope.formItems = {};
         $scope.selectedType = "";
+        $scope.projectIinstances = {};
 
         KaboodleProjects.query(function(response) {
             $scope.data.projects = response;
 
         });
 
+
+
         $scope.projectFieldsForCreate = function(selectedObject) {
             $scope.selectedType = selectedObject.name;
-
+            console.log($scope.selectedType);
             $scope.formItems = selectedObject.fields;
+            KaboodleProjectInstances.query(function(response) {
+                $scope.projectInstances = response;
+
+            });
         };
 
         $scope.saveFormDetails = function(formData) {
+            console.log($scope.selectedType);
             var myRecord = PrepareRecord.getRecord(formData,$scope.selectedType);
             console.log(myRecord);
 
             // save on Mongo
 
             var kaboodleproject = new KaboodleProjectInstances(myRecord);
+            $scope.projectInstances.push(myRecord);
 
             $scope.data.project = kaboodleproject.$save(function(response) {
                 return response;

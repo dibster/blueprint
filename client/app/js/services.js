@@ -22,7 +22,7 @@ angular.module('myApp.services', ['ngResource'])
     })
     .service('PrepareRecord', function() {
         this.getRecord = function(formData, type) {
-            var jsonrecord = {"type" : type};
+            var jsonrecord = {"Type" : type};
             formData.forEach(function(field) {
                 if (field.content != null) {
                     var fieldname = field.name;
