@@ -24,25 +24,25 @@
     <div class="span2">
         <h5>Edit</h5>
         <ul data-ng-update = "updateEditView()" class="unstyled" ui-sortable="sortableOptions" ng-model="editview">
-            <li ng-repeat="item in editview">{{ item }}<span class="pull-right"><i class="icon-black icon-remove-sign" data-ng-click="removeViewField(item,'1')"></i></span></li>
+            <li ng-repeat="item in editview">{{ item.name }}<span class="pull-right"><i class="icon-black icon-remove-sign" data-ng-click="removeViewField(item,'1')"></i></span></li>
         </ul>
     </div>
     <div class="span2">
         <h5>Show</h5>
         <ul data-ng-update = "updateShowView()" class="unstyled" ui-sortable="sortableOptions" ng-model="showview">
-            <li ng-repeat="item in showview">{{ item }}<span class="pull-right"><i class="icon-black icon-remove-sign" data-ng-click="removeViewField(item,'2')"></i></span></li>
+            <li ng-repeat="item in showview">{{ item.name }}<span class="pull-right"><i class="icon-black icon-remove-sign" data-ng-click="removeViewField(item,'2')"></i></span></li>
         </ul>
     </div>
     <div class="span2">
         <h5>Dashboard</h5>
         <ul data-ng-update = "updateDashboardView()" class="unstyled" ui-sortable="sortableOptions" ng-model="dashboardview">
-            <li ng-repeat="item in dashboardview">{{ item }}<span class="pull-right"><i class="icon-black icon-remove-sign" data-ng-click="removeViewField(item,'3')"></i></span></li>
+            <li ng-repeat="item in dashboardview">{{ item.name }}<span class="pull-right"><i class="icon-black icon-remove-sign" data-ng-click="removeViewField(item,'3')"></i></span></li>
         </ul>
     </div>
     <div class="span2">
         <h5>List</h5>
         <ul data-ng-update = "updateListView()" class="unstyled" ui-sortable="sortableOptions" ng-model="listview">
-            <li ng-repeat="item in listview">{{ item }}<span class="pull-right"><i class="icon-black icon-remove-sign" data-ng-click="removeViewField(item,'4')"></i></span></li>
+            <li ng-repeat="item in listview">{{ item.name }}<span class="pull-right"><i class="icon-black icon-remove-sign" data-ng-click="removeViewField(item,'4')"></i></span></li>
         </ul>
     </div>
 

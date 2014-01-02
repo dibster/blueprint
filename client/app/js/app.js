@@ -21,7 +21,7 @@ angular.module('myApp', [
           controller: 'ObjectsCtrl'})
       .when('/objects/:id/views', {
           templateUrl: 'partials/objectviews.html',
-          controller: 'ObjectsCtrl'})
+          controller: 'KaboodleAdminViewCtrl'})
       .when('/projects', {
           templateUrl: 'partials/projects.html',
           controller: 'ProjectsCtrl'})
