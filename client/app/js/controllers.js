@@ -55,7 +55,8 @@ angular.module('myApp.controllers', [])
         $scope.viewPage = function() {
             KaboodleObjects.get({id : $scope.objectId},function(object) {
                 $scope.object = object;
-                $scope.createview = _.pluck($scope.object.views[0].fields, 'name');
+                $scope.createview = $scope.object.views[0].fields;
+//                $scope.createview = _.pluck($scope.object.views[0].fields, 'name');
                 $scope.editview = _.pluck($scope.object.views[1].fields, 'name');
                 $scope.showview = _.pluck($scope.object.views[2].fields, 'name');
                 $scope.dashboardview = _.pluck($scope.object.views[3].fields, 'name');
@@ -70,7 +71,8 @@ angular.module('myApp.controllers', [])
         };
 
         $scope.updateCreateView = function() {
-            console.log($scope.createview);
+            console.log('in create view');
+//            console.log($scope.createview);
         };
 
         $scope.create = function() {
@@ -117,15 +119,50 @@ angular.module('myApp.controllers', [])
 
 
         $scope.addFieldToViews = function(selectedItem) {
+
+            console.log($routeParams.id);
+            this.object._id = $routeParams.id;
+            var selectedItemName = selectedItem.name;
+            var objectUpdated = false;
+
+            console.log('in add field');
             console.log(selectedItem);
-            this.object.views[0].fields.push(selectedItem);
-            this.object.views[1].fields.push(selectedItem);
-            this.object.views[2].fields.push(selectedItem);
-            this.object.views[3].fields.push(selectedItem);
-            this.object.views[4].fields.push(selectedItem);
-            this.object.$update(function(response) {
-                console.log('saved');
-            });
+            console.log(this.object);
+
+
+            // iterate through all views
+
+            for(var i=0;i<5;i++)
+            {
+                var fieldExists = false;
+                // get the array length
+                var arrayLength = this.object.views[i].fields.length;
+                // does the field exist
+                for (var index = 0; index < arrayLength; ++index) {
+                    if (this.object.views[i].fields[index].name == selectedItemName)
+                    {
+                        fieldExists = true;
+                        break;
+                    }
+                }
+                if (!fieldExists) {
+                    console.log('Adding Field' + selectedItem);
+                    this.object.views[i].fields.push(selectedItem);
+
+                    // why us this not updated
+
+                    objectUpdated = true;
+                }
+            }
+            //todo fix the views lists so that they can be updated properly
+
+            if (objectUpdated) {
+                this.object.$update(function(response) {
+                    console.log(response);
+                    $scope.object = response;
+                    $scope.object._id = $routeParams.id;
+                });
+            }
         };
 
         $scope.removeField = function(column) {
@@ -136,32 +173,50 @@ angular.module('myApp.controllers', [])
             this.object.$update(function(response) {
                 console.log(response);
             });
+
         };
 
         $scope.sortingLog = [];
 
-        $scope.sortableOptions = {
+        $scope.sortableOptionsCreate = {
             // called after a node is dropped
             stop: function(e, ui) {
-                var logEntry = {
+                    var logEntry = {
                     ID: $scope.sortingLog.length + 1,
                     Text: 'Moved element: ' + ui.item.scope().item.text
                 };
                 $scope.sortingLog.push(logEntry);
-                console.log($scope.createview);
+                $scope.object.views[0].fields = $scope.createview;
+                $scope.object.$update(function(response) {
+//                    console.log(response);
+                });
             }
         };
 
 
         $scope.removeViewField = function(viewcolumnname, viewnumber) {
             console.log(viewnumber);
+            console.log(viewcolumnname);
+
             this.object._id = $routeParams.id;
-            var index = this.object.views[viewnumber].fields.indexOf(viewcolumn);
+            var index = this.object.views[viewnumber].fields.indexOf(viewcolumnname);
             this.object.views[viewnumber].fields.splice(index, 1);
             this.object.$update(function(response) {
                 console.log(response);
             });
         };
+    }])
+
+
+    .controller('KaboodleAdminViewCtrl',
+         ['$scope',
+           'KaboodleObjects',
+           '$routeParams',
+           'location',
+
+         function($scope, KaboodleObjects, $routeParams, $location) {
+         $scope.data = {};
+
     }])
 
     .controller('KaboodleTypesCtrl', ['$scope', 'KaboodleTypes',  function($scope, KaboodleTypes) {
@@ -179,10 +234,7 @@ angular.module('myApp.controllers', [])
 
         KaboodleProjects.query(function(response) {
             $scope.data.projects = response;
-
         });
-
-
 
         $scope.projectFieldsForCreate = function(selectedObject) {
             $scope.selectedType = selectedObject.name;
@@ -190,7 +242,6 @@ angular.module('myApp.controllers', [])
             $scope.formItems = selectedObject.fields;
             KaboodleProjectInstances.query(function(response) {
                 $scope.projectInstances = response;
-
             });
         };
 
@@ -198,17 +249,11 @@ angular.module('myApp.controllers', [])
             console.log($scope.selectedType);
             var myRecord = PrepareRecord.getRecord(formData,$scope.selectedType);
             console.log(myRecord);
-
-            // save on Mongo
-
             var kaboodleproject = new KaboodleProjectInstances(myRecord);
             $scope.projectInstances.push(myRecord);
-
             $scope.data.project = kaboodleproject.$save(function(response) {
                 return response;
             });
-
-
         };
 
     }]);
