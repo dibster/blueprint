@@ -228,6 +228,60 @@ angular.module('myApp.controllers', [])
         });
     }])
 
+
+    .controller('ProjectDashboardCtrl',
+        ['$scope',
+         'KaboodleProjectInstances',
+         '$routeParams',
+         '$location' ,
+
+         function($scope, KaboodleProjectInstances, $routeParams,$location) {
+
+             $scope.newsItems = [];
+             $scope.tasks = [];
+            $scope.project = {};
+            console.log($routeParams.id);
+            $scope.findOne = function() {
+            KaboodleProjectInstances.get({id : $routeParams.id},function(project) {
+                $scope.project = project;
+            });
+
+                $scope.AddNewsItem = function(newsItem) {
+
+                    if (!(_.has($scope.project, "news")))
+                    {
+                        console.log('creating new news object on the project');
+                        $scope.project.news = $scope.newsItems;
+                    }
+
+
+                    $scope.project.news.push(newsItem);
+                    this.project._id = $routeParams.id;
+                    this.project.$update(function(response) {
+                        console.log('saved');
+                    });
+                }
+
+                $scope.AddTask = function(task) {
+
+                    if (!(_.has($scope.project, "tasks")))
+                    {
+                        console.log('creating new tasks object on the project');
+                        $scope.project.tasks = $scope.tasks;
+                    }
+
+
+                    $scope.project.tasks.push(task);
+                    this.project._id = $routeParams.id;
+                    this.project.$update(function(response) {
+                        console.log('saved');
+                    });
+                }
+        };
+
+    }])
+
+
     .controller('ProjectsCtrl', ['$scope', 'KaboodleProjects','PrepareRecord', 'KaboodleProjectInstances', function($scope, KaboodleProjects,PrepareRecord, KaboodleProjectInstances) {
         $scope.data = {};
         $scope.formItems = {};

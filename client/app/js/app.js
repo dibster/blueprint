@@ -25,5 +25,8 @@ angular.module('myApp', [
       .when('/projects', {
           templateUrl: 'partials/projects.html',
           controller: 'ProjectsCtrl'})
+      .when('/projects/:id/edit', {
+          templateUrl: 'partials/projectdashboard.html',
+          controller: 'ProjectDashboardCtrl'})
       .otherwise({redirectTo: '/objects'});
 }]);
