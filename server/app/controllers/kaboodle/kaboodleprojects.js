@@ -42,7 +42,7 @@ exports.findById = function(req, res) {
 
 exports.add = function(req, res) {
     var object = req.body;
-    console.log('Adding object: ' + JSON.stringify(object));
+    // Add a user and date created field to the object somewhere here
     db.collection('kaboodleprojects', function(err, collection) {
         collection.insert(object, {safe: true}, function(err, result) {
             if (err) {

@@ -9,6 +9,7 @@ angular.module('myApp', [
   'myApp.directives',
   'myApp.controllers',
   'ui.bootstrap',
+  'angularMoment',
   'ui.sortable'
 ])
 .config(['$routeProvider', function($routeProvider) {

@@ -235,48 +235,62 @@ angular.module('myApp.controllers', [])
          '$routeParams',
          '$location' ,
 
-         function($scope, KaboodleProjectInstances, $routeParams,$location) {
+         function($scope, KaboodleProjectInstances, $routeParams, $location) {
 
-             $scope.newsItems = [];
-             $scope.tasks = [];
+            $scope.newsItems = [];
+            $scope.tasks = [];
             $scope.project = {};
-            console.log($routeParams.id);
+            $scope.dateOptions = {
+                 'year-format': "'yy'",
+                 'starting-day': 1
+            };
             $scope.findOne = function() {
             KaboodleProjectInstances.get({id : $routeParams.id},function(project) {
                 $scope.project = project;
             });
 
-                $scope.AddNewsItem = function(newsItem) {
+            $scope.AddNewsItem = function(newsItem) {
 
-                    if (!(_.has($scope.project, "news")))
-                    {
-                        console.log('creating new news object on the project');
-                        $scope.project.news = $scope.newsItems;
-                    }
+                console.log(newsItem);
+                if (!(_.has($scope.project, "news")))
+                {
+                    console.log('creating new news object on the project');
+                    $scope.project.news = $scope.newsItems;
+                }
+                var user = 1;
+                var datetimeNow = new Date();
+                var userTimeStamp = {'u' : user, 'cd' : datetimeNow};
+                // add timestamp to task
+                var newNewsItem = _.extend(newsItem, userTimeStamp);
+                console.log(newNewsItem);
+                $scope.project.news.push(newNewsItem);
+                this.project._id = $routeParams.id;
+                this.project.$update(function(response) {
+                    console.log('saved');
+                });
+            }
 
+            $scope.AddTask = function(task) {
 
-                    $scope.project.news.push(newsItem);
-                    this.project._id = $routeParams.id;
-                    this.project.$update(function(response) {
-                        console.log('saved');
-                    });
+                if (!(_.has($scope.project, "tasks")))
+                {
+                    console.log('creating new tasks object on the project');
+                    $scope.project.tasks = $scope.tasks;
                 }
 
-                $scope.AddTask = function(task) {
-
-                    if (!(_.has($scope.project, "tasks")))
-                    {
-                        console.log('creating new tasks object on the project');
-                        $scope.project.tasks = $scope.tasks;
-                    }
-
-
-                    $scope.project.tasks.push(task);
-                    this.project._id = $routeParams.id;
-                    this.project.$update(function(response) {
-                        console.log('saved');
-                    });
-                }
+                // append user and date to the task as a service (and maybe a slug)
+                var user = 1;
+                var datetimeNow = new Date();
+                var userTimeStamp = {'u' : user, 'cd' : datetimeNow};
+                // add timestamp to task
+                var newTask = _.extend(task, userTimeStamp);
+                console.log(newTask);
+                $scope.project.tasks.push(newTask);
+                this.project._id = $routeParams.id;
+                this.project.$update(function(response) {
+                    console.log('saved');
+                });
+            }
         };
 
     }])

@@ -17,7 +17,8 @@
                             <label>{{formItem.name}}</label>
                             <textarea rows="5" ng-switch-when="Note" data-ng-model="formItem.content"></textarea>
                             <input type="text" ng-switch-when="Text" data-ng-model="formItem.content">
-                            <input type="text" ng-switch-when="Date" data-ng-model="formItem.content">
+                            <input type="text" ng-switch-when="User" data-ng-model="formItem.content">
+                            <input type="text" class="input-small" placeholder="When" datepicker-popup="dd-MM-yy" show-weeks="0" datepicker-options="dateOptions" ng-switch-when="Date" data-ng-model="formItem.content">
                             <input type="number" ng-switch-when="Number" data-ng-model="formItem.content">
                             <select ng-switch-when="list" data-ng-model="formItem.content" ng-options="option for option in formItem.options"/>
                             <input type="checkbox" ng-switch-when="Yes or No" data-ng-model="formItem.content">
