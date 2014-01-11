@@ -2,9 +2,10 @@
 
 <div class="row-fluid">
     <div class="span4">
-        <h5>{{ project.Title }}</h5>
+        <h3>{{ project.Title }}</h3>
     </div>
     <div class="span4">
+         <span>Project Status</span>
          <div class="progress progress-success">
             <div class="bar" style="width: 60%;"></div>
         </div>
@@ -14,17 +15,32 @@
 <div class="row-fluid">
 
     <div class="span4">
-        <h5>News</h5>
-        <form class="form-inline">
-            <input type="text" style="width: 80%;" class="input-xlarge" placeholder="News" data-ng-model="news.item">
-            <button type="submit" data-ng-click="AddNewsItem(news)" data-ng-show="news.item" class="btn btn-small">Post</button>
+        <div class="span12">
+            <ul class="breadcrumb">
+                <li>News <i class="fa fa-edit" ng-click="newsEditorEnabled=!newsEditorEnabled"></i></li>
+            </ul>
+        </div>
+
+        <form class="form-horizontal well" ng-show="newsEditorEnabled">
+            <fieldset>
+                <div class="control-group">
+                    <label>News</label>
+                    <textarea class="input-xlarge" id="news" data-ng-model="news.item" rows="3"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary" data-ng-click="AddNewsItem(news)">Save changes</button>
+                    <button type="reset" class="btn" ng-click="newsEditorEnabled=!newsEditorEnabled">Cancel</button>
+                </div>
+            </fieldset>
         </form>
 
         <div class="row-fluid">
             <ul class="unstyled">
-                <li ng-repeat="news in project.news">
+                <li ng-repeat="news in project.news | orderBy:'cd':true">
                     <div class="span8">{{ news.item }} </div>
-                    <div class="span4"><span am-time-ago="news.cd"></span></div>
+                    <div class="span4">
+                        <span class="pull-right" am-time-ago="news.cd"></span>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -32,22 +48,54 @@
 
     <div class="span4">
 
-        <h5>Tasks</h5>
-        <form class="form-inline">
-            <input type="text" class="input-large" placeholder="Task" data-ng-model="task.name">
-            <input type="text" class="input-small" placeholder="When" datepicker-popup="dd-MM-yy" show-weeks="0" datepicker-options="dateOptions" data-ng-model="task.date">
-            <input type="text" class="input-mini" placeholder="Who" data-ng-model="task.who">
-            <button type="submit" data-ng-click="AddTask(task)" data-ng-show="task.name" class="btn btn-small pull-right">Add</button>
-        </form>
-        <ul class="unstyled" >
-            <li ng-repeat="task in project.tasks">{{ task.name }}</li>
-        </ul>
+        <div class="span12">
+            <ul class="breadcrumb">
+                <li>Tasks <i class="fa fa-edit" ng-click="taskEditorEnabled=!taskEditorEnabled"></i></li>
+            </ul>
+        </div>
+        <div class=""span12">
+            <form class="form-horizontal well" ng-show="taskEditorEnabled">
+                <fieldset>
+                    <div class="control-group">
+                        <label>Task Title</label>
+                        <input type="text" class="input-xlarge" id="name" data-ng-model="task.name">
+                    </div>
+                    <div class="control-group">
+                        <label>Due Date</label>
+                        <input type="text" class="input" placeholder="When" datepicker-popup="dd-MM-yy" show-weeks="0" datepicker-options="dateOptions" data-ng-model="task.date">
+                    </div>
+                    <div class="control-group">
+                        <label>Assign To</label>
+                        <input type="text" class="input" placeholder="Who" data-ng-model="task.who">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary" data-ng-click="AddTask(task)">Save changes</button>
+                        <button type="reset" class="btn" ng-click="taskEditorEnabled=!taskEditorEnabled">Cancel</button>
+                    </div>
+                    <!---->
+                        <!---->
+                        <!--<button type="submit" data-ng-click="AddTask(task)" data-ng-show="task.name" class="btn btn-primary">Post</button>-->
+                </fieldset>
+            </form>
+       </div>
 
+
+    <ul class="unstyled">
+            <li ng-repeat="task in project.tasks | orderBy:'date':false"">
+                <div class="span6">{{ task.name }} </div>
+                <div class="span3"><span am-time-ago="task.date"></span></div>
+                <div class="span3">{{ task.who }}</span></div>
+            </li>
+        </ul>
     </div>
 
     <div class="span4">
 
-        <h5>Files</h5>
+        <div class="span12">
+            <ul class="breadcrumb">
+                <li>Files <i class="fa fa-upload" ng-click="filesEditorEnabled=!filesEditorEnabled"></i></li>
+            </ul>
+        </div>
 
     </div>
 
