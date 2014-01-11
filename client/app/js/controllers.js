@@ -237,6 +237,7 @@ angular.module('myApp.controllers', [])
 
          function($scope, KaboodleProjectInstances, $routeParams, $location) {
 
+            filepicker.setKey('A329Dm8m7T5ies2SEBTtjz');
             $scope.newsItems = [];
             $scope.tasks = [];
             $scope.project = {};

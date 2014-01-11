@@ -93,9 +93,12 @@
 
         <div class="span12">
             <ul class="breadcrumb">
-                <li>Files <i class="fa fa-upload" ng-click="filesEditorEnabled=!filesEditorEnabled"></i></li>
+                <li>Files</li>
             </ul>
         </div>
+
+        <div  style="text-align:center" filepicker path="/blueprintname/" callback="callBackToExecuteAfterUpload(file)" multiple=false>Add Files</div>
+
 
     </div>
 

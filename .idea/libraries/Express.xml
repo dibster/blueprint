@@ -2,13 +2,13 @@
   <library name="Express" type="javaScript">
     <properties>
       <sourceFilesUrls>
-        <item url="file://$PROJECT_DIR$/server/node_modules/express" />
         <item url="file://$PROJECT_DIR$/server/node_modules/express/node_modules" />
+        <item url="file://$PROJECT_DIR$/server/node_modules/express" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/server/node_modules/express" />
       <root url="file://$PROJECT_DIR$/server/node_modules/express/node_modules" />
+      <root url="file://$PROJECT_DIR$/server/node_modules/express" />
     </CLASSES>
     <SOURCES />
   </library>
