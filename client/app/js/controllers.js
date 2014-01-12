@@ -237,7 +237,9 @@ angular.module('myApp.controllers', [])
 
          function($scope, KaboodleProjectInstances, $routeParams, $location) {
 
+            // bad , but its just a demo .....
             filepicker.setKey('A329Dm8m7T5ies2SEBTtjz');
+
             $scope.newsItems = [];
             $scope.tasks = [];
             $scope.project = {};
@@ -292,6 +294,24 @@ angular.module('myApp.controllers', [])
                     console.log('saved');
                 });
             }
+
+            $scope.AddAssets = function(uploadedassets) {
+                if (!(_.has($scope.project, "assets")))
+                {
+                    console.log('creating new Assets object on the project');
+                    $scope.project.assets = uploadedassets;
+                }
+                else
+                {
+                    $scope.project.assets = _.union($scope.project.assets,uploadedassets);
+                }
+
+                this.project._id = $routeParams.id;
+                this.project.$update(function(response) {
+                    console.log('saved');
+                });
+            }
+
         };
 
     }])

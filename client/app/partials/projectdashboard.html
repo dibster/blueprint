@@ -81,7 +81,7 @@
 
 
     <ul class="unstyled">
-            <li ng-repeat="task in project.tasks | orderBy:'date':false"">
+            <li ng-repeat="task in project.tasks | orderBy:'date':false">
                 <div class="span6">{{ task.name }} </div>
                 <div class="span3"><span am-time-ago="task.date"></span></div>
                 <div class="span3">{{ task.who }}</span></div>
@@ -97,8 +97,15 @@
             </ul>
         </div>
 
-        <div  style="text-align:center" filepicker path="/blueprintname/" callback="callBackToExecuteAfterUpload(file)" multiple=false>Add Files</div>
+        <ul class="unstyled">
+            <li ng-repeat="asset in project.assets">
+                <div class="span2"><i class="fa fa-file"></i> </div>
+                <div class="span8"><a href="{{asset.url}}">{{asset.filename}}</a> </div>
+                <div class="span2"><i class="fa fa-download"></i> </div>
+            </li>
+        </ul>
 
+        <div  style="text-align:center" filepicker path="/blueprintname/" callback="AddAssets(file)" multiple="true">Add Files</div>
 
     </div>
 
