@@ -331,7 +331,6 @@ angular.module('myApp.controllers', [])
 
         $scope.projectFieldsForCreate = function(selectedObject) {
             $scope.selectedType = selectedObject.name;
-            console.log($scope.selectedType);
             $scope.formItems = selectedObject.views[0].fields;
             KaboodleProjectInstances.query(function(response) {
                 $scope.projectInstances = response;
@@ -339,14 +338,12 @@ angular.module('myApp.controllers', [])
         };
 
         $scope.saveFormDetails = function(formData) {
-            console.log($scope.selectedType);
             var myRecord = PrepareRecord.getRecord(formData,$scope.selectedType);
-            console.log(myRecord);
             var kaboodleproject = new KaboodleProjectInstances(myRecord);
-            $scope.projectInstances.push(myRecord);
+
             $scope.data.project = kaboodleproject.$save(function(response) {
-                return response;
-                console.log(response);
+                $scope.projectInstances.push(response);
+//                return response;
             });
         };
 
