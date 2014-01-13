@@ -94,6 +94,8 @@ angular.module('myApp.controllers', [])
 
         $scope.copySelectedObject = function(selectedItem) {
             this.object.fields = selectedItem.fields;
+            $scope.objectId = $routeParams.id;
+            console.log( 'in copy ' + $scope.objectId);
             this.object.views = selectedItem.views;
             this.object.$update(function(response) {
                 console.log('saved');
@@ -344,6 +346,7 @@ angular.module('myApp.controllers', [])
             $scope.projectInstances.push(myRecord);
             $scope.data.project = kaboodleproject.$save(function(response) {
                 return response;
+                console.log(response);
             });
         };
 

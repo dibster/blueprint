@@ -35,8 +35,11 @@
 
         <table class="table table-condensed">
             <tr>
-                <th style="width: 30%">Project Name</th>
-                <th style="width: 30%">Project Type</th>
+                <th style="width: 40%">Name</th>
+                <th style="width: 15%">Type</th>
+                <th style="width: 15%">News</th>
+                <th style="width: 15%">Files</th>
+                <th style="width: 15%">Tasks</th>
 
 
             </tr>
@@ -46,6 +49,15 @@
                 </td>
                 <td>
                     {{ object.Type }}
+                </td>
+                <td >
+                    {{ object.news.length }}
+                </td>
+                <td >
+                    {{ object.assets.length }}
+                </td>
+                <td>
+                    {{ object.tasks.length }}
                 </td>
 
             </tr>

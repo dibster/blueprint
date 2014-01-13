@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="51ac86f2-a104-4d81-a8bd-7f817e81fc09" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/js/controllers.js" afterPath="$PROJECT_DIR$/client/app/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/index.html" afterPath="$PROJECT_DIR$/client/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/partials/objectedit.html" afterPath="$PROJECT_DIR$/client/app/partials/objectedit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/partials/projectdashboard.html" afterPath="$PROJECT_DIR$/client/app/partials/projectdashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/partials/projects.html" afterPath="$PROJECT_DIR$/client/app/partials/projects.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="blueprint.iws" />
@@ -31,17 +33,23 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="46" selection-start="1707" selection-end="1707" vertical-scroll-proportion="-20.51724" vertical-offset="285" max-vertical-offset="1220">
+            <state line="45" column="45" selection-start="1801" selection-end="1801" vertical-scroll-proportion="-20.896551" vertical-offset="294" max-vertical-offset="1240">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
+      <file leaf-file-name="projects.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/partials/projects.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="313" column="0" selection-start="10656" selection-end="10656" vertical-scroll-proportion="0.6529284" vertical-offset="5658" max-vertical-offset="7120">
-              <folding />
+            <state line="58" column="19" selection-start="2585" selection-end="2585" vertical-scroll-proportion="-19.586206" vertical-offset="592" max-vertical-offset="1480">
+              <folding>
+                <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#2;n#tr#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#3;n#tr#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#4;n#tr#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,7 +57,7 @@
       <file leaf-file-name="projectdashboard.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/partials/projectdashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="35" selection-start="4046" selection-end="4046" vertical-scroll-proportion="-19.068966" vertical-offset="1487" max-vertical-offset="2380">
+            <state line="32" column="22" selection-start="1191" selection-end="1191" vertical-scroll-proportion="-22.068966" vertical-offset="0" max-vertical-offset="2380">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#3;n#!!top" expanded="true" />
@@ -61,7 +69,16 @@
       <file leaf-file-name="directives.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/js/directives.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1220">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1220">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="348" column="38" selection-start="12073" selection-end="12073" vertical-scroll-proportion="0.76717114" vertical-offset="6301" max-vertical-offset="7180">
               <folding />
             </state>
           </provider>
@@ -70,11 +87,8 @@
       <file leaf-file-name="objectedit.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/partials/objectedit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="14" selection-start="563" selection-end="563" vertical-scroll-proportion="-5.4545455" vertical-offset="0" max-vertical-offset="1600">
-              <folding>
-                <marker date="1389437505798" expanded="true" signature="149:573" placeholder="..." />
-                <marker date="1389437505798" expanded="true" signature="597:720" placeholder="..." />
-              </folding>
+            <state line="18" column="36" selection-start="635" selection-end="635" vertical-scroll-proportion="-12.413794" vertical-offset="0" max-vertical-offset="1620">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -82,7 +96,7 @@
       <file leaf-file-name="objectviews.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/partials/objectviews.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="20" selection-start="2524" selection-end="2524" vertical-scroll-proportion="-6.428571" vertical-offset="540" max-vertical-offset="1500">
+            <state line="54" column="20" selection-start="2524" selection-end="2524" vertical-scroll-proportion="-16.310345" vertical-offset="607" max-vertical-offset="1500">
               <folding />
             </state>
           </provider>
@@ -91,7 +105,7 @@
       <file leaf-file-name="allobjects.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/partials/allobjects.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="129" selection-start="1283" selection-end="1283" vertical-scroll-proportion="-22.965517" vertical-offset="14" max-vertical-offset="920">
+            <state line="33" column="18" selection-start="1104" selection-end="1117" vertical-scroll-proportion="-20.965517" vertical-offset="52" max-vertical-offset="920">
               <folding />
             </state>
           </provider>
@@ -131,23 +145,22 @@
         <option value="$PROJECT_DIR$/server/tests/kaboodleprojects.test.js" />
         <option value="$PROJECT_DIR$/client/app/js/services.js" />
         <option value="$PROJECT_DIR$/server/app/controllers/kaboodle/kaboodleprojects.js" />
-        <option value="$PROJECT_DIR$/client/app/partials/projects.html" />
         <option value="$PROJECT_DIR$/client/app/js/app.js" />
         <option value="$PROJECT_DIR$/client/app/partials/allobjects.html" />
-        <option value="$PROJECT_DIR$/client/app/partials/objectedit.html" />
         <option value="$PROJECT_DIR$/client/app/partials/objectviews.html" />
         <option value="$PROJECT_DIR$/client/app/js/directives.js" />
-        <option value="$PROJECT_DIR$/client/app/index.html" />
         <option value="$PROJECT_DIR$/client/app/partials/projectdashboard.html" />
+        <option value="$PROJECT_DIR$/client/app/partials/objectedit.html" />
+        <option value="$PROJECT_DIR$/client/app/index.html" />
+        <option value="$PROJECT_DIR$/client/app/partials/projects.html" />
         <option value="$PROJECT_DIR$/client/app/js/controllers.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="49" />
-    <option name="y" value="24" />
-    <option name="width" value="1887" />
-    <option name="height" value="1092" />
+    <option name="width" value="1871" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -340,14 +353,14 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="218" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="237" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="218" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="218" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/server/app/controllers/admin" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="244" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1142" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1142" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1142" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="244" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="237" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -386,6 +399,14 @@
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
       <method />
     </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -396,23 +417,15 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -575,7 +588,11 @@
       <created>1389472877240</created>
       <updated>1389472877240</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="have file upload directive to filepicker.io. Pretty Cool :-)">
+      <created>1389548302269</created>
+      <updated>1389548302269</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -599,15 +616,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="49" y="24" width="1887" height="1092" extended-state="0" />
+    <frame x="49" y="0" width="1871" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44572026" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985386" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24350132" sideWeight="0.67014617" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24558587" sideWeight="0.67014617" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38351983" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985386" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -617,6 +633,8 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="CSS Styles" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32953367" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24986738" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -636,10 +654,10 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985386" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24562334" sideWeight="0.67014617" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24986738" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24350132" sideWeight="0.67014617" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24986738" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -726,11 +744,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="66980" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/partials/projects.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="7" selection-start="1107" selection-end="1107" vertical-scroll-proportion="0.082392775" vertical-offset="347" max-vertical-offset="1240" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/app/controllers/kaboodle/kaboodleprojects.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="69" selection-start="1278" selection-end="1278" vertical-scroll-proportion="0.0" vertical-offset="332" max-vertical-offset="1940">
@@ -738,54 +751,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/partials/objectedit.html">
+    <entry file="file://$PROJECT_DIR$/client/app/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="14" selection-start="563" selection-end="563" vertical-scroll-proportion="-5.4545455" vertical-offset="0" max-vertical-offset="1600">
-          <folding>
-            <marker date="1389437505798" expanded="true" signature="149:573" placeholder="..." />
-            <marker date="1389437505798" expanded="true" signature="597:720" placeholder="..." />
-          </folding>
-        </state>
+        <state line="19" column="34" selection-start="482" selection-end="482" vertical-scroll-proportion="0.4064171" vertical-offset="0" max-vertical-offset="935" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/js/directives.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1220">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/partials/allobjects.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="129" selection-start="1283" selection-end="1283" vertical-scroll-proportion="-22.965517" vertical-offset="14" max-vertical-offset="920">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/partials/objectviews.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="20" selection-start="2524" selection-end="2524" vertical-scroll-proportion="-6.428571" vertical-offset="540" max-vertical-offset="1500">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="34" selection-start="482" selection-end="482" vertical-scroll-proportion="0.4064171" vertical-offset="0" max-vertical-offset="935">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="46" selection-start="1707" selection-end="1707" vertical-scroll-proportion="-20.51724" vertical-offset="285" max-vertical-offset="1220">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1220">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/partials/projectdashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="35" selection-start="4046" selection-end="4046" vertical-scroll-proportion="-19.068966" vertical-offset="1487" max-vertical-offset="2380">
+        <state line="32" column="22" selection-start="1191" selection-end="1191" vertical-scroll-proportion="-22.068966" vertical-offset="0" max-vertical-offset="2380">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#3;n#!!top" expanded="true" />
@@ -793,9 +773,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/partials/objectviews.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="20" selection-start="2524" selection-end="2524" vertical-scroll-proportion="-16.310345" vertical-offset="607" max-vertical-offset="1500">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/partials/objectedit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="36" selection-start="635" selection-end="635" vertical-scroll-proportion="-12.413794" vertical-offset="0" max-vertical-offset="1620">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/partials/allobjects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="18" selection-start="1104" selection-end="1117" vertical-scroll-proportion="-20.965517" vertical-offset="52" max-vertical-offset="920">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="45" selection-start="1801" selection-end="1801" vertical-scroll-proportion="-20.896551" vertical-offset="294" max-vertical-offset="1240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/partials/projects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="19" selection-start="2585" selection-end="2585" vertical-scroll-proportion="-19.586206" vertical-offset="592" max-vertical-offset="1480">
+          <folding>
+            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#2;n#tr#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#3;n#tr#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#4;n#tr#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="313" column="0" selection-start="10656" selection-end="10656" vertical-scroll-proportion="0.6529284" vertical-offset="5658" max-vertical-offset="7120">
+        <state line="348" column="38" selection-start="12073" selection-end="12073" vertical-scroll-proportion="0.76717114" vertical-offset="6301" max-vertical-offset="7180">
           <folding />
         </state>
       </provider>
