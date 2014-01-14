@@ -43,7 +43,8 @@
 
 
             </tr>
-            <tr ng-repeat="object in projectInstances| filter:data.selectedType">
+            {{type.name}}
+            <tr ng-repeat="object in projectInstances| filter:type.name">
                 <td>
                     <a data-ng-href="#/projects/{{object._id}}/edit">{{object.Title}}</a>
                 </td>

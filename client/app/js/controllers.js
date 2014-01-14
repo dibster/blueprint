@@ -245,6 +245,7 @@ angular.module('myApp.controllers', [])
             $scope.newsItems = [];
             $scope.tasks = [];
             $scope.project = {};
+            $scope.currentProjectId = $routeParams.id;
             $scope.dateOptions = {
                  'year-format': "'yy'",
                  'starting-day': 1
@@ -252,6 +253,7 @@ angular.module('myApp.controllers', [])
             $scope.findOne = function() {
             KaboodleProjectInstances.get({id : $routeParams.id},function(project) {
                 $scope.project = project;
+
             });
 
             $scope.AddNewsItem = function(newsItem) {
@@ -319,32 +321,48 @@ angular.module('myApp.controllers', [])
     }])
 
 
-    .controller('ProjectsCtrl', ['$scope', 'KaboodleProjects','PrepareRecord', 'KaboodleProjectInstances', function($scope, KaboodleProjects,PrepareRecord, KaboodleProjectInstances) {
-        $scope.data = {};
-        $scope.formItems = {};
-        $scope.selectedType = "";
+    .controller('ProjectCopyCtrl', ['$scope', 'KaboodleProjects','PrepareRecord', 'KaboodleProjectInstances', function($scope, KaboodleProjects,PrepareRecord, KaboodleProjectInstances) {
+        $scope.selectedProject = {};
         $scope.projectIinstances = {};
 
-        KaboodleProjects.query(function(response) {
-            $scope.data.projects = response;
+        KaboodleProjectInstances.query(function(response) {
+            $scope.projectInstances = response;
         });
 
-        $scope.projectFieldsForCreate = function(selectedObject) {
-            $scope.selectedType = selectedObject.name;
-            $scope.formItems = selectedObject.views[0].fields;
-            KaboodleProjectInstances.query(function(response) {
-                $scope.projectInstances = response;
+        $scope.getProjectSummary = function(selectedProject) {
+            console.log(selectedProject._id);
+            KaboodleProjectInstances.get({id : selectedProject._id},function(project) {
+                $scope.selectedProject = project;
             });
-        };
+        }
+    }])
 
-        $scope.saveFormDetails = function(formData) {
-            var myRecord = PrepareRecord.getRecord(formData,$scope.selectedType);
-            var kaboodleproject = new KaboodleProjectInstances(myRecord);
+.controller('ProjectsCtrl', ['$scope', 'KaboodleProjects','PrepareRecord', 'KaboodleProjectInstances', function($scope, KaboodleProjects,PrepareRecord, KaboodleProjectInstances) {
+    $scope.data = {};
+    $scope.formItems = {};
+    $scope.selectedType = "";
+    $scope.projectIinstances = {};
 
-            $scope.data.project = kaboodleproject.$save(function(response) {
-                $scope.projectInstances.push(response);
+    KaboodleProjects.query(function(response) {
+        $scope.data.projects = response;
+    });
+
+    $scope.projectFieldsForCreate = function(selectedObject) {
+        $scope.selectedType = selectedObject.name;
+        $scope.formItems = selectedObject.views[0].fields;
+        KaboodleProjectInstances.query(function(response) {
+            $scope.projectInstances = response;
+        });
+    };
+
+    $scope.saveFormDetails = function(formData) {
+        var myRecord = PrepareRecord.getRecord(formData,$scope.selectedType);
+        var kaboodleproject = new KaboodleProjectInstances(myRecord);
+
+        $scope.data.project = kaboodleproject.$save(function(response) {
+            $scope.projectInstances.push(response);
 //                return response;
-            });
-        };
+        });
+    };
 
-    }]);
+}]);
