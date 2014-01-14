@@ -321,20 +321,53 @@ angular.module('myApp.controllers', [])
     }])
 
 
-    .controller('ProjectCopyCtrl', ['$scope', 'KaboodleProjects','PrepareRecord', 'KaboodleProjectInstances', function($scope, KaboodleProjects,PrepareRecord, KaboodleProjectInstances) {
+    .controller('ProjectCopyCtrl', ['$scope', '$routeParams','KaboodleProjects','PrepareRecord', 'KaboodleProjectInstances', function($scope,$routeParams, KaboodleProjects,PrepareRecord, KaboodleProjectInstances) {
         $scope.selectedProject = {};
         $scope.projectIinstances = {};
+
+        $scope.skipWeekends = true;
 
         KaboodleProjectInstances.query(function(response) {
             $scope.projectInstances = response;
         });
 
         $scope.getProjectSummary = function(selectedProject) {
-            console.log(selectedProject._id);
             KaboodleProjectInstances.get({id : selectedProject._id},function(project) {
                 $scope.selectedProject = project;
+                // add selected property to object, makes it easier to use when copying
+                _.each($scope.selectedProject.tasks,function(task) {
+                    task.selected=true;
+                })
+                _.each($scope.selectedProject.assets,function(asset) {
+                    asset.selected=false;
+                })
+
             });
         }
+
+        $scope.copyContent = function() {
+            var newtasks = _.where($scope.selectedProject.tasks, {selected : true});
+            var newassets = _.where($scope.selectedProject.assets, {selected : true});
+            console.log($routeParams.id);
+            // should be API function but will use existing rest for now
+
+            // get current project
+
+            KaboodleProjectInstances.get({id : $routeParams.id},function(project) {
+                var targetProject = project;
+                // add selected property to object, makes it easier to use when copying
+                targetProject.tasks = newtasks;
+                targetProject.assets = newassets;
+
+                targetProject.$update(function(response) {
+                    console.log('copied tasks to project');
+                });
+
+            });
+
+
+        }
+
     }])
 
 .controller('ProjectsCtrl', ['$scope', 'KaboodleProjects','PrepareRecord', 'KaboodleProjectInstances', function($scope, KaboodleProjects,PrepareRecord, KaboodleProjectInstances) {
