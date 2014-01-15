@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="51ac86f2-a104-4d81-a8bd-7f817e81fc09" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/js/controllers.js" afterPath="$PROJECT_DIR$/client/app/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/index.html" afterPath="$PROJECT_DIR$/client/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/partials/projectcopy.html" afterPath="$PROJECT_DIR$/client/app/partials/projectcopy.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="blueprint.iws" />
@@ -64,7 +62,25 @@
       <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="343" column="0" selection-start="11837" selection-end="11837" vertical-scroll-proportion="0.14221218" vertical-offset="6734" max-vertical-offset="8140">
+            <state line="365" column="19" selection-start="12799" selection-end="12799" vertical-scroll-proportion="0.70654625" vertical-offset="6674" max-vertical-offset="8200">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/js/services.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="61" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="13" selection-start="964" selection-end="982" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
               <folding />
             </state>
           </provider>
@@ -512,7 +528,11 @@
       <created>1389689340021</created>
       <updated>1389689340021</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Copying now works, select task and Assets, added to new project">
+      <created>1389742203536</created>
+      <updated>1389742203536</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -594,7 +614,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="added kaboodletypes server" />
     <MESSAGE value="still working on Object Edit" />
     <MESSAGE value="Object Edit Get working" />
     <MESSAGE value="Create new Object seems ok" />
@@ -619,7 +638,8 @@
     <MESSAGE value="some changes to the object Edit page" />
     <MESSAGE value="Fixed new project, goto select page" />
     <MESSAGE value="Copy project, it just gets better :-)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Copy project, it just gets better :-)" />
+    <MESSAGE value="Copying now works, select task and Assets, added to new project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Copying now works, select task and Assets, added to new project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -637,11 +657,6 @@
     <entry file="file://$PROJECT_DIR$/client/scripts/web-server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="5000" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/js/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="61" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/lib/ui-angular/ui-bootstrap-0.7.0.js">
@@ -680,13 +695,6 @@
     <entry file="file://$PROJECT_DIR$/server/tests/projecttemplates.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="0" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0" vertical-offset="46" max-vertical-offset="4040">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="45" selection-start="902" selection-end="902" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
           <folding />
         </state>
       </provider>
@@ -739,9 +747,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/js/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="61" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="13" selection-start="964" selection-end="982" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="343" column="0" selection-start="11837" selection-end="11837" vertical-scroll-proportion="0.14221218" vertical-offset="6734" max-vertical-offset="8140">
+        <state line="365" column="19" selection-start="12799" selection-end="12799" vertical-scroll-proportion="0.70654625" vertical-offset="6674" max-vertical-offset="8200">
           <folding />
         </state>
       </provider>

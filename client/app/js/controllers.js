@@ -321,7 +321,7 @@ angular.module('myApp.controllers', [])
     }])
 
 
-    .controller('ProjectCopyCtrl', ['$scope', '$routeParams','KaboodleProjects','PrepareRecord', 'KaboodleProjectInstances', function($scope,$routeParams, KaboodleProjects,PrepareRecord, KaboodleProjectInstances) {
+    .controller('ProjectCopyCtrl', ['$scope', '$routeParams', '$location','KaboodleProjects','PrepareRecord', 'KaboodleProjectInstances', function($scope,$routeParams, $location, KaboodleProjects,PrepareRecord, KaboodleProjectInstances) {
         $scope.selectedProject = {};
         $scope.projectIinstances = {};
 
@@ -360,8 +360,11 @@ angular.module('myApp.controllers', [])
                 targetProject.assets = newassets;
 
                 targetProject.$update(function(response) {
-                    console.log('copied tasks to project');
+                    console.log('copied tasks and assets to project');
+                    $location.path( "/projects/"+ $routeParams.id + "/edit");
+
                 });
+
 
             });
 
