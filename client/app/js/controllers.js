@@ -288,9 +288,10 @@ angular.module('myApp.controllers', [])
                 // append user and date to the task as a service (and maybe a slug)
                 var user = 1;
                 var datetimeNow = new Date();
-                var userTimeStamp = {'u' : user, 'cd' : datetimeNow};
+                var taststatus = 'Open';
+                var baseTaskData = {'u' : user, 'cd' : datetimeNow, 'taskStatus': taststatus};
                 // add timestamp to task
-                var newTask = _.extend(task, userTimeStamp);
+                var newTask = _.extend(task, baseTaskData);
                 console.log(newTask);
                 $scope.project.tasks.push(newTask);
                 this.project._id = $routeParams.id;
@@ -327,9 +328,21 @@ angular.module('myApp.controllers', [])
 
         $scope.skipWeekends = true;
 
+        $scope.alerts = [
+            { type: 'success', msg: 'Select a suitable project to copy, then choose the tasks, assets, and team you need and click Copy' },
+        ];
+
         KaboodleProjectInstances.query(function(response) {
             $scope.projectInstances = response;
         });
+
+        $scope.closeAlert = function(index) {
+            $scope.alerts.splice(index, 1);
+        };
+
+        $scope.addAlert = function() {
+            $scope.alerts.push({msg: "Select Tasks, Assets and Team from the area on the left"});
+        };
 
         $scope.getProjectSummary = function(selectedProject) {
             KaboodleProjectInstances.get({id : selectedProject._id},function(project) {
@@ -341,6 +354,7 @@ angular.module('myApp.controllers', [])
                 _.each($scope.selectedProject.assets,function(asset) {
                     asset.selected=false;
                 })
+                $scope.alerts.push({msg: "Select Tasks, Assets and Team from the area on the left"});
 
             });
         }

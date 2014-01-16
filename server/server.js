@@ -46,6 +46,7 @@ app.delete('/api/objects/:id', objects.remove);
 
 app.get('/api/kaboodleprojects', kaboodleprojects.findAll);
 app.get('/api/kaboodleprojects/:id', kaboodleprojects.findById);
+app.get('/api/kaboodleprojectsforuser/:id', kaboodleprojects.findByUser);
 app.post('/api/kaboodleprojects', kaboodleprojects.add);
 app.put('/api/kaboodleprojects/:id', kaboodleprojects.update);
 app.delete('/api/kaboodleprojects/:id', kaboodleprojects.remove);

@@ -6,7 +6,7 @@
         <button type="button" class="btn btn-warning pull-right" data-ng-click="copyContent()"><i class="fa fa-copy"></i> Copy</button>
     </div>
     <div class="span8">
-
+        <alert ng-repeat="alert in alerts" type = "alert.type" close="closeAlert($index)"> {{ alert.msg }}</alert>
     </div>
 </div>
 

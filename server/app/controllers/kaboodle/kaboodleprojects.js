@@ -32,9 +32,19 @@ exports.findAll = function(req, res) {
 
 exports.findById = function(req, res) {
     var id = req.params.id;
-    console.log('Retrieving object: ' + id);
+    console.log('Retrieving projects by User: ' + id);
     db.collection('kaboodleprojects', function(err, collection) {
         collection.findOne({'_id': new BSON.ObjectID(id)}, function(err, item) {
+            res.send(item);
+        });
+    });
+};
+
+exports.findByUser = function(req, res) {
+    var id = req.params.id;
+    console.log('Retrieving object: ' + id);
+    db.collection('kaboodleprojects', function(err, collection) {
+        collection.find({ 'tasks.name': id }).toArray(function(err, item) {
             res.send(item);
         });
     });
