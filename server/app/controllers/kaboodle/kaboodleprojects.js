@@ -40,11 +40,13 @@ exports.findById = function(req, res) {
     });
 };
 
+// TODO get just the data we need once I have figured that out
+
 exports.findByUser = function(req, res) {
     var id = req.params.id;
     console.log('Retrieving object: ' + id);
     db.collection('kaboodleprojects', function(err, collection) {
-        collection.find({ 'tasks.name': id }).toArray(function(err, item) {
+        collection.find({ 'tasks.who': id }).toArray(function(err, item) {
             res.send(item);
         });
     });
