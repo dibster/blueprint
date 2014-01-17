@@ -89,7 +89,7 @@ angular.module('myApp.controllers', [])
             });
             $scope.newfield = {};
             $scope.newfield.req = 'n';
-            $scope.newfield.type = 'Text';
+   $timeout(function() { $scope.fetchFeed(feed); }, $scope.refreshInterval * 1000);         $scope.newfield.type = 'Text';
         };
 
         $scope.copySelectedObject = function(selectedItem) {
@@ -394,14 +394,16 @@ angular.module('myApp.controllers', [])
 
     }])
 
-    .controller('MyProjectDashboardCtrl', ['$scope', '$routeParams', '$location','KaboodleProjects', 'MyKaboodleProjectInstances', function($scope,$routeParams, $location, KaboodleProjects, MyKaboodleProjectInstances) {
+    .controller('MyProjectDashboardCtrl', ['$scope', '$routeParams', '$location', '$timeout','KaboodleProjects', 'MyKaboodleProjectInstances', function($scope,$routeParams, $location, $timeout,  KaboodleProjects, MyKaboodleProjectInstances) {
 
         $scope.projectIinstances = {};
         $scope.MyNews = [];
         $scope.MyTasks = [];
         $scope.MyAssets = [];
         $scope.ShowHideButton = true;
+        $scope.Refresh = false;
 
+        $scope.refreshInterval = 60;
 
         $scope.skipWeekends = true;
 
@@ -409,16 +411,22 @@ angular.module('myApp.controllers', [])
             { type: 'success', msg: '4 new Assets, 6 new tasks, and 14 news Items since your visit' },
         ];
 
-        MyKaboodleProjectInstances.query({id : $routeParams.id},function(projects) {
+
+        $scope.fetchMyProjects = function() {
+            MyKaboodleProjectInstances.query({id : $routeParams.id},function(projects) {
             $scope.projectInstances = projects;
-            $scope.MyNews = _.flatten((projects,'news'));
-            $scope.MyTasks = _.flatten(_.pluck(projects,'tasks'));
-            $scope.MyAssets = _.flatten(_.pluck(projects,'assets'));
 
-            console.log($scope.MyAssets);
-            console.log(projects);
+            // uunderscore is pretty cool, may be supid what i am soinf but, get all the arrays from all returned , then flatten them into a
+            // single array,then remove any undefined itsms
 
-        });
+            $scope.MyNews = _.compact(_.flatten(_.pluck(projects,'news')));
+            $scope.MyTasks = _.compact(_.flatten(_.pluck(projects,'tasks')));
+            $scope.MyAssets = _.compact(_.flatten(_.pluck(projects,'assets')));
+            if ($scope.Refresh) {
+            $timeout(function() { $scope.fetchMyProjects(); }, $scope.refreshInterval * 1000);
+            }
+         });
+        };
 
         $scope.hideProjects = function() {
             $scope.ShowHideButton = false;

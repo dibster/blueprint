@@ -1,7 +1,8 @@
-<div class="row-fluid">
+<div class="row-fluid" data-ng-init="fetchMyProjects()">
     <div class="span4">
         <button class="btn btn-default" data-ng-show="ShowHideButton" data-ng-click="hideProjects()" >Hide Projects</button>
         <button class="btn btn-default" data-ng-show="!ShowHideButton" data-ng-click="showProjects()" >Show Projects</button>
+        <br>
     </div>
 
     <div class="span8">
