@@ -9,7 +9,7 @@
             {"name" : "Start", "type" : "Date","req" : "n"},
             {"name" : "End", "type" : "Date","req" : "n"},
             {"name" : "Status", "type" : "List","req" : "n","values" :["a","b","c"]},
-            {"name" : "Owner", "type" : "user","req" : "n"}
+            {"name" : "Owner", "type" : "Text","req" : "n"}
         ],
         "views" : [{ "name" : "Create",
             "fields" :  [{"name" : "Title", "type" : "Text","req" : "y"},
@@ -17,7 +17,7 @@
                 {"name" : "Start", "type" : "Date","req" : "n"},
                 {"name" : "End", "type" : "Date","req" : "n"},
                 {"name" : "Status", "type" : "List","req" : "n","values" :["a","b","c"]},
-                {"name" : "Owner", "type" : "user","req" : "n"}]
+                {"name" : "Owner", "Text" : "user","req" : "n"}]
         },
             { "name" : "Show",
                 "fields" :  [{"name" : "Title", "type" : "Text","req" : "y"},
@@ -25,7 +25,7 @@
                     {"name" : "Start", "type" : "Date","req" : "n"},
                     {"name" : "End", "type" : "Date","req" : "n"},
                     {"name" : "Status", "type" : "List","req" : "n","values" :["a","b","c"]},
-                    {"name" : "Owner", "type" : "user","req" : "n"}]
+                    {"name" : "Owner", "Text" : "user","req" : "n"}]
             }]
     },
     {

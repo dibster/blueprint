@@ -29,6 +29,9 @@ angular.module('myApp', [
       .when('/projectcopy/:id', {
           templateUrl: 'partials/projectcopy.html',
           controller: 'ProjectCopyCtrl'})
+      .when('/myprojectdashboard/:id', {
+          templateUrl: 'partials/myProjectDashboard.html',
+          controller: 'MyProjectDashboardCtrl'})
       .when('/projects/:id/edit', {
           templateUrl: 'partials/projectdashboard.html',
           controller: 'ProjectDashboardCtrl'})

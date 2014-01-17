@@ -228,8 +228,6 @@ describe('API', function() {
                     if (err) {
                         throw err;
                     }
-                    console.log(res.body);
-                    console.log('dave test');
                     res.body[0].should.have.property('Title');
                     res.body[0].tasks.length.should.eql(4);
                 });

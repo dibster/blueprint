@@ -1,0 +1,128 @@
+<div class="row-fluid">
+    <div class="span4">
+        <button class="btn btn-default" data-ng-show="ShowHideButton" data-ng-click="hideProjects()" >Hide Projects</button>
+        <button class="btn btn-default" data-ng-show="!ShowHideButton" data-ng-click="showProjects()" >Show Projects</button>
+    </div>
+
+    <div class="span8">
+        <alert ng-repeat="alert in alerts" type = "alert.type" close="closeAlert($index)"> {{ alert.msg }}</alert>
+    </div>
+
+
+</div>
+
+<div class="row-fluid" data-ng-show="ShowHideButton"  >
+
+    <div class="span12">
+
+        <table class="table table-condensed">
+            <tr>
+                <th style="width: 25%">Project</th>
+                <th style="width: 15%">Type</th>
+                <th style="width: 15%">News</th>
+                <th style="width: 15%">Files</th>
+                <th style="width: 15%">Tasks</th>
+                <th style="width: 15%">Progress</th>
+            </tr>
+            {{type.name}}
+            <tr ng-repeat="object in projectInstances| filter:type.name">
+                <td>
+                    <a data-ng-href="#/projects/{{object._id}}/edit">{{object.Title}}</a>
+                </td>
+                <td>
+                    {{ object.Type }}
+                </td>
+                <td >
+                    {{ object.news.length }}
+                </td>
+                <td >
+                    {{ object.assets.length }}
+                </td>
+                <td>
+                    <span>{{object.tasks.length}}</span>
+                </td>
+                <td>
+                    <div class="progress progress-success">
+                        <div class="bar" style="width: 60%;"></div>
+                    </div>
+
+                </td>
+
+            </tr>
+        </table>
+    </div>
+
+
+
+</div>
+
+<div class="row-fluid">
+    <div class="span4">
+        <h3>Activity</h3>
+    </div>
+
+
+</div>
+
+<div class="row-fluid">
+
+    <div class="span4">
+        <div class="span12">
+            <ul class="breadcrumb">
+                <li>News</li>
+            </ul>
+        </div>
+
+
+
+        <div class="row-fluid">
+            <ul class="unstyled">
+                <li ng-repeat="news in MyNews | orderBy:'cd':true">
+                    <div class="span8">{{ news.item }} </div>
+                    <div class="span4">
+                        <span class="pull-right" am-time-ago="news.cd"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="span4">
+
+        <div class="span12">
+            <ul class="breadcrumb">
+                <li>Tasks</li>
+            </ul>
+        </div>
+
+        <ul class="unstyled">
+            <li ng-repeat="task in MyTasks | orderBy:'date':false">
+                <div class="span6">{{ task.name }} </div>
+                <div class="span3"><span am-time-ago="task.date"></span></div>
+                <div class="span3">{{ task.who }}</span></div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="span4">
+
+        <div class="span12">
+            <ul class="breadcrumb">
+                <li>Files</li>
+            </ul>
+        </div>
+
+        <ul class="unstyled">
+            <li ng-repeat="asset in MyAssets">
+                <div class="span2"><i class="fa fa-file"></i> </div>
+                <div class="span8"><a href="{{asset.url}}">{{asset.filename}}</a> </div>
+                <div class="span2"><i class="fa fa-download"></i> </div>
+            </li>
+        </ul>
+
+
+    </div>
+
+</div>
+
+

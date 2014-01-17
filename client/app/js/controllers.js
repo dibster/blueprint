@@ -362,6 +362,9 @@ angular.module('myApp.controllers', [])
         $scope.copyContent = function() {
             var newtasks = _.where($scope.selectedProject.tasks, {selected : true});
             var newassets = _.where($scope.selectedProject.assets, {selected : true});
+            console.log(newtasks);
+            console.log(newassets);
+
             console.log($routeParams.id);
             // should be API function but will use existing rest for now
 
@@ -370,8 +373,12 @@ angular.module('myApp.controllers', [])
             KaboodleProjectInstances.get({id : $routeParams.id},function(project) {
                 var targetProject = project;
                 // add selected property to object, makes it easier to use when copying
-                targetProject.tasks = newtasks;
-                targetProject.assets = newassets;
+                if (newtasks.length > 0) {
+                    targetProject.tasks = newtasks;
+                }
+                if (newassets.length > 0) {
+                    targetProject.assets = newassets;
+                }
 
                 targetProject.$update(function(response) {
                     console.log('copied tasks and assets to project');
@@ -385,6 +392,63 @@ angular.module('myApp.controllers', [])
 
         }
 
+    }])
+
+    .controller('MyProjectDashboardCtrl', ['$scope', '$routeParams', '$location','KaboodleProjects', 'MyKaboodleProjectInstances', function($scope,$routeParams, $location, KaboodleProjects, MyKaboodleProjectInstances) {
+
+        $scope.projectIinstances = {};
+        $scope.MyNews = [];
+        $scope.MyTasks = [];
+        $scope.MyAssets = [];
+        $scope.ShowHideButton = true;
+
+
+        $scope.skipWeekends = true;
+
+        $scope.alerts = [
+            { type: 'success', msg: '4 new Assets, 6 new tasks, and 14 news Items since your visit' },
+        ];
+
+        MyKaboodleProjectInstances.query({id : $routeParams.id},function(projects) {
+            $scope.projectInstances = projects;
+            $scope.MyNews = _.flatten((projects,'news'));
+            $scope.MyTasks = _.flatten(_.pluck(projects,'tasks'));
+            $scope.MyAssets = _.flatten(_.pluck(projects,'assets'));
+
+            console.log($scope.MyAssets);
+            console.log(projects);
+
+        });
+
+        $scope.hideProjects = function() {
+            $scope.ShowHideButton = false;
+            console.log($scope.showHideButton);
+        };
+
+        $scope.showProjects = function() {
+            $scope.ShowHideButton = true;
+        };
+
+        $scope.closeAlert = function(index) {
+            $scope.alerts.splice(index, 1);
+        };
+
+
+//        MyKaboodleProjectInstances.get({id : $routeParams.id},function(project) {
+//            console.log('getting users projects');
+//            $scope.project = project;
+//            // add selected property to object, makes it easier to use when copying
+//            _.each($scope.project.tasks,function(task) {
+//                task.selected=true;
+//            })
+//            _.each($scope.project.assets,function(asset) {
+//                asset.selected=false;
+//            })
+//            $scope.alerts.push({msg: "Select Tasks, Assets and Team from the area on the left"});
+//
+//        });
+
+   
     }])
 
 .controller('ProjectsCtrl', ['$scope', 'KaboodleProjects','PrepareRecord', 'KaboodleProjectInstances', function($scope, KaboodleProjects,PrepareRecord, KaboodleProjectInstances) {
