@@ -3,19 +3,20 @@
         "name" : "Project",
         "description": "Default Project Object ...",
         "type" : "Project",
-        "template" : "true",
+        "template" : true,
         "fields" : [{"name" : "Title", "type" : "Text","req" : "y"},
             {"name" : "Description", "type" : "Note","req" : "n"},
             {"name" : "Start", "type" : "Date","req" : "n"},
             {"name" : "End", "type" : "Date","req" : "n"},
             {"name" : "Status", "type" : "List","req" : "n","values" :["a","b","c"]},
-            {"name" : "Owner", "type" : "user","req" : "n"}
+            {"name" : "Owner", "type" : "Text","req" : "n"}
         ],
         "views" : [{ "name" : "Create",
             "fields" :  [{"name" : "Title", "type" : "Text","req" : "y"},
                 {"name" : "Description", "type" : "Note","req" : "n"},
                 {"name" : "Start", "type" : "Date","req" : "n"},
-                {"name" : "Owner", "type" : "user","req" : "n"}]
+                {"name" : "End", "type" : "Date","req" : "n"},
+                {"name" : "Owner", "type" : "Text","req" : "n"}]
         },
             { "name" : "Edit",
                 "fields" :  [{"name" : "Title", "type" : "Text","req" : "y"},
@@ -23,7 +24,7 @@
                     {"name" : "Start", "type" : "Date","req" : "n"},
                     {"name" : "End", "type" : "Date","req" : "n"},
                     {"name" : "Status", "type" : "List","req" : "n","values" :["a","b","c"]},
-                    {"name" : "Owner", "type" : "user","req" : "n"}]
+                    {"name" : "Owner", "type" : "Text","req" : "n"}]
             },
             { "name" : "Show",
                 "fields" :  [{"name" : "Title", "type" : "Text","req" : "y"},
@@ -31,7 +32,7 @@
                     {"name" : "Start", "type" : "Date","req" : "n"},
                     {"name" : "End", "type" : "Date","req" : "n"},
                     {"name" : "Status", "type" : "List","req" : "n","values" :["a","b","c"]},
-                    {"name" : "Owner", "type" : "user","req" : "n"}]
+                    {"name" : "Owner", "type" : "Text","req" : "n"}]
             },
             { "name" : "List",
                 "fields" :  [{"name" : "Title", "type" : "Text","req" : "y"},
@@ -39,7 +40,7 @@
                     {"name" : "Start", "type" : "Date","req" : "n"},
                     {"name" : "End", "type" : "Date","req" : "n"},
                     {"name" : "Status", "type" : "List","req" : "n","values" :["a","b","c"]},
-                    {"name" : "Owner", "type" : "user","req" : "n"}]
+                    {"name" : "Owner", "type" : "Text","req" : "n"}]
             },
             { "name" : "Dashboard",
                 "fields" :  [{"name" : "Title", "type" : "Text","req" : "y"},
@@ -47,49 +48,203 @@
                     {"name" : "Start", "type" : "Date","req" : "n"},
                     {"name" : "End", "type" : "Date","req" : "n"},
                     {"name" : "Status", "type" : "List","req" : "n","values" :["a","b","c"]},
-                    {"name" : "Owner", "type" : "user","req" : "n"}]
+                    {"name" : "Owner", "type" : "Text","req" : "n"}]
             }]
     },
     {
         "name" : "Milestone",
         "description": "Default Milestone Object ...",
         "type": "Milestone",
-        "template" : "true",
+        "template" : true,
         "fields" : [{"name" : "Title", "type" : "Text","req" : "y"},
             {"name" : "Description", "type" : "Note","req" : "n"},
             {"name" : "End", "type" : "Date","req" : "n"}
+        ],
+        "views" : [
+            { "name" : "Create",
+                "fields" :  [
+                    {"name" : "Title", "type" : "Text","req" : "y"},
+                    {"name" : "Description", "type" : "Note","req" : "n"},
+                    {"name" : "End", "type" : "Date","req" : "n"}
+                ]
+            },
+            { "name" : "Edit",
+                "fields" :  [
+                    {"name" : "Title", "type" : "Text","req" : "y"},
+                    {"name" : "Description", "type" : "Note","req" : "n"},
+                    {"name" : "End", "type" : "Date","req" : "n"}
+                ]
+            },
+            { "name" : "Show",
+                "fields" :  [
+                    {"name" : "Title", "type" : "Text","req" : "y"},
+                    {"name" : "Description", "type" : "Note","req" : "n"},
+                    {"name" : "End", "type" : "Date","req" : "n"}
+                ]
+            },
+            { "name" : "List",
+                "fields" :  [
+                    {"name" : "Title", "type" : "Text","req" : "y"},
+                    {"name" : "Description", "type" : "Note","req" : "n"},
+                    {"name" : "End", "type" : "Date","req" : "n"}
+                ]
+            },
+            { "name" : "Dashboard",
+                "fields" :  [
+                    {"name" : "Title", "type" : "Text","req" : "y"},
+                    {"name" : "Description", "type" : "Note","req" : "n"},
+                    {"name" : "End", "type" : "Date","req" : "n"}
+                ]
+            }
+
         ]
     },
     {
         "name" : "Task",
         "description": "Default Task Object ...",
         "type" : "Task",
-        "template" : "true",
+        "template" : true,
         "fields" : [{"name" : "Title", "type" : "Text","req" : "y"},
             {"name" : "Description", "type" : "Note","req" : "n"},
             {"name" : "Start", "type" : "Date","req" : "n"},
             {"name" : "End", "type" : "Date","req" : "n"},
-            {"name" : "Status", "type" : "List","req" : "n","values" :["a","b","c"]},
-            {"name" : "Owner", "type" : "user","req" : "n"}
+            {"name" : "Status", "type" : "List","req" : "n","values" :["Open","In Progress","Closed"]},
+            {"name" : "Owner", "type" : "Text","req" : "n"}
+        ],
+        "views" : [
+            { "name" : "Create",
+                "fields" :  [
+                    {"name" : "Title", "type" : "Text","req" : "y"},
+                    {"name" : "Description", "type" : "Note","req" : "n"},
+                    {"name" : "Start", "type" : "Date","req" : "n"},
+                    {"name" : "End", "type" : "Date","req" : "n"},
+                    {"name" : "Status", "type" : "List","req" : "n","values" :["Open","In Progress","Closed"]},
+                    {"name" : "Owner", "type" : "Text","req" : "n"}                ]
+            },
+            { "name" : "Edit",
+                "fields" :  [
+                    {"name" : "Title", "type" : "Text","req" : "y"},
+                    {"name" : "Description", "type" : "Note","req" : "n"},
+                    {"name" : "Start", "type" : "Date","req" : "n"},
+                    {"name" : "End", "type" : "Date","req" : "n"},
+                    {"name" : "Status", "type" : "List","req" : "n","values" :["Open","In Progress","Closed"]},
+                    {"name" : "Owner", "type" : "Text","req" : "n"}                ]
+            },
+            { "name" : "Show",
+                "fields" :  [
+                    {"name" : "Title", "type" : "Text","req" : "y"},
+                    {"name" : "Description", "type" : "Note","req" : "n"},
+                    {"name" : "Start", "type" : "Date","req" : "n"},
+                    {"name" : "End", "type" : "Date","req" : "n"},
+                    {"name" : "Status", "type" : "List","req" : "n","values" :["Open","In Progress","Closed"]},
+                    {"name" : "Owner", "type" : "Text","req" : "n"}                ]
+            },
+            { "name" : "List",
+                "fields" :  [
+                    {"name" : "Title", "type" : "Text","req" : "y"},
+                    {"name" : "Description", "type" : "Note","req" : "n"},
+                    {"name" : "Start", "type" : "Date","req" : "n"},
+                    {"name" : "End", "type" : "Date","req" : "n"},
+                    {"name" : "Status", "type" : "List","req" : "n","values" :["Open","In Progress","Closed"]},
+                    {"name" : "Owner", "type" : "Text","req" : "n"}                ]
+            },
+            { "name" : "Dashboard",
+                "fields" :  [
+                    {"name" : "Title", "type" : "Text","req" : "y"},
+                    {"name" : "Description", "type" : "Note","req" : "n"},
+                    {"name" : "Start", "type" : "Date","req" : "n"},
+                    {"name" : "End", "type" : "Date","req" : "n"},
+                    {"name" : "Status", "type" : "List","req" : "n","values" :["Open","In Progress","Closed"]},
+                    {"name" : "Owner", "type" : "Text","req" : "n"}                ]
+            }
+
         ]
     },
     {
         "name" : "Asset",
         "description": "Default Asset Object ...",
         "type" : "Asset",
-        "template" : "true"
+        "template" : true,
+        "fields" : [{"name" : "Title", "type" : "Text","req" : "y"},
+            {"name" : "Description", "type" : "Note","req" : "n"}
+
+        ],
+        "views" : [
+            { "name" : "Create",
+                "fields" :  [
+                    {"name" : "Title", "type" : "Text","req" : "y"},
+                    {"name" : "Description", "type" : "Note","req" : "n"}
+                ]
+            },
+            { "name" : "Edit",
+                "fields" :  [
+                    {"name" : "Title", "type" : "Text","req" : "y"},
+                    {"name" : "Description", "type" : "Note","req" : "n"}
+                ]
+            },
+            { "name" : "Show",
+                "fields" :  [
+                    {"name" : "Title", "type" : "Text","req" : "y"},
+                    {"name" : "Description", "type" : "Note","req" : "n"}
+                ]
+            },
+            { "name" : "List",
+                "fields" :  [
+                    {"name" : "Title", "type" : "Text","req" : "y"},
+                    {"name" : "Description", "type" : "Note","req" : "n"}
+                ]
+            },
+            { "name" : "Dashboard",
+                "fields" :  [
+                    {"name" : "Title", "type" : "Text","req" : "y"},
+                    {"name" : "Description", "type" : "Note","req" : "n"}
+                ]
+            }
+
+        ]
+
     },
     {
         "name" : "Lookup",
         "description": "Default Lookup Object ...",
         "type" : "Lookup",
-        "template" : "true"
+        "template" : true,
+        "fields" : [{"name" : "Title", "type" : "Text","req" : "y"}
+        ],
+        "views" : [
+            { "name" : "Create",
+                "fields" :  [
+                    {"name" : "Title", "type" : "Text","req" : "y"}
+                ]
+            },
+            { "name" : "Edit",
+                "fields" :  [
+                    {"name" : "Title", "type" : "Text","req" : "y"}
+                ]
+            },
+            { "name" : "Show",
+                "fields" :  [
+                    {"name" : "Title", "type" : "Text","req" : "y"}
+                ]
+            },
+            { "name" : "List",
+                "fields" :  [
+                    {"name" : "Title", "type" : "Text","req" : "y"}
+                ]
+            },
+            { "name" : "Dashboard",
+                "fields" :  [
+                    {"name" : "Title", "type" : "Text","req" : "y"}
+                ]
+            }
+
+        ]
     },
     {
         "name" : "Will be deleted",
         "description": "Record to be deleted ...",
         "type" : "Lookup",
-        "template" : "true"
+        "template" : true
     }
 
 

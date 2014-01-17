@@ -23,7 +23,9 @@ angular.module('myApp.controllers', [])
 //        $scope.focusInput="true";
 
         KaboodleObjects.query(function(response) {
+            // remove templates from the list , should be back end code
             $scope.data.objects = response;
+//            $scope.data.objects = _.where(response, {template : false});
         });
 
         KaboodleTypes.query(function(response) {
@@ -62,7 +64,8 @@ angular.module('myApp.controllers', [])
 
             var object = new KaboodleObjects({
                 name: this.newobject.name,
-                type: this.data.selectedType
+                type: this.data.selectedType,
+                template : false
             });
 
             $scope.data.object = object.$save(function(response) {
@@ -83,13 +86,20 @@ angular.module('myApp.controllers', [])
 
         $scope.addField = function(addnewfield) {
             this.object._id = $routeParams.id
-            this.object.fields.push(addnewfield);
+            if (!(_.has(this.object, "fields")))
+            {
+                this.object.fields = [addnewfield];
+            }
+            else {
+                this.object.fields.push(addnewfield);
+            }
+
+
             this.object.$update(function(response) {
                 console.log('saved');
             });
             $scope.newfield = {};
             $scope.newfield.req = 'n';
-   $timeout(function() { $scope.fetchFeed(feed); }, $scope.refreshInterval * 1000);         $scope.newfield.type = 'Text';
         };
 
         $scope.copySelectedObject = function(selectedItem) {
@@ -416,6 +426,7 @@ angular.module('myApp.controllers', [])
             MyKaboodleProjectInstances.query({id : $routeParams.id},function(projects) {
             $scope.projectInstances = projects;
 
+
             // uunderscore is pretty cool, may be supid what i am soinf but, get all the arrays from all returned , then flatten them into a
             // single array,then remove any undefined itsms
 
@@ -464,17 +475,25 @@ angular.module('myApp.controllers', [])
     $scope.formItems = {};
     $scope.selectedType = "";
     $scope.projectIinstances = {};
+    $scope.projectTypes = {};
 
-    KaboodleProjects.query(function(response) {
-        $scope.data.projects = response;
+    KaboodleProjectInstances.query(function(response) {
+        $scope.projectInstances = response;
     });
 
-    $scope.projectFieldsForCreate = function(selectedObject) {
+    KaboodleProjects.query(function(response) {
+        $scope.projectTypes = response;
+    });
+
+
+
+
+
+
+        $scope.projectFieldsForCreate = function(selectedObject) {
         $scope.selectedType = selectedObject.name;
         $scope.formItems = selectedObject.views[0].fields;
-        KaboodleProjectInstances.query(function(response) {
-            $scope.projectInstances = response;
-        });
+
     };
 
     $scope.saveFormDetails = function(formData) {

@@ -63,7 +63,7 @@ describe('Add a record different type', function() {
                 {
                     "name" : "Receive Brief",
                     "date" : "2014-01-16T00:00:00.000Z",
-                    "who" : "Dave",
+                    "who" : "Test",
                     "u" : 1,
                     "cd" : "2014-01-16T08:30:07.441Z",
                     "taskStatus" : "Open"
@@ -71,7 +71,7 @@ describe('Add a record different type', function() {
                 {
                     "name" : "Ingest Content",
                     "date" : "2014-01-16T00:00:00.000Z",
-                    "who" : "Dave",
+                    "who" : "Test",
                     "u" : 1,
                     "cd" : "2014-01-16T08:30:26.560Z",
                     "taskStatus" : "Open"
@@ -79,7 +79,7 @@ describe('Add a record different type', function() {
                 {
                     "name" : "Create Quote",
                     "date" : "2014-01-17T00:00:00.000Z",
-                    "who" : "Dave",
+                    "who" : "Test",
                     "u" : 1,
                     "cd" : "2014-01-16T08:30:51.238Z",
                     "taskStatus" : "Open"
@@ -87,7 +87,7 @@ describe('Add a record different type', function() {
                 {
                     "name" : "Produce Project Plan",
                     "date" : "2014-01-17T00:00:00.000Z",
-                    "who" : "Dave",
+                    "who" : "Test",
                     "u" : 1,
                     "cd" : "2014-01-16T08:31:12.820Z",
                     "taskStatus" : "Open"
@@ -222,7 +222,7 @@ describe('API', function() {
         it('should return 1 object with 4 tasks on it', function() {
             // count objects should have one more (6)
             request(url)
-                .get('/api/kaboodleprojectsforuser/Dave')
+                .get('/api/kaboodleprojectsforuser/Test')
                 .expect(200)
                 .end(function(err, res) {
                     if (err) {
