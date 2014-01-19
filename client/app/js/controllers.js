@@ -469,13 +469,10 @@ angular.module('myApp.controllers', [])
         $scope.projectTypes = response;
     });
 
-    $scope.projectFieldsForCreate = function(selectedObject) {
-        $scope.selectedType = selectedObject.name;
-        $scope.formItems = selectedObject.views[0].fields;
-
-    };
 
     $scope.saveFormDetails = function(formData) {
+        $log.info('in update');
+        $log.info($scope.selectedType);
         var myRecord = PrepareRecord.getRecord(formData,$scope.selectedType);
         var kaboodleproject = new KaboodleProjectInstances(myRecord);
 
@@ -486,7 +483,7 @@ angular.module('myApp.controllers', [])
     };
 
     $scope.openCreateProjectModal = function (selectedObject) {
-
+            $scope.selectedType = selectedObject.name;
             var modalInstance = $modal.open({
                 templateUrl: 'partials/modalProjectCreate.html',
                 controller: ModalInstanceCtrl,

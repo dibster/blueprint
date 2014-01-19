@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51ac86f2-a104-4d81-a8bd-7f817e81fc09" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/partials/modalProjectCreate.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/js/controllers.js" afterPath="$PROJECT_DIR$/client/app/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/partials/projects.html" afterPath="$PROJECT_DIR$/client/app/partials/projects.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="blueprint.iws" />
@@ -40,7 +38,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="503" column="0" selection-start="17472" selection-end="17472" vertical-scroll-proportion="1.0451467" vertical-offset="9134" max-vertical-offset="10680">
+            <state line="471" column="0" selection-start="16280" selection-end="16280" vertical-scroll-proportion="0.3227991" vertical-offset="9134" max-vertical-offset="10620">
               <folding />
             </state>
           </provider>
@@ -527,7 +525,11 @@
       <created>1389985478788</created>
       <updated>1389985478788</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="modal on project create kind of working (not settingtype)">
+      <created>1390124937709</created>
+      <updated>1390124937709</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -609,7 +611,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Adding new fields and focus on field that was a right pain in the ass" />
     <MESSAGE value="Started work on View Configuration, have layout now need to add drag and drop ....." />
     <MESSAGE value="Views added dragdrop factory (no codee yet) but am deletimng view fields" />
     <MESSAGE value="drag starting (drop next)" />
@@ -634,7 +635,8 @@
     <MESSAGE value="my  dashboard, iillustrates gfetting user stuff from multiple projects" />
     <MESSAGE value="live updates !" />
     <MESSAGE value="tidy up the projects dashboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="tidy up the projects dashboard" />
+    <MESSAGE value="modal on project create kind of working (not settingtype)" />
+    <option name="LAST_COMMIT_MESSAGE" value="modal on project create kind of working (not settingtype)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -758,7 +760,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="503" column="0" selection-start="17472" selection-end="17472" vertical-scroll-proportion="1.0451467" vertical-offset="9134" max-vertical-offset="10680">
+        <state line="471" column="0" selection-start="16280" selection-end="16280" vertical-scroll-proportion="0.3227991" vertical-offset="9134" max-vertical-offset="10620">
           <folding />
         </state>
       </provider>
