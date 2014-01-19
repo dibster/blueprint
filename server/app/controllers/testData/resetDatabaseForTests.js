@@ -28,9 +28,11 @@ exports.emptyDB = function(req,res) {
     });
     db.collection('kaboodletypes').remove({},function(err,numberRemoved){
         console.log("remove kaboodle types");
+    });    db.collection('kaboodletypes').remove({},function(err,numberRemoved){
+        console.log("remove kaboodle types");
     });
-    db.collection('kaboodleprojects').remove({},function(err,numberRemoved){
-        console.log("remove kaboodle projects");
+    db.collection('kaboodletags').remove({},function(err,numberRemoved){
+        console.log("remove kaboodle tags");
     });
     db.collection('kaboodleobjects', {strict:true}, function(err, collection) {
         populateDB();
@@ -79,13 +81,32 @@ var populateDB = function() {
         });
     });
 
-    var kaboodletypes = './app/controllers/testData/kaboodletypes.json';
-    fs.readFile(kaboodletypes, 'utf8', function(err, data) {
+    var fieldtypes = './app/controllers/testData/kaboodlefieldtypes.json';
+    fs.readFile(fieldtypes, 'utf8', function(err, data) {
         if (err) {
             throw err;
         }
         var objects = JSON.parse(data);
-        db.collection('kaboodletypes', function(err, collection) {
+        db.collection('kaboodlefieldtypes', function(err, collection) {
+            if (err) {
+                throw err;
+            }
+            collection.insert(objects, {safe: true}, function(err, result) {
+                if (err) {
+                    throw err;
+                }
+                db.close();
+            });
+        });
+    });
+
+    var kaboodletags = './app/controllers/testData/kaboodletags.json';
+    fs.readFile(kaboodletags, 'utf8', function(err, data) {
+        if (err) {
+            throw err;
+        }
+        var objects = JSON.parse(data);
+        db.collection('kaboodletags', function(err, collection) {
             if (err) {
                 throw err;
             }

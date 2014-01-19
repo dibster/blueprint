@@ -8,6 +8,10 @@
         "description": "Text Field Multi Line"
     },
     {
+        "name" : "Tag",
+        "description": "Similar to # tags"
+    },
+    {
         "name" : "Note",
         "description": "Text Field Multi Line"
     },

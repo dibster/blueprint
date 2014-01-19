@@ -3,6 +3,7 @@ var express = require('express'),
     fieldtypes = require('./app/controllers/admin/fieldtypes');
     kaboodletypes = require('./app/controllers/admin/kaboodletypes');
     kaboodleprojects = require('./app/controllers/kaboodle/kaboodleprojects');
+    kaboodletags = require('./app/controllers/kaboodle/kaboodletags');
     emptyDBTests = require('./app/controllers/testData/resetDatabaseForTests');
 
 var app = express();
@@ -65,6 +66,10 @@ app.get('/api/assets', objects.findAssets);
 app.get('/api/milestones', objects.findMilestones);
 app.get('/api/tasks', objects.findTasks);
 app.get('/api/lookups', objects.findLookups);
+
+// tags
+
+app.get('/api/kaboodletags/:id', kaboodletags.findById);
 
 // admin routes
 app.get('/api/fieldtypes', fieldtypes.findAll);
