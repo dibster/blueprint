@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51ac86f2-a104-4d81-a8bd-7f817e81fc09" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/app/controllers/kaboodle/kaboodletags.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/app/controllers/testData/kaboodletags.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/tests/tags.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app/controllers/testData/kaboodlefieldtypes.json" afterPath="$PROJECT_DIR$/server/app/controllers/testData/kaboodlefieldtypes.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/js/controllers.js" afterPath="$PROJECT_DIR$/client/app/js/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/partials/modalProjectCreate.html" afterPath="$PROJECT_DIR$/client/app/partials/modalProjectCreate.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app/controllers/testData/resetDatabaseForTests.js" afterPath="$PROJECT_DIR$/server/app/controllers/testData/resetDatabaseForTests.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/server.js" afterPath="$PROJECT_DIR$/server/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/js/services.js" afterPath="$PROJECT_DIR$/client/app/js/services.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="blueprint.iws" />
@@ -31,48 +29,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="fieldtypes.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app/controllers/admin/fieldtypes.js">
+      <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="280">
+            <state line="20" column="64" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="kaboodletypes.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app/controllers/admin/kaboodletypes.js">
+      <file leaf-file-name="modalProjectCreate.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/partials/modalProjectCreate.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="43" selection-end="253" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="280">
+            <state line="13" column="118" selection-start="756" selection-end="756" vertical-scroll-proportion="-8.965517" vertical-offset="0" max-vertical-offset="720">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/server.js">
+      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="67" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1760">
+            <state line="516" column="47" selection-start="17817" selection-end="17817" vertical-scroll-proportion="0.81941307" vertical-offset="9594" max-vertical-offset="10980">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="kaboodletags.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app/controllers/kaboodle/kaboodletags.js">
+      <file leaf-file-name="resetDatabaseForTests.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/app/controllers/testData/resetDatabaseForTests.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="35" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="320">
-              <folding>
-                <element signature="e#0#41#0" expanded="false" />
-              </folding>
+            <state line="74" column="37" selection-start="2453" selection-end="2453" vertical-scroll-proportion="0.0" vertical-offset="261" max-vertical-offset="2540">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="objects.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app/controllers/admin/objects.js">
+      <file leaf-file-name="kaboodleobjects.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/app/controllers/testData/kaboodleobjects.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3280">
+            <state line="157" column="54" selection-start="0" selection-end="10979" vertical-scroll-proportion="-0.6896552" vertical-offset="3120" max-vertical-offset="5120">
               <folding />
             </state>
           </provider>
@@ -83,49 +79,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="540">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tags.test.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/tests/tags.test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="51" selection-start="916" selection-end="916" vertical-scroll-proportion="0.5773081" vertical-offset="141" max-vertical-offset="1040">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="kaboodletags.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app/controllers/testData/kaboodletags.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="1" selection-start="380" selection-end="380" vertical-scroll-proportion="-12.413794" vertical-offset="0" max-vertical-offset="480">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="kaboodleprojects.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app/controllers/kaboodle/kaboodleprojects.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="5" selection-start="835" selection-end="1155" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="2180">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="resetDatabaseForTests.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app/controllers/testData/resetDatabaseForTests.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="0" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="2540">
-              <folding>
-                <marker date="1390139414272" expanded="true" signature="2767:3211" placeholder="{...}" />
-                <marker date="1390139414272" expanded="true" signature="2786:2820" placeholder="{...}" />
-                <marker date="1390139414272" expanded="true" signature="2931:3203" placeholder="{...}" />
-                <marker date="1390139414272" expanded="true" signature="2954:2996" placeholder="{...}" />
-                <marker date="1390139414272" expanded="true" signature="3072:3191" placeholder="{...}" />
-                <marker date="1390139414272" expanded="true" signature="3099:3149" placeholder="{...}" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -148,22 +101,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/client/app/partials/myProjectDashboard.html" />
         <option value="$PROJECT_DIR$/server/app/controllers/testData/kaboodleobjects.json" />
         <option value="$PROJECT_DIR$/server/tests/kaboodleprojects.test.js" />
         <option value="$PROJECT_DIR$/client/app/partials/projects.html" />
-        <option value="$PROJECT_DIR$/client/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/client/app/index.html" />
-        <option value="$PROJECT_DIR$/client/app/partials/modalProjectCreate.html" />
         <option value="$PROJECT_DIR$/server/app/controllers/testData/kaboodlefieldtypes.json" />
         <option value="$PROJECT_DIR$/server/tests/tasks.test.js" />
         <option value="$PROJECT_DIR$/server/app/controllers/testData/KaboodleTags.json" />
         <option value="$PROJECT_DIR$/server/app/controllers/testData/Kaboodletags.json" />
-        <option value="$PROJECT_DIR$/server/app/controllers/testData/resetDatabaseForTests.js" />
         <option value="$PROJECT_DIR$/server/server.js" />
         <option value="$PROJECT_DIR$/server/app/controllers/kaboodle/kabooldetags.js" />
         <option value="$PROJECT_DIR$/server/app/controllers/kaboodle/kaboodletags.js" />
         <option value="$PROJECT_DIR$/server/tests/tags.test.js" />
+        <option value="$PROJECT_DIR$/client/app/js/services.js" />
+        <option value="$PROJECT_DIR$/server/app/controllers/testData/resetDatabaseForTests.js" />
+        <option value="$PROJECT_DIR$/client/app/partials/modalProjectCreate.html" />
+        <option value="$PROJECT_DIR$/client/app/js/controllers.js" />
       </list>
     </option>
   </component>
@@ -246,24 +199,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blueprint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blueprint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -297,8 +232,18 @@
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="kaboodle" />
+              <option name="myItemId" value="blueprint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blueprint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -312,7 +257,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blueprint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blueprint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -320,11 +283,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -628,7 +587,11 @@
       <created>1390126022087</created>
       <updated>1390126022087</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="BAckend Tags OK&#10;">
+      <created>1390140880596</created>
+      <updated>1390140880596</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -660,7 +623,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44572026" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985386" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24558587" sideWeight="0.67014617" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24558587" sideWeight="0.67014617" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38351983" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985386" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -711,7 +674,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="drag starting (drop next)" />
     <MESSAGE value="drag drop ok, service also working to turn selected fields into json object" />
     <MESSAGE value="added kaboodleprojects back end" />
     <MESSAGE value="saving records to the project collection with any configurable data type" />
@@ -736,7 +698,8 @@
     <MESSAGE value="modal on project create kind of working (not settingtype)" />
     <MESSAGE value="model is working on project create&#10;" />
     <MESSAGE value="ubuntu style looks a lot better" />
-    <option name="LAST_COMMIT_MESSAGE" value="ubuntu style looks a lot better" />
+    <MESSAGE value="BAckend Tags OK&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="BAckend Tags OK&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -751,27 +714,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="471" column="0" selection-start="16280" selection-end="16280" vertical-scroll-proportion="0.0" vertical-offset="9134" max-vertical-offset="10620">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="190" selection-end="190" vertical-scroll-proportion="-4.827586" vertical-offset="0" max-vertical-offset="1320">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/partials/modalProjectCreate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="10" selection-start="101" selection-end="101" vertical-scroll-proportion="-2.7586207" vertical-offset="0" max-vertical-offset="680">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/app/controllers/testData/kaboodlefieldtypes.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="41" selection-start="246" selection-end="246" vertical-scroll-proportion="-7.586207" vertical-offset="0" max-vertical-offset="1060">
@@ -786,38 +728,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/controllers/testData/kaboodleobjects.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="54" selection-start="0" selection-end="10979" vertical-scroll-proportion="-108.27586" vertical-offset="0" max-vertical-offset="5120">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/controllers/testData/kaboodletypes.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="899">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/app/controllers/testData/kaboodletags.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="1" selection-start="380" selection-end="380" vertical-scroll-proportion="-12.413794" vertical-offset="0" max-vertical-offset="480">
+        <state line="18" column="1" selection-start="380" selection-end="380" vertical-scroll-proportion="0.41379312" vertical-offset="0" max-vertical-offset="870">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/controllers/testData/resetDatabaseForTests.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="2540">
-          <folding>
-            <marker date="1390139414272" expanded="true" signature="2767:3211" placeholder="{...}" />
-            <marker date="1390139414272" expanded="true" signature="2786:2820" placeholder="{...}" />
-            <marker date="1390139414272" expanded="true" signature="2931:3203" placeholder="{...}" />
-            <marker date="1390139414272" expanded="true" signature="2954:2996" placeholder="{...}" />
-            <marker date="1390139414272" expanded="true" signature="3072:3191" placeholder="{...}" />
-            <marker date="1390139414272" expanded="true" signature="3099:3149" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -844,21 +758,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/app/controllers/kaboodle/kaboodleprojects.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="5" selection-start="835" selection-end="1155" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="2180">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="67" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1760">
+        <state line="32" column="5" selection-start="835" selection-end="1155" vertical-scroll-proportion="0.4449388" vertical-offset="240" max-vertical-offset="2180">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/app/controllers/kaboodle/kaboodletags.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="35" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="320">
+        <state line="8" column="35" selection-start="257" selection-end="257" vertical-scroll-proportion="0.13348165" vertical-offset="0" max-vertical-offset="899">
           <folding>
             <element signature="e#0#41#0" expanded="false" />
           </folding>
@@ -868,6 +775,55 @@
     <entry file="file://$PROJECT_DIR$/server/tests/tags.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="51" selection-start="916" selection-end="916" vertical-scroll-proportion="0.5773081" vertical-offset="141" max-vertical-offset="1040">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="67" selection-start="372" selection-end="372" vertical-scroll-proportion="0.1112347" vertical-offset="0" max-vertical-offset="1760">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/controllers/testData/kaboodleobjects.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="157" column="54" selection-start="0" selection-end="10979" vertical-scroll-proportion="-0.6896552" vertical-offset="3120" max-vertical-offset="5120">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/controllers/testData/kaboodletypes.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="899">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/js/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="64" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/controllers/testData/resetDatabaseForTests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="37" selection-start="2453" selection-end="2453" vertical-scroll-proportion="0.0" vertical-offset="1161" max-vertical-offset="2540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/partials/modalProjectCreate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="118" selection-start="756" selection-end="756" vertical-scroll-proportion="-8.965517" vertical-offset="0" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="516" column="47" selection-start="17817" selection-end="17817" vertical-scroll-proportion="0.81941307" vertical-offset="9594" max-vertical-offset="10980">
           <folding />
         </state>
       </provider>

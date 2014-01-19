@@ -11,6 +11,7 @@
                     <textarea rows="3" ng-switch-when="Note" data-ng-model="formItem.content"></textarea>
                     <input type="text" ng-switch-when="Text" data-ng-model="formItem.content">
                     <input type="text" ng-switch-when="User" data-ng-model="formItem.content">
+                    <input type="text" ng-switch-when="Tag" data-ng-model="formItem.content"  typeahead="type for type in bannertypes | filter:$viewValue | limitTo:8">
                     <input type="text" class="input-small" placeholder="When" datepicker-popup="dd-MM-yy" show-weeks="0" datepicker-options="dateOptions" ng-switch-when="Date" data-ng-model="formItem.content">
                     <input type="number" ng-switch-when="Number" data-ng-model="formItem.content">
                     <select ng-switch-when="list" data-ng-model="formItem.content" ng-options="option for option in formItem.options"/>
@@ -26,4 +27,4 @@
     <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
 </div>
 
-        
+<!--<input type="text" ng-model="asyncSelected" placeholder="Locations loaded via $http" typeahead="address for address in getLocation($viewValue) | filter:$viewValue" typeahead-loading="loadingLocations" class="form-control">-->

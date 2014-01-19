@@ -17,6 +17,9 @@ angular.module('myApp.services', ['ngResource'])
     .factory('MyKaboodleProjectInstances', function($resource){
         return $resource('http://localhost:3000/api/kaboodleprojectsforuser/:id', {id:'@_id'}, {})
     })
+    .factory('KaboodleTags', function($resource){
+        return $resource('http://localhost:3000/api/kaboodletags/:id', {id:'@_id'}, {})
+    })
     .factory('KaboodleTypes', function($resource){
         return $resource('http://localhost:3000/api/kaboodletypes', {})
     })

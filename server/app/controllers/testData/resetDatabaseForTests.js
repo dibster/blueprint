@@ -42,9 +42,9 @@ exports.emptyDB = function(req,res) {
 
 var populateDB = function() {
     var fs = require('fs');
-    var projecttypes = './app/controllers/testData/kaboodleobjects.json';
+    var kaboodleobjects = './app/controllers/testData/kaboodleobjects.json';
 
-    fs.readFile(projecttypes, 'utf8', function(err, data) {
+    fs.readFile(kaboodleobjects, 'utf8', function(err, data) {
         if (err) {
             throw err;
         }
@@ -62,13 +62,13 @@ var populateDB = function() {
         });
     });
 
-    var fieldtypes = './app/controllers/testData/kaboodlefieldtypes.json';
-    fs.readFile(fieldtypes, 'utf8', function(err, data) {
+    var objecttypes = './app/controllers/testData/kaboodletypes.json';
+    fs.readFile(objecttypes, 'utf8', function(err, data) {
         if (err) {
             throw err;
         }
         var objects = JSON.parse(data);
-        db.collection('kaboodlefieldtypes', function(err, collection) {
+        db.collection('kaboodletypes', function(err, collection) {
             if (err) {
                 throw err;
             }

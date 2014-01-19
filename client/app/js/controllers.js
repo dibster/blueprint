@@ -455,11 +455,12 @@ angular.module('myApp.controllers', [])
     }])
 
 
-.controller('ProjectsCtrl', ['$scope', '$modal','$log', 'KaboodleProjects','PrepareRecord', 'KaboodleProjectInstances',  function($scope, $modal, $log, KaboodleProjects,PrepareRecord, KaboodleProjectInstances) {
+.controller('ProjectsCtrl', ['$scope', '$modal','$log', 'KaboodleProjects','PrepareRecord', 'KaboodleProjectInstances','KaboodleTags',  function($scope, $modal, $log, KaboodleProjects,PrepareRecord, KaboodleProjectInstances, KaboodleTags) {
     $scope.data = {};
     $scope.formItems = {};
     $scope.selectedType = "";
     $scope.projectIinstances = {};
+    $scope.tagList = {};
 
     KaboodleProjectInstances.query(function(response) {
         $scope.projectInstances = response;
@@ -483,39 +484,56 @@ angular.module('myApp.controllers', [])
     };
 
     $scope.openCreateProjectModal = function (selectedObject) {
-            $scope.selectedType = selectedObject.name;
-            var modalInstance = $modal.open({
-                templateUrl: 'partials/modalProjectCreate.html',
-                controller: ModalInstanceCtrl,
-                resolve: {
-                    items: function () {
-                        $log.info(selectedObject);
-                        return selectedObject.views[0].fields;
-                    }
+            // get tags
+
+        $scope.selectedType = selectedObject.name;
+        var modalInstance = $modal.open({
+            templateUrl: 'partials/modalProjectCreate.html',
+            controller: ModalInstanceCtrl,
+            resolve: {
+                items: function () {
+                    $log.info(selectedObject);
+                    return selectedObject.views[0].fields;
                 }
-            });
+            }
+        });
 
-            modalInstance.result.then(function (selectedItem) {
-                $scope.formData = selectedItem;
-                $scope.saveFormDetails($scope.formData);
+        modalInstance.result.then(function (selectedItem) {
+            $scope.formData = selectedItem;
+            $scope.saveFormDetails($scope.formData);
 
-            }, function () {
-                $log.info('Modal dismissed at: ' + new Date());
-            });
+        }, function () {
+            $log.info('Modal dismissed at: ' + new Date());
+        });
     };
 
 
     var ModalInstanceCtrl = function($scope,$modalInstance, items) {
 
-            $scope.items = items;
+        $scope.items = items;
+        $log.info('in instance controller');
+        $scope.bannertypes = ['40K Banner', 'Static Banner', '100K Banner'];
 
-            $scope.ok = function () {
-                $modalInstance.close($scope.items);
-            };
+        // this would get values from backend,  but not implemented yet
 
-            $scope.cancel = function () {
-                $modalInstance.dismiss('cancel');
-            };
+        $scope.getTagValues = function(fieldname) {
+                //
+                $log.info('tag requested');
+                $log.info(fieldname);
+
+                KaboodleTags.get({id : fieldname},function(tag) {
+                    //$log.info('tag values : ' + tag.values[0].value );
+                    return tag.values;
+                });
+            }
+
+        $scope.ok = function () {
+            $modalInstance.close($scope.items);
+        };
+
+        $scope.cancel = function () {
+            $modalInstance.dismiss('cancel');
+        };
 
         }
 
