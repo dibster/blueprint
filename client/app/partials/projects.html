@@ -4,7 +4,8 @@
             <button type="button" class="btn dropdown-toggle"><i class="fa fa-plus"></i> New</button>
             <ul class="dropdown-menu">
                 <li ng-repeat="type in projectTypes">
-                    <a data-ng-click="projectFieldsForCreate(type)">{{ type.name }}</a>
+                    <!--<a data-ng-click="projectFieldsForCreate(type)">{{ type.name }}</a>-->
+                    <a  ng-click="openCreateProjectModal(type)">{{type.name}}</a>
                 </li>
             </ul>
         </div>
@@ -15,28 +16,7 @@
 <div class="row-fluid">
 
     <div class="span12">
-        <form>
 
-            <fieldset>
-                <!--<legend>Enter Data</legend>-->
-                    <div ng-repeat="formItem in formItems">
-                        <div ng-switch on="formItem.type">
-                            <label>{{formItem.name}}</label>
-                            <textarea rows="5" ng-switch-when="Note" data-ng-model="formItem.content"></textarea>
-                            <input type="text" ng-switch-when="Text" data-ng-model="formItem.content">
-                            <input type="text" ng-switch-when="User" data-ng-model="formItem.content">
-                            <input type="text" class="input-small" placeholder="When" datepicker-popup="dd-MM-yy" show-weeks="0" datepicker-options="dateOptions" ng-switch-when="Date" data-ng-model="formItem.content">
-                            <input type="number" ng-switch-when="Number" data-ng-model="formItem.content">
-                            <select ng-switch-when="list" data-ng-model="formItem.content" ng-options="option for option in formItem.options"/>
-                            <input type="checkbox" ng-switch-when="Yes or No" data-ng-model="formItem.content">
-                        </div>
-                    </div>
-            </fieldset>
-
-            <!--<button class="btn btn-primary" data-ng-show="formItems" data-ng-click="saveFormDetails(formItems)">Save</button>-->
-
-            <!--<button data-ng-click="saveFormDetails(formItems)">Save</button>-->
-        </form>
     </div>
 </div>
     <div class="row-fluid">

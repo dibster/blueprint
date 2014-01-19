@@ -452,30 +452,14 @@ angular.module('myApp.controllers', [])
             $scope.alerts.splice(index, 1);
         };
 
-
-//        MyKaboodleProjectInstances.get({id : $routeParams.id},function(project) {
-//            console.log('getting users projects');
-//            $scope.project = project;
-//            // add selected property to object, makes it easier to use when copying
-//            _.each($scope.project.tasks,function(task) {
-//                task.selected=true;
-//            })
-//            _.each($scope.project.assets,function(asset) {
-//                asset.selected=false;
-//            })
-//            $scope.alerts.push({msg: "Select Tasks, Assets and Team from the area on the left"});
-//
-//        });
-
-   
     }])
 
-.controller('ProjectsCtrl', ['$scope', 'KaboodleProjects','PrepareRecord', 'KaboodleProjectInstances', function($scope, KaboodleProjects,PrepareRecord, KaboodleProjectInstances) {
+
+.controller('ProjectsCtrl', ['$scope', '$modal','$log', 'KaboodleProjects','PrepareRecord', 'KaboodleProjectInstances',  function($scope, $modal, $log, KaboodleProjects,PrepareRecord, KaboodleProjectInstances) {
     $scope.data = {};
     $scope.formItems = {};
     $scope.selectedType = "";
     $scope.projectIinstances = {};
-    $scope.projectTypes = {};
 
     KaboodleProjectInstances.query(function(response) {
         $scope.projectInstances = response;
@@ -485,12 +469,7 @@ angular.module('myApp.controllers', [])
         $scope.projectTypes = response;
     });
 
-
-
-
-
-
-        $scope.projectFieldsForCreate = function(selectedObject) {
+    $scope.projectFieldsForCreate = function(selectedObject) {
         $scope.selectedType = selectedObject.name;
         $scope.formItems = selectedObject.views[0].fields;
 
@@ -506,4 +485,44 @@ angular.module('myApp.controllers', [])
         });
     };
 
-}]);
+    $scope.openCreateProjectModal = function (selectedObject) {
+
+            var modalInstance = $modal.open({
+                templateUrl: 'partials/modalProjectCreate.html',
+                controller: ModalInstanceCtrl,
+                resolve: {
+                    items: function () {
+                        $log.info(selectedObject);
+                        return selectedObject.views[0].fields;
+                    }
+                }
+            });
+
+            modalInstance.result.then(function (selectedItem) {
+                $scope.formData = selectedItem;
+                $scope.saveFormDetails($scope.formData);
+
+            }, function () {
+                $log.info('Modal dismissed at: ' + new Date());
+            });
+    };
+
+
+    var ModalInstanceCtrl = function($scope,$modalInstance, items) {
+
+            $scope.items = items;
+
+            $scope.ok = function () {
+                $modalInstance.close($scope.items);
+            };
+
+            $scope.cancel = function () {
+                $modalInstance.dismiss('cancel');
+            };
+
+        }
+
+
+    }])
+
+;
