@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51ac86f2-a104-4d81-a8bd-7f817e81fc09" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/js/controllers.js" afterPath="$PROJECT_DIR$/client/app/js/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/index.html" afterPath="$PROJECT_DIR$/client/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/partials/modalProjectCreate.html" afterPath="$PROJECT_DIR$/client/app/partials/modalProjectCreate.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="blueprint.iws" />
@@ -29,16 +30,16 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="1" selection-start="2005" selection-end="2005" vertical-scroll-proportion="-19.275862" vertical-offset="421" max-vertical-offset="1320">
+            <state line="7" column="0" selection-start="190" selection-end="190" vertical-scroll-proportion="-4.827586" vertical-offset="0" max-vertical-offset="1320">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="471" column="0" selection-start="16280" selection-end="16280" vertical-scroll-proportion="0.3227991" vertical-offset="9134" max-vertical-offset="10620">
+            <state line="471" column="0" selection-start="16280" selection-end="16280" vertical-scroll-proportion="0.0" vertical-offset="9134" max-vertical-offset="10620">
               <folding />
             </state>
           </provider>
@@ -55,10 +56,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modalProjectCreate.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="modalProjectCreate.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/app/partials/modalProjectCreate.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="45" selection-start="213" selection-end="213" vertical-scroll-proportion="-4.827586" vertical-offset="0" max-vertical-offset="680">
+            <state line="4" column="9" selection-start="100" selection-end="100" vertical-scroll-proportion="0.09334889" vertical-offset="0" max-vertical-offset="857">
               <folding />
             </state>
           </provider>
@@ -100,13 +101,13 @@
         <option value="$PROJECT_DIR$/client/app/js/services.js" />
         <option value="$PROJECT_DIR$/server/utilities/kaboodleobjects.json" />
         <option value="$PROJECT_DIR$/client/app/js/app.js" />
-        <option value="$PROJECT_DIR$/client/app/index.html" />
         <option value="$PROJECT_DIR$/client/app/partials/myProjectDashboard.html" />
         <option value="$PROJECT_DIR$/server/app/controllers/testData/kaboodleobjects.json" />
         <option value="$PROJECT_DIR$/server/tests/kaboodleprojects.test.js" />
         <option value="$PROJECT_DIR$/client/app/partials/projects.html" />
-        <option value="$PROJECT_DIR$/client/app/partials/modalProjectCreate.html" />
         <option value="$PROJECT_DIR$/client/app/js/controllers.js" />
+        <option value="$PROJECT_DIR$/client/app/index.html" />
+        <option value="$PROJECT_DIR$/client/app/partials/modalProjectCreate.html" />
       </list>
     </option>
   </component>
@@ -529,7 +530,11 @@
       <created>1390124937709</created>
       <updated>1390124937709</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="model is working on project create&#10;">
+      <created>1390125287946</created>
+      <updated>1390125287946</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -611,7 +616,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Started work on View Configuration, have layout now need to add drag and drop ....." />
     <MESSAGE value="Views added dragdrop factory (no codee yet) but am deletimng view fields" />
     <MESSAGE value="drag starting (drop next)" />
     <MESSAGE value="drag drop ok, service also working to turn selected fields into json object" />
@@ -636,7 +640,8 @@
     <MESSAGE value="live updates !" />
     <MESSAGE value="tidy up the projects dashboard" />
     <MESSAGE value="modal on project create kind of working (not settingtype)" />
-    <option name="LAST_COMMIT_MESSAGE" value="modal on project create kind of working (not settingtype)" />
+    <MESSAGE value="model is working on project create&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="model is working on project create&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -735,13 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="1" selection-start="2005" selection-end="2005" vertical-scroll-proportion="-19.275862" vertical-offset="421" max-vertical-offset="1320">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/partials/projects.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="81" selection-start="460" selection-end="460" vertical-scroll-proportion="-4.827586" vertical-offset="0" max-vertical-offset="1260">
@@ -751,16 +749,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/partials/modalProjectCreate.html">
+    <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="45" selection-start="213" selection-end="213" vertical-scroll-proportion="-4.827586" vertical-offset="0" max-vertical-offset="680">
+        <state line="471" column="0" selection-start="16280" selection-end="16280" vertical-scroll-proportion="0.0" vertical-offset="9134" max-vertical-offset="10620">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
+    <entry file="file://$PROJECT_DIR$/client/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="471" column="0" selection-start="16280" selection-end="16280" vertical-scroll-proportion="0.3227991" vertical-offset="9134" max-vertical-offset="10620">
+        <state line="7" column="0" selection-start="190" selection-end="190" vertical-scroll-proportion="-4.827586" vertical-offset="0" max-vertical-offset="1320">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/partials/modalProjectCreate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="9" selection-start="100" selection-end="100" vertical-scroll-proportion="0.09334889" vertical-offset="0" max-vertical-offset="857">
           <folding />
         </state>
       </provider>
