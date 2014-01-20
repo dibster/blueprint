@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="51ac86f2-a104-4d81-a8bd-7f817e81fc09" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/js/controllers.js" afterPath="$PROJECT_DIR$/client/app/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/partials/modalProjectCreate.html" afterPath="$PROJECT_DIR$/client/app/partials/modalProjectCreate.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app/controllers/testData/resetDatabaseForTests.js" afterPath="$PROJECT_DIR$/server/app/controllers/testData/resetDatabaseForTests.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/js/services.js" afterPath="$PROJECT_DIR$/client/app/js/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/partials/myProjectDashboard.html" afterPath="$PROJECT_DIR$/client/app/partials/myProjectDashboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="blueprint.iws" />
@@ -41,7 +39,7 @@
       <file leaf-file-name="modalProjectCreate.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/partials/modalProjectCreate.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="118" selection-start="756" selection-end="756" vertical-scroll-proportion="-8.965517" vertical-offset="0" max-vertical-offset="720">
+            <state line="4" column="9" selection-start="100" selection-end="100" vertical-scroll-proportion="-2.7586207" vertical-offset="0" max-vertical-offset="720">
               <folding />
             </state>
           </provider>
@@ -50,7 +48,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="516" column="47" selection-start="17817" selection-end="17817" vertical-scroll-proportion="0.81941307" vertical-offset="9594" max-vertical-offset="10980">
+            <state line="124" column="13" selection-start="3778" selection-end="3778" vertical-scroll-proportion="0.51103365" vertical-offset="2040" max-vertical-offset="11340">
               <folding />
             </state>
           </provider>
@@ -69,6 +67,24 @@
         <entry file="file://$PROJECT_DIR$/server/app/controllers/testData/kaboodleobjects.json">
           <provider selected="true" editor-type-id="text-editor">
             <state line="157" column="54" selection-start="0" selection-end="10979" vertical-scroll-proportion="-0.6896552" vertical-offset="3120" max-vertical-offset="5120">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="objectedit.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/partials/objectedit.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="75" column="0" selection-start="2977" selection-end="2977" vertical-scroll-proportion="-27.310345" vertical-offset="708" max-vertical-offset="1620">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myProjectDashboard.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/partials/myProjectDashboard.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="0" selection-start="332" selection-end="332" vertical-scroll-proportion="-2.7586207" vertical-offset="0" max-vertical-offset="2680">
               <folding />
             </state>
           </provider>
@@ -101,7 +117,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/server/app/controllers/testData/kaboodleobjects.json" />
         <option value="$PROJECT_DIR$/server/tests/kaboodleprojects.test.js" />
         <option value="$PROJECT_DIR$/client/app/partials/projects.html" />
         <option value="$PROJECT_DIR$/client/app/index.html" />
@@ -115,6 +130,7 @@
         <option value="$PROJECT_DIR$/server/tests/tags.test.js" />
         <option value="$PROJECT_DIR$/client/app/js/services.js" />
         <option value="$PROJECT_DIR$/server/app/controllers/testData/resetDatabaseForTests.js" />
+        <option value="$PROJECT_DIR$/client/app/partials/myProjectDashboard.html" />
         <option value="$PROJECT_DIR$/client/app/partials/modalProjectCreate.html" />
         <option value="$PROJECT_DIR$/client/app/js/controllers.js" />
       </list>
@@ -262,6 +278,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blueprint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blueprint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -591,7 +629,11 @@
       <created>1390140880596</created>
       <updated>1390140880596</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Tagging with Array done, for Banner Types,">
+      <created>1390151133722</created>
+      <updated>1390151133722</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -674,7 +716,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="drag drop ok, service also working to turn selected fields into json object" />
     <MESSAGE value="added kaboodleprojects back end" />
     <MESSAGE value="saving records to the project collection with any configurable data type" />
     <MESSAGE value="sorting out views" />
@@ -699,14 +740,15 @@
     <MESSAGE value="model is working on project create&#10;" />
     <MESSAGE value="ubuntu style looks a lot better" />
     <MESSAGE value="BAckend Tags OK&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="BAckend Tags OK&#10;" />
+    <MESSAGE value="Tagging with Array done, for Banner Types," />
+    <option name="LAST_COMMIT_MESSAGE" value="Tagging with Array done, for Banner Types," />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/client/app/js/controllers.js</url>
-          <line>26</line>
+          <line>27</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
@@ -714,20 +756,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/app/controllers/testData/kaboodlefieldtypes.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="41" selection-start="246" selection-end="246" vertical-scroll-proportion="-7.586207" vertical-offset="0" max-vertical-offset="1060">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/tests/fieldtypes.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="1187" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1040">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/app/controllers/testData/kaboodletags.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="1" selection-start="380" selection-end="380" vertical-scroll-proportion="0.41379312" vertical-offset="0" max-vertical-offset="870">
@@ -814,16 +842,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/partials/myProjectDashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="332" selection-end="332" vertical-scroll-proportion="-2.7586207" vertical-offset="0" max-vertical-offset="2680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/partials/modalProjectCreate.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="118" selection-start="756" selection-end="756" vertical-scroll-proportion="-8.965517" vertical-offset="0" max-vertical-offset="720">
+        <state line="4" column="9" selection-start="100" selection-end="100" vertical-scroll-proportion="-2.7586207" vertical-offset="0" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/partials/objectedit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="0" selection-start="2977" selection-end="2977" vertical-scroll-proportion="-27.310345" vertical-offset="708" max-vertical-offset="1620">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="516" column="47" selection-start="17817" selection-end="17817" vertical-scroll-proportion="0.81941307" vertical-offset="9594" max-vertical-offset="10980">
+        <state line="124" column="13" selection-start="3778" selection-end="3778" vertical-scroll-proportion="0.51103365" vertical-offset="2040" max-vertical-offset="11340">
           <folding />
         </state>
       </provider>

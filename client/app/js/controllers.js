@@ -10,8 +10,9 @@ angular.module('myApp.controllers', [])
          'KaboodleFieldTypes',
          '$routeParams',
          '$location',
+         '$log',
 
-        function($scope, KaboodleObjects, KaboodleTypes, KaboodleFieldTypes,  $routeParams, $location) {
+        function($scope, KaboodleObjects, KaboodleTypes, KaboodleFieldTypes,  $routeParams, $location, $log) {
 
         $scope.data = {};
         $scope.newobject = {};
@@ -118,9 +119,26 @@ angular.module('myApp.controllers', [])
             var index = this.object.fields.indexOf(column);
             this.object.fields.splice(index, 1);
 
+           // remove fields on views, might be a quicker way with underscore but couldnt find one
+
+            for(var i=0;i<5;i++)
+            {
+                var fieldExists = false;
+                // get the array length
+                var arrayLength = this.object.views[i].fields.length;
+                // does the field exist
+                for (var index = 0; index < arrayLength; ++index) {
+                    if (this.object.views[i].fields[index].name === column.name)
+                    {
+                        this.object.views[i].fields.splice(index, 1);
+                    }
+                }
+            }
+
             this.object.$update(function(response) {
                 console.log(response);
             });
+
 
         };
 
