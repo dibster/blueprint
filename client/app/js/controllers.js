@@ -287,13 +287,13 @@ angular.module('myApp.controllers', [])
                 if (!(_.has($scope.project, "news")))
                 {
                     console.log('creating new news object on the project');
-                    $scope.project.news = $scope.newsItems;
+                    $scope.project.news = $scope.newsItems;tend
                 }
                 var user = 1;
                 var datetimeNow = new Date();
                 var userTimeStamp = {'u' : user, 'cd' : datetimeNow};
                 // add timestamp to task
-                var newNewsItem = _.extend(newsItem, userTimeStamp);
+                var newNewsItem = _.assign(newsItem, userTimeStamp);
                 console.log(newNewsItem);
                 $scope.project.news.push(newNewsItem);
                 this.project._id = $routeParams.id;
@@ -316,7 +316,7 @@ angular.module('myApp.controllers', [])
                 var taststatus = 'Open';
                 var baseTaskData = {'u' : user, 'cd' : datetimeNow, 'taskStatus': taststatus};
                 // add timestamp to task
-                var newTask = _.extend(task, baseTaskData);
+                var newTask = _.assign(task, baseTaskData);
                 console.log(newTask);
                 $scope.project.tasks.push(newTask);
                 this.project._id = $routeParams.id;
