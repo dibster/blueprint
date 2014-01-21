@@ -96,10 +96,11 @@
         </div>
 
         <ul class="unstyled">
-            <li ng-repeat="task in MyTasks | orderBy:'date':false">
+            <li ng-repeat="task in MyTasks | orderBy:'date':true">
                 <div class="span6">{{ task.name }} </div>
                 <div class="span3"><span am-time-ago="task.date"></span></div>
                 <div class="span3">{{ task.who }}</span></div>
+
             </li>
         </ul>
     </div>

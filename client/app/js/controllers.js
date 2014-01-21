@@ -145,8 +145,6 @@ angular.module('myApp.controllers', [])
 
 
     }])
-
-
     .controller('KaboodleAdminViewCtrl',
          ['$scope',
            'KaboodleObjects',
@@ -251,14 +249,12 @@ angular.module('myApp.controllers', [])
 
          };
     }])
-
     .controller('KaboodleTypesCtrl', ['$scope', 'KaboodleTypes',  function($scope, KaboodleTypes) {
         $scope.data = {};
         KaboodleTypes.query(function(response) {
             $scope.data.types = response;
         });
     }])
-
 
     .controller('ProjectDashboardCtrl',
         ['$scope',
@@ -349,8 +345,6 @@ angular.module('myApp.controllers', [])
         };
 
     }])
-
-
     .controller('ProjectCopyCtrl', ['$scope', '$routeParams', '$location','KaboodleProjects','PrepareRecord', 'KaboodleProjectInstances', function($scope,$routeParams, $location, KaboodleProjects,PrepareRecord, KaboodleProjectInstances) {
         $scope.selectedProject = {};
         $scope.projectIinstances = {};
@@ -443,18 +437,15 @@ angular.module('myApp.controllers', [])
 
         $scope.fetchMyProjects = function() {
             MyKaboodleProjectInstances.query({id : $routeParams.id},function(projects) {
-            $scope.projectInstances = projects;
-
-
-            // uunderscore is pretty cool, may be supid what i am soinf but, get all the arrays from all returned , then flatten them into a
-            // single array,then remove any undefined itsms
-
-            $scope.MyNews = _.compact(_.flatten(_.pluck(projects,'news')));
-            $scope.MyTasks = _.compact(_.flatten(_.pluck(projects,'tasks')));
-            $scope.MyAssets = _.compact(_.flatten(_.pluck(projects,'assets')));
-            if ($scope.Refresh) {
-            $timeout(function() { $scope.fetchMyProjects(); }, $scope.refreshInterval * 1000);
-            }
+                $scope.projectInstances = projects;
+                // uunderscore is pretty cool, may be stupid what i am doing but, get all the arrays from all returned , then flatten them into a
+                // single array,then remove any undefined items
+                $scope.MyNews = _.compact(_.flatten(_.pluck(projects,'news')));
+                $scope.MyTasks = _.compact(_.flatten(_.pluck(projects,'tasks')));
+                $scope.MyAssets = _.compact(_.flatten(_.pluck(projects,'assets')));
+                if ($scope.Refresh) {
+                $timeout(function() { $scope.fetchMyProjects(); }, $scope.refreshInterval * 1000);
+                }
          });
         };
 
@@ -473,88 +464,86 @@ angular.module('myApp.controllers', [])
 
     }])
 
+    .controller('ProjectsCtrl', ['$scope', '$modal','$log', 'KaboodleProjects','PrepareRecord', 'KaboodleProjectInstances','KaboodleTags',  function($scope, $modal, $log, KaboodleProjects,PrepareRecord, KaboodleProjectInstances, KaboodleTags) {
+        $scope.data = {};
+        $scope.formItems = {};
+        $scope.selectedType = "";
+        $scope.projectIinstances = {};
+        $scope.tagList = {};
 
-.controller('ProjectsCtrl', ['$scope', '$modal','$log', 'KaboodleProjects','PrepareRecord', 'KaboodleProjectInstances','KaboodleTags',  function($scope, $modal, $log, KaboodleProjects,PrepareRecord, KaboodleProjectInstances, KaboodleTags) {
-    $scope.data = {};
-    $scope.formItems = {};
-    $scope.selectedType = "";
-    $scope.projectIinstances = {};
-    $scope.tagList = {};
-
-    KaboodleProjectInstances.query(function(response) {
-        $scope.projectInstances = response;
-    });
-
-    KaboodleProjects.query(function(response) {
-        $scope.projectTypes = response;
-    });
-
-
-    $scope.saveFormDetails = function(formData) {
-        $log.info('in update');
-        $log.info($scope.selectedType);
-        var myRecord = PrepareRecord.getRecord(formData,$scope.selectedType);
-        var kaboodleproject = new KaboodleProjectInstances(myRecord);
-
-        $scope.data.project = kaboodleproject.$save(function(response) {
-            $scope.projectInstances.push(response);
-//                return response;
+        KaboodleProjectInstances.query(function(response) {
+            $scope.projectInstances = response;
         });
-    };
 
-    $scope.openCreateProjectModal = function (selectedObject) {
-            // get tags
+        KaboodleProjects.query(function(response) {
+            $scope.projectTypes = response;
+        });
 
-        $scope.selectedType = selectedObject.name;
-        var modalInstance = $modal.open({
-            templateUrl: 'partials/modalProjectCreate.html',
-            controller: ModalInstanceCtrl,
-            resolve: {
-                items: function () {
-                    $log.info(selectedObject);
-                    return selectedObject.views[0].fields;
+
+        $scope.saveFormDetails = function(formData) {
+            $log.info('in update');
+            $log.info($scope.selectedType);
+            var myRecord = PrepareRecord.getRecord(formData,$scope.selectedType);
+            var kaboodleproject = new KaboodleProjectInstances(myRecord);
+
+            $scope.data.project = kaboodleproject.$save(function(response) {
+                $scope.projectInstances.push(response);
+    //                return response;
+            });
+        };
+
+        $scope.openCreateProjectModal = function (selectedObject) {
+                // get tags
+            $scope.selectedType = selectedObject.name;
+            var modalInstance = $modal.open({
+                templateUrl: 'partials/modalProjectCreate.html',
+                controller: ModalInstanceCtrl,
+                resolve: {
+                    items: function () {
+                        $log.info(selectedObject);
+                        return selectedObject.views[0].fields;
+                    }
                 }
-            }
-        });
+            });
 
-        modalInstance.result.then(function (selectedItem) {
-            $scope.formData = selectedItem;
-            $scope.saveFormDetails($scope.formData);
+            modalInstance.result.then(function (selectedItem) {
+                $scope.formData = selectedItem;
+                $scope.saveFormDetails($scope.formData);
 
-        }, function () {
-            $log.info('Modal dismissed at: ' + new Date());
-        });
-    };
-
-
-    var ModalInstanceCtrl = function($scope,$modalInstance, items) {
-
-        $scope.items = items;
-        $log.info('in instance controller');
-        $scope.bannertypes = ['40K Banner', 'Static Banner', '100K Banner'];
-
-        // this would get values from backend,  but not implemented yet
-
-        $scope.getTagValues = function(fieldname) {
-                //
-                $log.info('tag requested');
-                $log.info(fieldname);
-
-                KaboodleTags.get({id : fieldname},function(tag) {
-                    //$log.info('tag values : ' + tag.values[0].value );
-                    return tag.values;
-                });
-            }
-
-        $scope.ok = function () {
-            $modalInstance.close($scope.items);
+            }, function () {
+                $log.info('Modal dismissed at: ' + new Date());
+            });
         };
 
-        $scope.cancel = function () {
-            $modalInstance.dismiss('cancel');
-        };
 
-        }
+        var ModalInstanceCtrl = function($scope,$modalInstance, items) {
+
+            $scope.items = items;
+            $log.info('in instance controller');
+            $scope.bannertypes = ['40K Banner', 'Static Banner', '100K Banner'];
+
+            // this would get values from backend,  but not implemented yet
+
+            $scope.getTagValues = function(fieldname) {
+                    //
+                    $log.info('tag requested');
+                    $log.info(fieldname);
+
+                    KaboodleTags.get({id : fieldname},function(tag) {
+                        //$log.info('tag values : ' + tag.values[0].value );
+                        return tag.values;
+                    });
+                }
+
+            $scope.ok = function () {
+                $modalInstance.close($scope.items);
+            };
+
+            $scope.cancel = function () {
+                $modalInstance.dismiss('cancel');
+            };
+
+            }
 
 
     }])
