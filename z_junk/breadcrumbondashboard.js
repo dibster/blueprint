@@ -75,9 +75,13 @@ var records = [
 
 //    var MyTasks = _.compact(_.flatten(_.pluck(records,'tasks')));
 
-    var myTaskList = [];
-    var myNewsList = [];
-    var myAssetList = [];
+
+var myDashboardContents = function(records) {
+
+    var dashboardRecs = {};
+        dashboardRecs.myTaskList = [];
+        dashboardRecs.myNewsList = [];
+        dashboardRecs.myAssetList = [];
 
     var numberOfProjects = records.length;
 
@@ -85,25 +89,33 @@ var records = [
         // set breadcrumb for project 
         var breadcrumb={} ;
         breadcrumb.Location = records[i].Title;
-        
+        if (_.has(records[i], "tasks")) {
         var numberOfTasks = records[i].tasks.length;
-        for (var j = 0; j < numberOfTasks; j++){
-            var taskWithBreadcrumb = _.extend(breadcrumb,records[i].tasks[j]);
-            myTaskList.push(JSON.stringify(taskWithBreadcrumb));
+            for (var j = 0; j < numberOfTasks; j++){
+                var taskWithBreadcrumb = _.extend(breadcrumb,records[i].tasks[j]);
+                dashboardRecs.myTaskList.push(JSON.stringify(taskWithBreadcrumb));
+            }
         }
-        // tasks
-        var numberOfNews = records[i].news.length;
-        for (var j = 0; j < numberOfNews; j++){
-            var newsWithBreadcrumb = _.extend(breadcrumb,records[i].news[j]);
-            myNewsList.push(JSON.stringify(newsWithBreadcrumb));
+        // news
+        if (_.has(records[i], "news")) {
+            var numberOfNews = records[i].news.length;
+            for (var j = 0; j < numberOfNews; j++){
+                var newsWithBreadcrumb = _.extend(breadcrumb,records[i].news[j]);
+                dashboardRecs.myNewsList.push(JSON.stringify(newsWithBreadcrumb));
+            }
         }
-        // tasks
-        var numberOfAssets = records[i].assets.length;
-        for (var j = 0; j < numberOfAssets; j++){
-            var assetWithBreadcrumb = _.extend(breadcrumb,records[i].assets[j]);
-            myAssetList.push(JSON.stringify(assetWithBreadcrumb));
+        // assets
+        if (_.has(records[i], "assets")) {
+            var numberOfAssets = records[i].assets.length;
+            for (var j = 0; j < numberOfAssets; j++){
+                var assetWithBreadcrumb = _.extend(breadcrumb,records[i].assets[j]);
+                dashboardRecs.myAssetList.push(JSON.stringify(assetWithBreadcrumb));
+            }
         }
     }
- c
+    return dashboardRecs;
+}
 
-    console.log(myTaskList);
+
+dashboardRecords = myDashboardContents(records);
+console.log(dashboardRecords.MyTaskList);

@@ -287,7 +287,7 @@ angular.module('myApp.controllers', [])
                 if (!(_.has($scope.project, "news")))
                 {
                     console.log('creating new news object on the project');
-                    $scope.project.news = $scope.newsItems;tend
+                    $scope.project.news = $scope.newsItems;
                 }
                 var user = 1;
                 var datetimeNow = new Date();
