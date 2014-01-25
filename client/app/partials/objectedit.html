@@ -26,9 +26,9 @@
     <table class="table">
         <tr>
             <th style="width: 30%">Name</th>
-            <th style="width: 25%">Type</th>
-            <th style="width: 15%">Required</th>
-            <th style="width: 15%">Length</th>
+            <th style="width: 30%">Type</th>
+            <th style="width: 30%">Required</th>
+
             <th style="width: 15%">
                 <div class="pull-right">
                     Action
@@ -52,9 +52,6 @@
                 </select>
             </td>
             <td>
-                <input type="text" data-ng-model="newfield.length" class="form-control" id="newfieldlength" >
-            </td>
-            <td>
                 <button type="button" class="btn btn-primary pull-right" data-ng-click="addField(newfield);focusInput=true"><i class="fa fa-plus-square-o"></i> Add</button>
             </td>
         </tr>
@@ -63,7 +60,6 @@
             <td>{{column.type}}</td>
             <td class="" data-ng-show="column.req == 'y'">{{column.req}}</td>
             <td data-ng-show="column.req == 'n'"></td>
-            <td>{{column.length}}</td>
             <td><button type="button"  class="btn pull-right" data-ng-click="removeField(column)"><i class="fa fa-trash-o"></i> Delete</button></td>
         </tr>
     </table>

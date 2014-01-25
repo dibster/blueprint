@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51ac86f2-a104-4d81-a8bd-7f817e81fc09" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/kaboodle/kaboodleClientFunctions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/index.html" afterPath="$PROJECT_DIR$/client/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/partials/objectedit.html" afterPath="$PROJECT_DIR$/client/app/partials/objectedit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/partials/projectdashboard.html" afterPath="$PROJECT_DIR$/client/app/partials/projectdashboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="blueprint.iws" />
@@ -26,19 +28,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="3" selection-start="2386" selection-end="2435" vertical-scroll-proportion="-28.62069" vertical-offset="350" max-vertical-offset="1360">
+            <state line="19" column="59" selection-start="731" selection-end="731" vertical-scroll-proportion="0.35211268" vertical-offset="180" max-vertical-offset="1360">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="projectdashboard.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="projectdashboard.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/partials/projectdashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="35" selection-start="939" selection-end="939" vertical-scroll-proportion="0.21003501" vertical-offset="460" max-vertical-offset="2660">
+            <state line="28" column="23" selection-start="849" selection-end="849" vertical-scroll-proportion="4.827586" vertical-offset="700" max-vertical-offset="2660">
               <folding />
             </state>
           </provider>
@@ -91,6 +93,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="objectedit.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/partials/objectedit.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="0" selection-start="1868" selection-end="1868" vertical-scroll-proportion="-10.551724" vertical-offset="674" max-vertical-offset="1540">
+              <folding>
+                <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#2;n#tr#0;n#table#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#3;n#tr#0;n#table#0;n#div#2;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -109,7 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/server/app/controllers/testData/Kaboodletags.json" />
         <option value="$PROJECT_DIR$/server/server.js" />
         <option value="$PROJECT_DIR$/server/app/controllers/kaboodle/kabooldetags.js" />
         <option value="$PROJECT_DIR$/server/app/controllers/kaboodle/kaboodletags.js" />
@@ -119,20 +134,21 @@
         <option value="$PROJECT_DIR$/client/app/partials/modalProjectCreate.html" />
         <option value="$PROJECT_DIR$/client/app/partials/myProjectDashboard.html" />
         <option value="$PROJECT_DIR$/server/app/controllers/testData/kaboodleobjects.json" />
-        <option value="$PROJECT_DIR$/client/app/index.html" />
         <option value="$PROJECT_DIR$/client/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/z_junk/test.html" />
         <option value="$PROJECT_DIR$/z_junk/breadcrumbondashboard.js" />
         <option value="$PROJECT_DIR$/client/kaboodle/kaboodleClientFunctions.js" />
         <option value="$PROJECT_DIR$/client/app/partials/projectdashboard.html" />
+        <option value="$PROJECT_DIR$/client/app/partials/objectedit.html" />
+        <option value="$PROJECT_DIR$/client/app/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="49" />
-    <option name="y" value="24" />
-    <option name="width" value="1871" />
-    <option name="height" value="1056" />
+    <option name="x" value="48" />
+    <option name="y" value="-4" />
+    <option name="width" value="1873" />
+    <option name="height" value="1085" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -593,7 +609,11 @@
       <created>1390307385041</created>
       <updated>1390307385042</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="&#10;some more changes&#10;">
+      <created>1390309172801</created>
+      <updated>1390309172801</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -617,15 +637,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="49" y="24" width="1871" height="1056" extended-state="0" />
+    <frame x="48" y="-4" width="1873" height="1085" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31941545" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44572026" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985386" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24558587" sideWeight="0.67014617" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24532336" sideWeight="0.68058455" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38351983" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985386" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -676,7 +696,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="kind of got a dashboard of sorts working&#10;" />
     <MESSAGE value="added user and timestamp to news and tasks" />
     <MESSAGE value="added moment.js and refectored dashboard controller" />
     <MESSAGE value="Added Flatly UI, and tidied up a lot of the views and stuff" />
@@ -701,7 +720,8 @@
     <MESSAGE value="before lodash / underscore replacement&#10;" />
     <MESSAGE value="lodash changes made (faster already .......)" />
     <MESSAGE value="dashboard test javascript function" />
-    <option name="LAST_COMMIT_MESSAGE" value="dashboard test javascript function" />
+    <MESSAGE value="&#10;some more changes&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;some more changes&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -731,13 +751,6 @@
     <entry file="file://$PROJECT_DIR$/client/app/partials/modalProjectCreate.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="9" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/partials/objectedit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="0" selection-start="2977" selection-end="2977" vertical-scroll-proportion="0.92415404" vertical-offset="708" max-vertical-offset="1620">
           <folding />
         </state>
       </provider>
@@ -793,13 +806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="3" selection-start="2386" selection-end="2435" vertical-scroll-proportion="-28.62069" vertical-offset="350" max-vertical-offset="1360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/z_junk/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="0" selection-start="461" selection-end="461" vertical-scroll-proportion="-17.931034" vertical-offset="0" max-vertical-offset="740">
@@ -823,9 +829,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/partials/objectedit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="0" selection-start="1868" selection-end="1868" vertical-scroll-proportion="-10.551724" vertical-offset="674" max-vertical-offset="1540">
+          <folding>
+            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#2;n#tr#0;n#table#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#3;n#tr#0;n#table#0;n#div#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/partials/projectdashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="35" selection-start="939" selection-end="939" vertical-scroll-proportion="0.21003501" vertical-offset="460" max-vertical-offset="2660">
+        <state line="28" column="23" selection-start="849" selection-end="849" vertical-scroll-proportion="4.827586" vertical-offset="700" max-vertical-offset="2660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="59" selection-start="731" selection-end="731" vertical-scroll-proportion="0.35211268" vertical-offset="180" max-vertical-offset="1360">
           <folding />
         </state>
       </provider>
