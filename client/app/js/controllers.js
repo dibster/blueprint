@@ -10,9 +10,10 @@ angular.module('myApp.controllers', [])
          'KaboodleFieldTypes',
          '$routeParams',
          '$location',
+         '$modal',
          '$log',
 
-        function($scope, KaboodleObjects, KaboodleTypes, KaboodleFieldTypes,  $routeParams, $location, $log) {
+        function($scope, KaboodleObjects, KaboodleTypes, KaboodleFieldTypes,  $routeParams, $location, $modal, $log) {
 
         $scope.data = {};
         $scope.newobject = {};
@@ -144,7 +145,50 @@ angular.module('myApp.controllers', [])
         };
 
 
-    }])
+
+        $scope.openFieldModal = function (field) {
+            var modalInstance = $modal.open({
+                templateUrl: 'partials/modalFieldEdit.html',
+                controller: FieldModalInstanceCtrl,
+                resolve: {
+                    modalField: function () {
+                        return field;
+                    },
+                    fieldtypes: function () {
+                        return $scope.data.fieldtypes;
+                    }
+                }
+            });
+
+            modalInstance.result.then(function (field) {
+                console.log('saving field : ' +  field);
+
+            }, function () {
+                $log.info('Modal dismissed at: ' + new Date());
+            });
+        };
+
+        var FieldModalInstanceCtrl = function($scope,$modalInstance, modalField, fieldtypes) {
+
+            $scope.modalField = modalField;
+            $scope.fieldtypes = fieldtypes;
+
+
+            // this would get values from backend,  but not implemented yet
+
+
+            $scope.ok = function () {
+                $modalInstance.close(modalField);
+            };
+
+            $scope.cancel = function () {
+                $modalInstance.dismiss('cancel');
+            };
+
+        };
+
+
+        }])
     .controller('KaboodleAdminViewCtrl',
          ['$scope',
            'KaboodleObjects',

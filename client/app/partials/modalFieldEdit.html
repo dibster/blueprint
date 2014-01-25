@@ -1,0 +1,31 @@
+<div class="modal-header">
+    <h3>Edit Field Definition</h3>
+</div>
+<div class="modal-body">
+
+    <form>
+        <fieldset>
+            <!--<legend>Enter Data</legend>-->
+            <label class="control-label">Name</label>
+            <input type="text" data-ng-model="modalField.name">
+            <label class="control-label">Type</label>
+            <select required  ng-model="newfield.type">
+                <option data-ng-repeat="fieldtype in fieldtypes">{{fieldtype.name}}</option>
+            </select>
+            <label class="control-label">Required</label>
+            <select required ng-model="modelField.req">
+                <option selected>n</option>
+                <option>y</option>
+            </select>
+
+            <!--<textarea rows="3" ng-switch-when="Note" data-ng-model="formItem.content"></textarea>-->
+        </fieldset>
+        <!--<button data-ng-click="saveFormDetails(formItems)">Save</button>-->
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>
+
+<!--<input type="text" ng-model="asyncSelected" placeholder="Locations loaded via $http" typeahead="address for address in getLocation($viewValue) | filter:$viewValue" typeahead-loading="loadingLocations" class="form-control">-->
