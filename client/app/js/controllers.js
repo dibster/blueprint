@@ -153,7 +153,9 @@ angular.module('myApp.controllers', [])
                 controller: FieldModalInstanceCtrl,
                 resolve: {
                     modalField: function () {
-
+                    if (_.has(thisModalField, "values")) {
+                        thisModalField.choices = thisModalField.values.join("\n");
+                    }
                         return thisModalField;
                     },
                     fieldtypes: function () {
@@ -245,7 +247,7 @@ angular.module('myApp.controllers', [])
 
 
                  // iterate through all views
-$scope.project
+
                  for(var i=0;i<5;i++)
                  {
                      var fieldExists = false;

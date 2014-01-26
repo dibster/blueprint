@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="51ac86f2-a104-4d81-a8bd-7f817e81fc09" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/js/controllers.js" afterPath="$PROJECT_DIR$/client/app/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/partials/modalFieldEdit.html" afterPath="$PROJECT_DIR$/client/app/partials/modalFieldEdit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/partials/objectedit.html" afterPath="$PROJECT_DIR$/client/app/partials/objectedit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="blueprint.iws" />
@@ -96,7 +94,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="163" column="0" selection-start="5166" selection-end="5166" vertical-scroll-proportion="0.2739726" vertical-offset="3100" max-vertical-offset="12280">
+            <state line="157" column="21" selection-start="5101" selection-end="5101" vertical-scroll-proportion="0.47945204" vertical-offset="2860" max-vertical-offset="12320">
               <folding />
             </state>
           </provider>
@@ -661,7 +659,11 @@
       <created>1390657728530</created>
       <updated>1390657728530</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="chioces being stored as array, just got to set them and I am done">
+      <created>1390736135739</created>
+      <updated>1390736135739</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -744,7 +746,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Added Flatly UI, and tidied up a lot of the views and stuff" />
     <MESSAGE value="have file upload directive to filepicker.io. Pretty Cool :-)" />
     <MESSAGE value="some changes to the object Edit page" />
     <MESSAGE value="Fixed new project, goto select page" />
@@ -769,7 +770,8 @@
     <MESSAGE value="&#10;some more changes&#10;" />
     <MESSAGE value="before choice" />
     <MESSAGE value="modal popup for all field edits, cool the way you can pass multiple objects into the modal :-)" />
-    <option name="LAST_COMMIT_MESSAGE" value="modal popup for all field edits, cool the way you can pass multiple objects into the modal :-)" />
+    <MESSAGE value="chioces being stored as array, just got to set them and I am done" />
+    <option name="LAST_COMMIT_MESSAGE" value="chioces being stored as array, just got to set them and I am done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -900,7 +902,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="163" column="0" selection-start="5166" selection-end="5166" vertical-scroll-proportion="0.2739726" vertical-offset="3100" max-vertical-offset="12280">
+        <state line="157" column="21" selection-start="5101" selection-end="5101" vertical-scroll-proportion="0.47945204" vertical-offset="2860" max-vertical-offset="12320">
           <folding />
         </state>
       </provider>
