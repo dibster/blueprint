@@ -102,92 +102,60 @@ describe('get all records of type Titles', function() {
                 console.log(res);
                 res.body[0].should.have.property('ListName');
                 res.body[1].should.have.property('ListName');
+                fetchrecordId = res.body[0]._id;
             });
 
     });
 
 });
 
-//
-//describe('API', function() {
-//    // get a record ID for theID based tests
-//    before(function(done){
-//        request(url)
-//            .get('/api/kaboodleprojects')
-//            .expect(200)
-//            .end(function(err, res) {
-//                if (err) {
-//                    throw err;
-//                }
-//                fetchrecordId = res.body[0]._id;
-//                done();
-//            });
-//    });
+
+describe('Update a record', function() {
+    it('should update it and return 200', function() {
+
+        var newObject = {
+            "ListName" : "Titles And Something",
+            "name" : "Sport",
+            "description": "Sports Updated by tests"
+            };
+
+        request(url)
+            .put('/api/kaboodlelists/' + fetchrecordId)
+            .send(newObject)
+            .expect(200)
+            .end(function(err, res) {
+                if (err) {
+                    throw err;
+                }
+            });
+
+    });
+});
+
+describe('Delete a record', function() {
+    it('should delete it and return 200', function() {
+        request(url)
+            .del('/api/kaboodlelists/' + fetchrecordId)
+            .expect(200)
+            .end(function(err, res) {
+                if (err) {
+                    throw err;
+                }
+            });
+        request(url)
+            .get('/api/kaboodlelistsbyname/' + "Titles And Something")
+            .expect(200)
+            .end(function(err, res) {
+                if (err) {
+                    throw err;
+                }
+                res.body[0].should.have.property('ListName');
+                res.body.length.should.equal(1);
+            });
+    });
+});
 
 
-////
-////
-//    describe('Count the number of base objects', function() {
-//        it('should return 2 objects', function() {
-//            // count objects should have one more (6)
-//            request(url)
-//                .get('/api/kaboodleprojects')
-//                .expect(200)
-//                .end(function(err, res) {
-//                    if (err) {
-//                        throw err;
-//                    }
-//                    res.body[0].should.have.property('Title');
-//                    res.body.length.should.eql(2);
-//                });
-//        });
-//    });
-//
-
-
-
-
-
-//
-//
-////
-//    describe('Update a record', function() {
-//        it('should update it and return 200', function() {
-//
-//            var newObject = {
-//                "name" : "FIFA 10",
-//                "description": "FIFA 10 Project Updated",
-//                "type" : "Campaign",
-//                "status" : "Open"};
-//
-//            request(url)
-//                .put('/api/kaboodleprojects/' + fetchrecordId)
-//                .send(newObject)
-//                .expect(200)
-//                .end(function(err, res) {
-//                    if (err) {
-//                        throw err;
-//                    }
-//                });
-//
-//        });
-//    });
-////
-//    describe('Delete a record', function() {
-//        it('should delete it and return 200', function() {
-//
-//            request(url)
-//                .del('/api/kaboodleprojects/' + fetchrecordId)
-//                .expect(200)
-//                .end(function(err, res) {
-//                    if (err) {
-//                        throw err;
-//                    }
-//                });
-//
-//        });
-//    });
-//
 //    describe('Count the number of projects after delete', function() {
 //        it('should return 1 object', function() {
 //            // count objects should have one more (6)

@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51ac86f2-a104-4d81-a8bd-7f817e81fc09" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/app/controllers/kaboodle/kaboodlelists.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/tests/kaboodlelists.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/partials/lists.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/js/app.js" afterPath="$PROJECT_DIR$/client/app/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/js/controllers.js" afterPath="$PROJECT_DIR$/client/app/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/index.html" afterPath="$PROJECT_DIR$/client/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app/controllers/testData/kaboodleobjects.json" afterPath="$PROJECT_DIR$/server/app/controllers/testData/kaboodleobjects.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app/controllers/testData/kaboodletypes.json" afterPath="$PROJECT_DIR$/server/app/controllers/testData/kaboodletypes.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app/controllers/testData/resetDatabaseForTests.js" afterPath="$PROJECT_DIR$/server/app/controllers/testData/resetDatabaseForTests.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/server.js" afterPath="$PROJECT_DIR$/server/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/js/services.js" afterPath="$PROJECT_DIR$/client/app/js/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/tests/kaboodlelists.test.js" afterPath="$PROJECT_DIR$/server/tests/kaboodlelists.test.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="blueprint.iws" />
@@ -48,7 +38,7 @@
       <file leaf-file-name="kaboodlelists.test.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/tests/kaboodlelists.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="2" selection-start="2615" selection-end="2615" vertical-scroll-proportion="0.6034483" vertical-offset="1640" max-vertical-offset="4600">
+            <state line="127" column="24" selection-start="3154" selection-end="3154" vertical-scroll-proportion="0.22413793" vertical-offset="2332" max-vertical-offset="3960">
               <folding />
             </state>
           </provider>
@@ -623,7 +613,11 @@
       <created>1390737017764</created>
       <updated>1390737017764</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="KaboodleListsbackend written, need to add a couple of more tests">
+      <created>1390775448958</created>
+      <updated>1390775448958</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -706,7 +700,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="some changes to the object Edit page" />
     <MESSAGE value="Fixed new project, goto select page" />
     <MESSAGE value="Copy project, it just gets better :-)" />
     <MESSAGE value="Copying now works, select task and Assets, added to new project" />
@@ -731,7 +724,8 @@
     <MESSAGE value="modal popup for all field edits, cool the way you can pass multiple objects into the modal :-)" />
     <MESSAGE value="chioces being stored as array, just got to set them and I am done" />
     <MESSAGE value="choices done" />
-    <option name="LAST_COMMIT_MESSAGE" value="choices done" />
+    <MESSAGE value="KaboodleListsbackend written, need to add a couple of more tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="KaboodleListsbackend written, need to add a couple of more tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -853,7 +847,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/tests/kaboodlelists.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="2" selection-start="2615" selection-end="2615" vertical-scroll-proportion="0.6034483" vertical-offset="1640" max-vertical-offset="4600">
+        <state line="127" column="24" selection-start="3154" selection-end="3154" vertical-scroll-proportion="0.22413793" vertical-offset="2332" max-vertical-offset="3960">
           <folding />
         </state>
       </provider>
