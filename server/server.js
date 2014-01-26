@@ -3,6 +3,7 @@ var express = require('express'),
     fieldtypes = require('./app/controllers/admin/fieldtypes');
     kaboodletypes = require('./app/controllers/admin/kaboodletypes');
     kaboodleprojects = require('./app/controllers/kaboodle/kaboodleprojects');
+    kaboodlelists = require('./app/controllers/kaboodle/kaboodlelists');
     kaboodletags = require('./app/controllers/kaboodle/kaboodletags');
     emptyDBTests = require('./app/controllers/testData/resetDatabaseForTests');
 
@@ -52,6 +53,16 @@ app.post('/api/kaboodleprojects', kaboodleprojects.add);
 app.put('/api/kaboodleprojects/:id', kaboodleprojects.update);
 app.delete('/api/kaboodleprojects/:id', kaboodleprojects.remove);
 
+// Kaboodle List Routes
+
+app.get('/api/kaboodlelists', kaboodlelists.findAll);
+app.get('/api/kaboodlelists/:id', kaboodlelists.findById);
+app.post('/api/kaboodlelists', kaboodlelists.add);
+app.put('/api/kaboodlelists/:id', kaboodlelists.update);
+app.delete('/api/kaboodlelists/:id', kaboodlelists.remove);
+app.get('/api/kaboodlelistsbyname/:id', kaboodlelists.findByListName);
+
+// fields and views
 
 
 app.get('/api/objects/:id/fields', objects.findAllFields);

@@ -28,7 +28,11 @@ exports.emptyDB = function(req,res) {
     });
     db.collection('kaboodletypes').remove({},function(err,numberRemoved){
         console.log("remove kaboodle types");
-    });    db.collection('kaboodletypes').remove({},function(err,numberRemoved){
+    });
+    db.collection('kaboodlelists').remove({},function(err,numberRemoved){
+            console.log("remove kaboodle lists");
+    });
+        db.collection('kaboodletypes').remove({},function(err,numberRemoved){
         console.log("remove kaboodle types");
     });
     db.collection('kaboodletags').remove({},function(err,numberRemoved){

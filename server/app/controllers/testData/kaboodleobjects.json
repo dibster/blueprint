@@ -205,9 +205,9 @@
 
     },
     {
-        "name" : "Lookup",
+        "name" : "List",
         "description": "Default Lookup Object ...",
-        "type" : "Lookup",
+        "type" : "List",
         "template" : true,
         "fields" : [{"name" : "Title", "type" : "Text","req" : "y"}
         ],

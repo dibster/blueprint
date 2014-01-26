@@ -607,4 +607,89 @@ angular.module('myApp.controllers', [])
 
     }])
 
+
+    .controller('ListsCtrl', ['$scope', '$modal','$log', 'KaboodleProjects','PrepareRecord', 'KaboodleProjectInstances','KaboodleTags',  function($scope, $modal, $log, KaboodleProjects,PrepareRecord, KaboodleProjectInstances, KaboodleTags) {
+        $scope.data = {};
+        $scope.formItems = {};
+        $scope.selectedType = "";
+        $scope.projectIinstances = {};
+        $scope.tagList = {};
+
+        KaboodleProjectInstances.query(function(response) {
+            $scope.projectInstances = response;
+        });
+
+        KaboodleProjects.query(function(response) {
+            $scope.projectTypes = response;
+        });
+
+
+        $scope.saveFormDetails = function(formData) {
+            $log.info('in update');
+            $log.info($scope.selectedType);
+            var myRecord = PrepareRecord.getRecord(formData,$scope.selectedType);
+            var kaboodleproject = new KaboodleProjectInstances(myRecord);
+
+            $scope.data.project = kaboodleproject.$save(function(response) {
+                $scope.projectInstances.push(response);
+                //                return response;
+            });
+        };
+
+        $scope.openCreateProjectModal = function (selectedObject) {
+            // get tags
+            $scope.selectedType = selectedObject.name;
+            var modalInstance = $modal.open({
+                templateUrl: 'partials/modalProjectCreate.html',
+                controller: ModalInstanceCtrl,
+                resolve: {
+                    items: function () {
+                        $log.info(selectedObject);
+                        return selectedObject.views[0].fields;
+                    }
+                }
+            });
+
+            modalInstance.result.then(function (selectedItem) {
+                $scope.formData = selectedItem;
+                $scope.saveFormDetails($scope.formData);
+
+            }, function () {
+                $log.info('Modal dismissed at: ' + new Date());
+            });
+        };
+
+
+        var ModalInstanceCtrl = function($scope,$modalInstance, items) {
+
+            $scope.items = items;
+            $log.info('in instance controller');
+            $scope.bannertypes = ['40K Banner', 'Static Banner', '100K Banner'];
+
+            // this would get values from backend,  but not implemented yet
+
+            $scope.getTagValues = function(fieldname) {
+                //
+                $log.info('tag requested');
+                $log.info(fieldname);
+
+                KaboodleTags.get({id : fieldname},function(tag) {
+                    //$log.info('tag values : ' + tag.values[0].value );
+                    return tag.values;
+                });
+            }
+
+            $scope.ok = function () {
+                $modalInstance.close($scope.items);
+            };
+
+            $scope.cancel = function () {
+                $modalInstance.dismiss('cancel');
+            };
+
+        }
+
+
+    }])
+
 ;

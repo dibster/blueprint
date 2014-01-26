@@ -16,7 +16,7 @@
         "description": "Asset"
     },
     {
-        "name" : "Lookup",
+        "name" : "List",
         "description": "Lookup"
     }
 ]
