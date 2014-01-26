@@ -56,7 +56,7 @@
             </td>
         </tr>
         <tr data-ng-repeat="column in object.fields" data-ng-model="object.fields">
-            <td><a ng-click="openFieldModal(column)">{{column.name}}</a></td>
+            <td><a ng-click="openFieldModal($index)">{{column.name}}</a></td>
             <td>{{column.type}}</td>
             <td class="" data-ng-show="column.req == 'y'">{{column.req}}</td>
             <td data-ng-show="column.req == 'n'"></td>

@@ -2,21 +2,27 @@
     <h3>Edit Field Definition</h3>
 </div>
 <div class="modal-body">
-
     <form>
         <fieldset>
             <!--<legend>Enter Data</legend>-->
             <label class="control-label">Name</label>
             <input type="text" data-ng-model="modalField.name">
             <label class="control-label">Type</label>
-            <select required  ng-model="newfield.type">
+            <select required  data-ng-model="modalField.type">
                 <option data-ng-repeat="fieldtype in fieldtypes">{{fieldtype.name}}</option>
             </select>
             <label class="control-label">Required</label>
-            <select required ng-model="modelField.req">
-                <option selected>n</option>
+            <select required ng-model="modalField.req">
+                <option>n</option>
                 <option>y</option>
             </select>
+            <span data-ng-show="modalField.type=='Choice'">
+            <label class="control-label">Choice Values</label>
+            <textarea rows="3" data-ng-model="modalField.choices"></textarea>
+             </span>
+
+            <label class="control-label">PopUp Help Description</label>
+            <textarea rows="3" data-ng-model="modalField.popupHelp"></textarea>
 
             <!--<textarea rows="3" ng-switch-when="Note" data-ng-model="formItem.content"></textarea>-->
         </fieldset>

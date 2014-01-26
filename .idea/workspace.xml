@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51ac86f2-a104-4d81-a8bd-7f817e81fc09" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/partials/modalFieldEdit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/js/controllers.js" afterPath="$PROJECT_DIR$/client/app/js/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/partials/modalFieldEdit.html" afterPath="$PROJECT_DIR$/client/app/partials/modalFieldEdit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/partials/objectedit.html" afterPath="$PROJECT_DIR$/client/app/partials/objectedit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -49,7 +49,7 @@
       <file leaf-file-name="modalProjectCreate.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/partials/modalProjectCreate.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="20" selection-start="287" selection-end="542" vertical-scroll-proportion="-6.206897" vertical-offset="0" max-vertical-offset="720">
+            <state line="10" column="20" selection-start="362" selection-end="447" vertical-scroll-proportion="-6.8965516" vertical-offset="0" max-vertical-offset="720">
               <folding />
             </state>
           </provider>
@@ -96,7 +96,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="156" column="45" selection-start="4907" selection-end="4907" vertical-scroll-proportion="0.55479455" vertical-offset="2796" max-vertical-offset="12020">
+            <state line="163" column="0" selection-start="5166" selection-end="5166" vertical-scroll-proportion="0.2739726" vertical-offset="3100" max-vertical-offset="12280">
               <folding />
             </state>
           </provider>
@@ -105,7 +105,7 @@
       <file leaf-file-name="objectedit.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/partials/objectedit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="1" selection-start="1536" selection-end="1980" vertical-scroll-proportion="-5.724138" vertical-offset="674" max-vertical-offset="1540">
+            <state line="58" column="50" selection-start="2355" selection-end="2355" vertical-scroll-proportion="-6.413793" vertical-offset="974" max-vertical-offset="1540">
               <folding>
                 <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#2;n#!!top" expanded="true" />
@@ -119,7 +119,7 @@
       <file leaf-file-name="modalFieldEdit.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/partials/modalFieldEdit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="53" selection-start="453" selection-end="453" vertical-scroll-proportion="-8.275862" vertical-offset="0" max-vertical-offset="740">
+            <state line="18" column="42" selection-start="769" selection-end="769" vertical-scroll-proportion="-10.344828" vertical-offset="60" max-vertical-offset="860">
               <folding />
             </state>
           </provider>
@@ -156,8 +156,8 @@
         <option value="$PROJECT_DIR$/client/kaboodle/kaboodleClientFunctions.js" />
         <option value="$PROJECT_DIR$/client/app/partials/projectdashboard.html" />
         <option value="$PROJECT_DIR$/client/app/index.html" />
-        <option value="$PROJECT_DIR$/client/app/partials/objectedit.html" />
         <option value="$PROJECT_DIR$/client/app/partials/modalFieldEdit.html" />
+        <option value="$PROJECT_DIR$/client/app/partials/objectedit.html" />
         <option value="$PROJECT_DIR$/client/app/js/controllers.js" />
       </list>
     </option>
@@ -657,7 +657,11 @@
       <created>1390647773192</created>
       <updated>1390647773192</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="modal popup for all field edits, cool the way you can pass multiple objects into the modal :-)">
+      <created>1390657728530</created>
+      <updated>1390657728530</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -740,7 +744,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="added moment.js and refectored dashboard controller" />
     <MESSAGE value="Added Flatly UI, and tidied up a lot of the views and stuff" />
     <MESSAGE value="have file upload directive to filepicker.io. Pretty Cool :-)" />
     <MESSAGE value="some changes to the object Edit page" />
@@ -765,7 +768,8 @@
     <MESSAGE value="dashboard test javascript function" />
     <MESSAGE value="&#10;some more changes&#10;" />
     <MESSAGE value="before choice" />
-    <option name="LAST_COMMIT_MESSAGE" value="before choice" />
+    <MESSAGE value="modal popup for all field edits, cool the way you can pass multiple objects into the modal :-)" />
+    <option name="LAST_COMMIT_MESSAGE" value="modal popup for all field edits, cool the way you can pass multiple objects into the modal :-)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -870,14 +874,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/partials/modalProjectCreate.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="20" selection-start="287" selection-end="542" vertical-scroll-proportion="-6.206897" vertical-offset="0" max-vertical-offset="720">
+        <state line="10" column="20" selection-start="362" selection-end="447" vertical-scroll-proportion="-6.8965516" vertical-offset="0" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/partials/modalFieldEdit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="42" selection-start="769" selection-end="769" vertical-scroll-proportion="-10.344828" vertical-offset="60" max-vertical-offset="860">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/partials/objectedit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="1" selection-start="1536" selection-end="1980" vertical-scroll-proportion="-5.724138" vertical-offset="674" max-vertical-offset="1540">
+        <state line="58" column="50" selection-start="2355" selection-end="2355" vertical-scroll-proportion="-6.413793" vertical-offset="974" max-vertical-offset="1540">
           <folding>
             <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#2;n#!!top" expanded="true" />
@@ -887,16 +898,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/partials/modalFieldEdit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="53" selection-start="453" selection-end="453" vertical-scroll-proportion="-8.275862" vertical-offset="0" max-vertical-offset="740">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="45" selection-start="4907" selection-end="4907" vertical-scroll-proportion="0.55479455" vertical-offset="2796" max-vertical-offset="12020">
+        <state line="163" column="0" selection-start="5166" selection-end="5166" vertical-scroll-proportion="0.2739726" vertical-offset="3100" max-vertical-offset="12280">
           <folding />
         </state>
       </provider>

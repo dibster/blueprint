@@ -144,15 +144,17 @@ angular.module('myApp.controllers', [])
 
         };
 
+        $scope.openFieldModal = function (index) {
+            var thisModalField= JSON.parse( JSON.stringify( $scope.object.fields[index]) );
+            console.log(thisModalField.type);
 
-
-        $scope.openFieldModal = function (field) {
             var modalInstance = $modal.open({
                 templateUrl: 'partials/modalFieldEdit.html',
                 controller: FieldModalInstanceCtrl,
                 resolve: {
                     modalField: function () {
-                        return field;
+
+                        return thisModalField;
                     },
                     fieldtypes: function () {
                         return $scope.data.fieldtypes;
@@ -160,25 +162,36 @@ angular.module('myApp.controllers', [])
                 }
             });
 
-            modalInstance.result.then(function (field) {
-                console.log('saving field : ' +  field);
+            modalInstance.result.then(function (updatedField) {
+                // update the column
+                if (updatedField.type === "Choice") {
+                    var values = updatedField.choices.split("\n");
+                    // remove choice from updated Field and add the array
+                    var newField = _.omit(updatedField,"choices");
+                    newField.values = values;
+                    $scope.object.fields[index] = newField;
+                }
+                else {
+                    $scope.object.fields[index] = updatedField;
+                }
+                $scope.object._id = $routeParams.id;
+                $scope.object.$update(function(response) {
+                    console.log('saved');
+                });
+
 
             }, function () {
                 $log.info('Modal dismissed at: ' + new Date());
             });
         };
 
-        var FieldModalInstanceCtrl = function($scope,$modalInstance, modalField, fieldtypes) {
+        var FieldModalInstanceCtrl = function($scope, $modalInstance, modalField, fieldtypes) {
 
             $scope.modalField = modalField;
             $scope.fieldtypes = fieldtypes;
 
-
-            // this would get values from backend,  but not implemented yet
-
-
             $scope.ok = function () {
-                $modalInstance.close(modalField);
+                $modalInstance.close($scope.modalField);
             };
 
             $scope.cancel = function () {
@@ -232,7 +245,7 @@ angular.module('myApp.controllers', [])
 
 
                  // iterate through all views
-
+$scope.project
                  for(var i=0;i<5;i++)
                  {
                      var fieldExists = false;
