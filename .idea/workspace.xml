@@ -4,7 +4,7 @@
     <list default="true" id="51ac86f2-a104-4d81-a8bd-7f817e81fc09" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/js/controllers.js" afterPath="$PROJECT_DIR$/client/app/js/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/index.html" afterPath="$PROJECT_DIR$/client/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/partials/lists.html" afterPath="$PROJECT_DIR$/client/app/partials/lists.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/partials/projectdashboard.html" afterPath="$PROJECT_DIR$/client/app/partials/projectdashboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="blueprint.iws" />
@@ -31,17 +31,18 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="2" selection-start="315" selection-end="315" vertical-scroll-proportion="-6.206897" vertical-offset="0" max-vertical-offset="1360">
+            <state line="49" column="2" selection-start="1980" selection-end="1980" vertical-scroll-proportion="-17.034483" vertical-offset="486" max-vertical-offset="1360">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="projectdashboard.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="projectdashboard.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/app/partials/projectdashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="49" selection-start="2284" selection-end="2305" vertical-scroll-proportion="-11.381818" vertical-offset="594" max-vertical-offset="2780">
+            <state line="4" column="36" selection-start="122" selection-end="122" vertical-scroll-proportion="0.09163803" vertical-offset="0" max-vertical-offset="2780">
               <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#3;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -66,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="8" selection-start="4170" selection-end="4170" vertical-scroll-proportion="0.11111111" vertical-offset="2584" max-vertical-offset="14220">
+            <state line="615" column="0" selection-start="21678" selection-end="21678" vertical-scroll-proportion="-36.923077" vertical-offset="11340" max-vertical-offset="14260">
               <folding />
             </state>
           </provider>
@@ -141,10 +142,10 @@
         <option value="$PROJECT_DIR$/server/app/controllers/admin/objects.js" />
         <option value="$PROJECT_DIR$/client/app/js/app.js" />
         <option value="$PROJECT_DIR$/client/app/js/services.js" />
-        <option value="$PROJECT_DIR$/client/app/partials/projectdashboard.html" />
+        <option value="$PROJECT_DIR$/client/app/partials/lists.html" />
         <option value="$PROJECT_DIR$/client/app/index.html" />
         <option value="$PROJECT_DIR$/client/app/js/controllers.js" />
-        <option value="$PROJECT_DIR$/client/app/partials/lists.html" />
+        <option value="$PROJECT_DIR$/client/app/partials/projectdashboard.html" />
       </list>
     </option>
   </component>
@@ -673,7 +674,11 @@
       <created>1390808593386</created>
       <updated>1390808593386</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="invoice create new is working">
+      <created>1390818123951</created>
+      <updated>1390818123952</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -705,7 +710,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44572026" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985386" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24532336" sideWeight="0.68058455" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24532336" sideWeight="0.68058455" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38351983" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985386" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -756,7 +761,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="live updates !" />
     <MESSAGE value="tidy up the projects dashboard" />
     <MESSAGE value="modal on project create kind of working (not settingtype)" />
     <MESSAGE value="model is working on project create&#10;" />
@@ -781,7 +785,8 @@
     <MESSAGE value="looking at objects inside the project structure" />
     <MESSAGE value="Dynamic List Views, nice" />
     <MESSAGE value="change format of fields" />
-    <option name="LAST_COMMIT_MESSAGE" value="change format of fields" />
+    <MESSAGE value="invoice create new is working" />
+    <option name="LAST_COMMIT_MESSAGE" value="invoice create new is working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -838,22 +843,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="2" selection-start="315" selection-end="315" vertical-scroll-proportion="-6.206897" vertical-offset="0" max-vertical-offset="1360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/partials/projectdashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="49" selection-start="2284" selection-end="2305" vertical-scroll-proportion="-11.381818" vertical-offset="594" max-vertical-offset="2780">
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#3;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/partials/projects.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="12" selection-start="101" selection-end="190" vertical-scroll-proportion="-2.0689654" vertical-offset="0" max-vertical-offset="1260">
@@ -896,10 +885,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="2" selection-start="1980" selection-end="1980" vertical-scroll-proportion="-17.034483" vertical-offset="486" max-vertical-offset="1360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="8" selection-start="4170" selection-end="4170" vertical-scroll-proportion="0.11111111" vertical-offset="2584" max-vertical-offset="14220">
+        <state line="615" column="0" selection-start="21678" selection-end="21678" vertical-scroll-proportion="-36.923077" vertical-offset="11340" max-vertical-offset="14260">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/partials/projectdashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="36" selection-start="122" selection-end="122" vertical-scroll-proportion="0.09163803" vertical-offset="0" max-vertical-offset="2780">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

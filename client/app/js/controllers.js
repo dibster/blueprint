@@ -548,6 +548,7 @@ angular.module('myApp.controllers', [])
         });
 
 
+
         $scope.saveFormDetails = function(formData) {
             $log.info('in update');
             $log.info($scope.selectedType);
@@ -612,10 +613,7 @@ angular.module('myApp.controllers', [])
             };
 
         }
-
-
     }])
-
 
     .controller('ListsCtrl', ['$scope', '$routeParams','$modal','$log', 'PrepareRecord','KaboodleLists', 'KaboodleObjects', 'KaboodleProjectInstances',
         function($scope, $routeParams, $modal, $log, PrepareRecord ,KaboodleLists, KaboodleObjects,KaboodleProjectInstances) {
@@ -631,17 +629,24 @@ angular.module('myApp.controllers', [])
         KaboodleObjects.get({id : $routeParams.name}, function(response) {
             $scope.viewFields = response.views[4].fields;
             $scope.createFields = response.views[0].fields;
-
             $scope.listName = response.name;
-        });
+            console.log('list is called : ' + $scope.listName);
 
+        });
 
         KaboodleProjectInstances.get({id : $routeParams.id},function(response) {
             $scope.currentProject = response;
             console.log($scope.currentProject);
             console.log($scope.listName);
+            if (!(_.has($scope.currentProject, $scope.listName )))
+            {
+                console.log('creating new object : ' + $scope.listName);
+                $scope.currentProject[$scope.listName] = [];
+            }
+
             $scope.listInstances = $scope.currentProject[$scope.listName];
             console.log($scope.listInstances);
+
         });
 
         // Modal Stuff
@@ -697,9 +702,6 @@ angular.module('myApp.controllers', [])
             });
         };
 
-
-
-
-        }])
+    }])
 
 ;
