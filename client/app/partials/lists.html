@@ -6,15 +6,31 @@
 <div class="row-fluid">
     <div class="span12">
         <table class="table table-condensed">
+            <!-- Set the Title Rows-->
             <tr>
                 <th data-ng-repeat="field in viewFields">{{field.name}}</th>
             </tr>
+            <!--Print out the Data -->
             <tr ng-repeat="listItem in listInstances">
-                <td data-ng-repeat="value in viewFields">
-                    <a data-ng-href="#/projects/{{object._id}}/edit">{{listItem[value.name]}}</a>
+                <td data-ng-repeat="field in viewFields">
+                    <div ng-switch on="field.type">
+                        <a data-ng-switch-when="Text" data-ng-href="#/projects/{{object._id}}/edit">{{listItem[field.name]}}{{$index}}</a>
+                        <span data-ng-switch-when="Date" am-time-ago="listItem[field.name]"></span>
+                    </div>
                 </td>
             </tr>
         </table>
     </div>
 </div>
 
+<div ng-switch on="formItem.type">
+    <label class="control-label">{{formItem.name}}</label>
+    <textarea rows="3" ng-switch-when="Note" data-ng-model="formItem.content"></textarea>
+    <input type="text" ng-switch-when="Text" data-ng-model="formItem.content">
+    <input type="text" ng-switch-when="User" data-ng-model="formItem.content">
+    <input type="text" ng-switch-when="Tag" data-ng-model="formItem.content"  typeahead="type for type in bannertypes | filter:$viewValue | limitTo:8">
+    <input type="text" class="input-small" placeholder="When" datepicker-popup="dd-MM-yy" show-weeks="0" datepicker-options="dateOptions" ng-switch-when="Date" data-ng-model="formItem.content">
+    <input type="number" ng-switch-when="Number" data-ng-model="formItem.content">
+    <select ng-switch-when="list" data-ng-model="formItem.content" ng-options="option for option in formItem.options"/>
+    <input type="checkbox" ng-switch-when="Yes or No" data-ng-model="formItem.content">
+</div>
