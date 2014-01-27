@@ -8,7 +8,7 @@
     </div>
 
     <div class="span6">
-        <select class="pull-right" ng-model="data.selectedType" autofocus>
+        <select class="pull-right" ng-model="search.type" autofocus>
             <option data-ng-repeat="type in data.types">{{type.name}}</option>
         </select>
     </div>
@@ -25,7 +25,9 @@
         <th></th>
 
     </tr>
-    <tr ng-repeat="object in data.objects| filter:data.selectedType">
+
+    <tr ng-repeat="object in data.objects| filter:search:strict">
+
         <td>
             <a data-ng-href="#/objects/{{object._id}}/edit">{{object.name}}</a>
         </td>
