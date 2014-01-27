@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="51ac86f2-a104-4d81-a8bd-7f817e81fc09" name="Default" comment="types back working">
+    <list default="true" id="51ac86f2-a104-4d81-a8bd-7f817e81fc09" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/partials/allobjects.html" afterPath="$PROJECT_DIR$/client/app/partials/allobjects.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/js/controllers.js" afterPath="$PROJECT_DIR$/client/app/js/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/index.html" afterPath="$PROJECT_DIR$/client/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="blueprint.iws" />
@@ -29,7 +31,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="6" selection-start="518" selection-end="518" vertical-scroll-proportion="-0.6896552" vertical-offset="260" max-vertical-offset="1380">
+            <state line="11" column="0" selection-start="462" selection-end="462" vertical-scroll-proportion="-7.586207" vertical-offset="0" max-vertical-offset="1380">
               <folding />
             </state>
           </provider>
@@ -71,19 +73,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="50" selection-start="343" selection-end="343" vertical-scroll-proportion="-11.538462" vertical-offset="0" max-vertical-offset="13700">
+            <state line="68" column="39" selection-start="1986" selection-end="1986" vertical-scroll-proportion="0.71991" vertical-offset="720" max-vertical-offset="13700">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="allobjects.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="allobjects.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/partials/allobjects.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="56" selection-start="858" selection-end="858" vertical-scroll-proportion="0.63205415" vertical-offset="0" max-vertical-offset="960">
+            <state line="4" column="48" selection-start="206" selection-end="206" vertical-scroll-proportion="-2.7586207" vertical-offset="0" max-vertical-offset="960">
               <folding />
             </state>
           </provider>
@@ -128,10 +130,10 @@
         <option value="$PROJECT_DIR$/server/app/controllers/testData/resetDatabaseForTests.js" />
         <option value="$PROJECT_DIR$/server/app/controllers/kaboodle/kaboodlelists.js" />
         <option value="$PROJECT_DIR$/server/tests/kaboodlelists.test.js" />
-        <option value="$PROJECT_DIR$/client/app/index.html" />
-        <option value="$PROJECT_DIR$/client/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/client/app/js/services.js" />
+        <option value="$PROJECT_DIR$/client/app/index.html" />
         <option value="$PROJECT_DIR$/client/app/partials/allobjects.html" />
+        <option value="$PROJECT_DIR$/client/app/js/controllers.js" />
       </list>
     </option>
   </component>
@@ -636,7 +638,11 @@
       <created>1390782476889</created>
       <updated>1390782476889</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="search working right">
+      <created>1390789629530</created>
+      <updated>1390789629530</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -719,7 +725,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Copying now works, select task and Assets, added to new project" />
     <MESSAGE value="copy weith reroute" />
     <MESSAGE value="get users projects" />
     <MESSAGE value="get users projects, with API tests" />
@@ -744,7 +749,8 @@
     <MESSAGE value="KaboodleListsbackend written, need to add a couple of more tests" />
     <MESSAGE value="back end for kaboodle lists" />
     <MESSAGE value="types back working" />
-    <option name="LAST_COMMIT_MESSAGE" value="types back working" />
+    <MESSAGE value="search working right" />
+    <option name="LAST_COMMIT_MESSAGE" value="search working right" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -829,13 +835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="6" selection-start="518" selection-end="518" vertical-scroll-proportion="-0.6896552" vertical-offset="260" max-vertical-offset="1380">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="0" selection-start="2316" selection-end="2316" vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="1980">
@@ -850,13 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="50" selection-start="343" selection-end="343" vertical-scroll-proportion="-11.538462" vertical-offset="0" max-vertical-offset="13700">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="6" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
@@ -864,9 +856,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="462" selection-end="462" vertical-scroll-proportion="-7.586207" vertical-offset="0" max-vertical-offset="1380">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/partials/allobjects.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="56" selection-start="858" selection-end="858" vertical-scroll-proportion="0.63205415" vertical-offset="0" max-vertical-offset="960">
+        <state line="4" column="48" selection-start="206" selection-end="206" vertical-scroll-proportion="-2.7586207" vertical-offset="0" max-vertical-offset="960">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="39" selection-start="1986" selection-end="1986" vertical-scroll-proportion="0.71991" vertical-offset="720" max-vertical-offset="13700">
           <folding />
         </state>
       </provider>

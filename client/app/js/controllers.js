@@ -66,7 +66,7 @@ angular.module('myApp.controllers', [])
 
             var object = new KaboodleObjects({
                 name: this.newobject.name,
-                type: this.data.selectedType,
+                type: this.search.type,
                 template : false
             });
 
