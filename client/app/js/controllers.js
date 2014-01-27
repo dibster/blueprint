@@ -617,18 +617,21 @@ angular.module('myApp.controllers', [])
     }])
 
 
-    .controller('ListsCtrl', ['$scope', '$routeParams','$modal','$log', 'KaboodleLists', 'KaboodleObjects', 'KaboodleProjectInstances',
-        function($scope, $routeParams, $modal, $log, KaboodleLists, KaboodleObjects,KaboodleProjectInstances) {
+    .controller('ListsCtrl', ['$scope', '$routeParams','$modal','$log', 'PrepareRecord','KaboodleLists', 'KaboodleObjects', 'KaboodleProjectInstances',
+        function($scope, $routeParams, $modal, $log, PrepareRecord ,KaboodleLists, KaboodleObjects,KaboodleProjectInstances) {
         $scope.selectedList = "";
         $scope.currentProject = {};
         $scope.listIinstances = {};
         $scope.listName = "";
         $scope.viewFields = {};
+        $scope.createFields = {};
 
-        // get the List MetaData
+            // get the List MetaData
 
         KaboodleObjects.get({id : $routeParams.name}, function(response) {
             $scope.viewFields = response.views[4].fields;
+            $scope.createFields = response.views[0].fields;
+
             $scope.listName = response.name;
         });
 
@@ -641,12 +644,62 @@ angular.module('myApp.controllers', [])
             console.log($scope.listInstances);
         });
 
-        // get views
+        // Modal Stuff
+
+        $scope.openCreateListModal = function (selectedItem) {
+            // get tags
+            var modalInstance = $modal.open({
+                templateUrl: 'partials/modalProjectCreate.html',
+                controller: ModalInstanceCtrl,
+                resolve: {
+                    items: function () {
+                        return $scope.createFields;
+                    }
+                }
+            });
+
+            modalInstance.result.then(function (selectedItem) {
+                $scope.formData = selectedItem;
+                console.log('this is the new Invoice : ' + selectedItem);
+                $scope.saveFormDetails(selectedItem);
+
+            }, function () {
+                $log.info('Modal dismissed at: ' + new Date());
+            });
+        };
+
+
+        var ModalInstanceCtrl = function($scope,$modalInstance, items) {
+
+            $scope.items = items;
+            $log.info('in instance controller');
+
+            $scope.ok = function () {
+                $modalInstance.close($scope.items);
+            };
+
+            $scope.cancel = function () {
+                $modalInstance.dismiss('cancel');
+            };
+
+        }
+
+        $scope.saveFormDetails = function(formData) {
+            $log.info('in update');
+            $log.info($scope.selectedType);
+            var myRecord = PrepareRecord.getRecord(formData,$scope.listName);
+            $scope.currentProject[$scope.listName].push(myRecord);
+            $scope.currentProject._id = $routeParams.id;
+
+            $scope.currentProject.$update(function(response) {
+                console.log('saved');
+                //                return response;
+            });
+        };
 
 
 
 
-
-    }])
+        }])
 
 ;

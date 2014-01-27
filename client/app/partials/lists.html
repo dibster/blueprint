@@ -1,8 +1,12 @@
 <div class="row-fluid">
     <div class="span12">
-        <h3>{{listName}}</h3>
+        <span>
+        <button type="button" data-ng-click="openCreateListModal()" class="btn btn-default"><i class="fa fa-plus"></i> New</button>
+        </span>
+        <p></p>
     </div>
 </div>
+
 <div class="row-fluid">
     <div class="span12">
         <table class="table table-condensed">
@@ -11,11 +15,25 @@
                 <th data-ng-repeat="field in viewFields">{{field.name}}</th>
             </tr>
             <!--Print out the Data -->
-            <tr ng-repeat="listItem in listInstances">
-                <td data-ng-repeat="field in viewFields">
+            <tr ng-repeat="listItem in listInstances" data-ng-init="rowIndex = $index">
+                <td data-ng-repeat="field in viewFields" data-ng-init="columnIndex = $index">
                     <div ng-switch on="field.type">
-                        <a data-ng-switch-when="Text" data-ng-href="#/projects/{{object._id}}/edit">{{listItem[field.name]}}{{$index}}</a>
-                        <span data-ng-switch-when="Date" am-time-ago="listItem[field.name]"></span>
+                        <a data-ng-show="columnIndex==0" ng-click="openCreateListModal(listItem)">
+                            <span data-ng-switch-when="Date" am-time-ago="listItem[field.name]"></span>
+                            <span data-ng-switch-when="Text">{{listItem[field.name]}}</span>
+                            <span data-ng-switch-when="Note">{{listItem[field.name]}}</span>
+                            <span data-ng-switch-when="User">{{listItem[field.name]}}</span>
+                            <span data-ng-switch-when="list">{{listItem[field.name]}}</span>
+                            <span data-ng-switch-when="Yes or No">{{listItem[field.name]}}</span>
+                        </a>
+                        <span data-ng-show="columnIndex!=0">
+                            <span data-ng-switch-when="Date" am-time-ago="listItem[field.name]"></span>
+                            <span data-ng-switch-when="Text">{{listItem[field.name]}}</span>
+                            <span data-ng-switch-when="Note">{{listItem[field.name]}}</span>
+                            <span data-ng-switch-when="User">{{listItem[field.name]}}</span>
+                            <span data-ng-switch-when="list">{{listItem[field.name]}}</span>
+                            <span data-ng-switch-when="Yes or No">{{listItem[field.name]}}</span>
+                        </span>
                     </div>
                 </td>
             </tr>
