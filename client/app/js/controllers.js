@@ -25,9 +25,7 @@ angular.module('myApp.controllers', [])
 //        $scope.focusInput="true";
 
         KaboodleObjects.query(function(response) {
-            // remove templates from the list , should be back end code
             $scope.data.objects = response;
-//            $scope.data.objects = _.where(response, {template : false});
         });
 
         KaboodleTypes.query(function(response) {
@@ -318,10 +316,11 @@ angular.module('myApp.controllers', [])
     .controller('ProjectDashboardCtrl',
         ['$scope',
          'KaboodleProjectInstances',
+         'KaboodleListDefinitions',
          '$routeParams',
          '$location' ,
 
-         function($scope, KaboodleProjectInstances, $routeParams, $location) {
+         function($scope, KaboodleProjectInstances, KaboodleListDefinitions, $routeParams, $location) {
 
             // bad , but its just a demo .....
             filepicker.setKey('A329Dm8m7T5ies2SEBTtjz');
@@ -334,11 +333,21 @@ angular.module('myApp.controllers', [])
                  'year-format': "'yy'",
                  'starting-day': 1
             };
+            $scope.listDefinitions = {};
+
+            KaboodleListDefinitions.query(function(listdefinitions) {
+               $scope.listDefinitions = listdefinitions;
+            });
+
+
             $scope.findOne = function() {
             KaboodleProjectInstances.get({id : $routeParams.id},function(project) {
                 $scope.project = project;
 
             });
+
+            // get all the Lists
+
 
             $scope.AddNewsItem = function(newsItem) {
 
@@ -608,70 +617,26 @@ angular.module('myApp.controllers', [])
     }])
 
 
-    .controller('ListsCtrl', ['$scope', '$modal','$log', 'KaboodleLists','PrepareRecord',
-        function($scope, $modal, $log, KaboodleLists,PrepareRecord) {
-        $scope.data = {};
-        $scope.formItems = {};
-        $scope.selectedType = "";
+    .controller('ListsCtrl', ['$scope', '$modal','$log', 'KaboodleLists', 'KaboodleObjects', 'KaboodleListInstances',
+        function($scope, $modal, $log, KaboodleLists, KaboodleObjects,KaboodleListInstances) {
+        $scope.selectedList = "";
         $scope.listIinstances = {};
-        $scope.tagList = {};
-        KaboodleLists.query({id : "Title And Something"},function(response) {
-            $scope.listInstances = response;
+        $scope.objectIinstances = {};
+
+        KaboodleObjects.query(function(response) {
+            $scope.objectInstances = _.filter(response, {"type" : "List", "template" : false});
         });
 
 
-        $scope.openCreateListModal = function (selectedObject) {
-            // get tags
-            $scope.selectedType = selectedObject.name;
-            var modalInstance = $modal.open({
-                templateUrl: 'partials/modalListCreate.html',
-                controller: ModalInstanceCtrl,
-                resolve: {
-                    items: function () {
-                        $log.info(selectedObject);
-                        return selectedObject.views[0].fields;
-                    }
-                }
+
+        $scope.showList = function(selectedList) {
+
+            KaboodleListInstances.query({id : selectedList.name},function(response) {
+                $scope.listInstances = response;
+                console.log(response);
             });
-
-            modalInstance.result.then(function (selectedItem) {
-                $scope.formData = selectedItem;
-                $scope.saveFormDetails($scope.formData);
-
-            }, function () {
-                $log.info('Modal dismissed at: ' + new Date());
-            });
-        };
-
-
-        var ModalInstanceCtrl = function($scope,$modalInstance, items) {
-
-            $scope.items = items;
-            $log.info('in instance controller');
-            $scope.bannertypes = ['40K Banner', 'Static Banner', '100K Banner'];
-
-            // this would get values from backend,  but not implemented yet
-
-            $scope.getTagValues = function(fieldname) {
-                //
-                $log.info('tag requested');
-                $log.info(fieldname);
-
-                KaboodleTags.get({id : fieldname},function(tag) {
-                    //$log.info('tag values : ' + tag.values[0].value );
-                    return tag.values;
-                });
-            }
-
-            $scope.ok = function () {
-                $modalInstance.close($scope.items);
-            };
-
-            $scope.cancel = function () {
-                $modalInstance.dismiss('cancel');
-            };
-
         }
+
 
 
     }])

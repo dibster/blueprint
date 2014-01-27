@@ -11,6 +11,9 @@ angular.module('myApp.services', ['ngResource'])
     .factory('KaboodleProjects', function($resource){
         return $resource('http://localhost:3000/api/projects', {})
     })
+    .factory('KaboodleListDefinitions', function($resource){
+        return $resource('http://localhost:3000/api/lists', {})
+    })
     .factory('KaboodleProjectInstances', function($resource){
         return $resource('http://localhost:3000/api/kaboodleprojects/:id', {id:'@_id'}, {update:{method: 'PUT'}})
     })
@@ -19,6 +22,9 @@ angular.module('myApp.services', ['ngResource'])
     })
     .factory('MyKaboodleProjectInstances', function($resource){
         return $resource('http://localhost:3000/api/kaboodleprojectsforuser/:id', {id:'@_id'}, {})
+    })
+    .factory('KaboodleListInstances', function($resource){
+        return $resource('http://localhost:3000/api/kaboodlelistsbyname/:id', {id:'@_id'}, {})
     })
     .factory('KaboodleTags', function($resource){
         return $resource('http://localhost:3000/api/kaboodletags/:id', {id:'@_id'}, {})

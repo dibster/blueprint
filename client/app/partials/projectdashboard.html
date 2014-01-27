@@ -16,9 +16,15 @@
 
             <ul class="dropdown-menu">
                 <li>
-                    {{routeParams}}
                     <a data-ng-href="#/projectcopy/{{currentProjectId}}">Copy Project</a>
+                </li>
+                <li>
                     <a data-ng-click="showProjectsToCopy">Manage Tasks</a>
+                </li>
+                <li class="divider">
+                </li>
+                <li>
+                    <a data-ng-repeat="list in listDefinitions" data-ng-click="shoeLists(list)">{{list.name}}</a>
                 </li>
             </ul>
         </div>

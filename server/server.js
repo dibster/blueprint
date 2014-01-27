@@ -76,7 +76,7 @@ app.get('/api/projects', objects.findProjects);
 app.get('/api/assets', objects.findAssets);
 app.get('/api/milestones', objects.findMilestones);
 app.get('/api/tasks', objects.findTasks);
-app.get('/api/lookups', objects.findLookups);
+app.get('/api/lists', objects.findLists);
 
 // tags
 

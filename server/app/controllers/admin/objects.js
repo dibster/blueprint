@@ -48,9 +48,9 @@ exports.findAssets = function(req,res) {
         });
     });
 };
-exports.findLookups = function(req,res) {
+exports.findLists = function(req,res) {
     db.collection('kaboodleobjects', function(err, collection) {
-        collection.find({'type' : 'lookup'}).toArray(function(err, items) {
+        collection.find({'type' : 'List', 'template' : false}).toArray(function(err, items) {
             res.send(items);
         });
     });

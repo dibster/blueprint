@@ -234,5 +234,80 @@ describe('API', function() {
         });
     });
 
+    describe('Add a New Record with attachable List Items', function() {
+        it('should return 1 object with 4 tasks on it', function() {
+            // count objects should have one more (6)
+            var newObject = {
+                "Title" : "New Project with Purchase Orders and Invoices",
+                "Description": "Facebook Channel",
+                "Channel Type " : "Facebook",
+                "Type" : "Social Media",
+                "Status" : "Open",
+                "Purchase Orders" : [
+                    {
+                        "Title" : "Buy This",
+                        "date" : "2014-01-16T00:00:00.000Z",
+                        "who" : "Test",
+                        "u" : 1,
+                        "cd" : "2014-01-16T08:30:07.441Z",
+                        "Status" : "Open"
+                    },
+                    {
+                        "Title" : "Buy This",
+                        "date" : "2014-01-16T00:00:00.000Z",
+                        "who" : "Test",
+                        "u" : 1,
+                        "cd" : "2014-01-16T08:30:07.441Z",
+                        "Status" : "Open"
+                    },
+                    {
+                        "Title" : "Buy This",
+                        "date" : "2014-01-16T00:00:00.000Z",
+                        "who" : "Test",
+                        "u" : 1,
+                        "cd" : "2014-01-16T08:30:07.441Z",
+                        "Status" : "Open"
+                    }
+                ],
+                "Invoices" : [
+                    {
+                        "Title" : "Pay This",
+                        "date" : "2014-01-16T00:00:00.000Z",
+                        "who" : "Test",
+                        "u" : 1,
+                        "cd" : "2014-01-16T08:30:07.441Z",
+                        "Status" : "Open"
+                    },
+                    {
+                        "Title" : "Pay This",
+                        "date" : "2014-01-16T00:00:00.000Z",
+                        "who" : "Test",
+                        "u" : 1,
+                        "cd" : "2014-01-16T08:30:07.441Z",
+                        "Status" : "Open"
+                    },
+                    {
+                        "Title" : "Pay This",
+                        "date" : "2014-01-16T00:00:00.000Z",
+                        "who" : "Test",
+                        "u" : 1,
+                        "cd" : "2014-01-16T08:30:07.441Z",
+                        "Status" : "Open"
+                    }
+                ]
+
+            };
+
+            request(url)
+                .post('/api/kaboodleprojects')
+                .send(newObject)
+                .expect(200)
+                .end(function(err, res) {
+                    if (err) {
+                        throw err;
+                    }
+                });
+        });
+    });
 
 });
