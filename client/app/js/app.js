@@ -26,7 +26,7 @@ angular.module('myApp', [
       .when('/projects', {
           templateUrl: 'partials/projects.html',
           controller: 'ProjectsCtrl'})
-      .when('/lists', {
+      .when('/lists/:id/list/:name', {
           templateUrl: 'partials/lists.html',
           controller: 'ListsCtrl'})
       .when('/projectcopy/:id', {

@@ -8,7 +8,7 @@
          <span>Project Status</span>
          <div class="progress progress-success">
             <div class="bar" style="width: 60%;"></div>
-        </div>
+        </div>z
     </div>
     <div class="span4">
         <div class="dropdown pull-right">
@@ -24,7 +24,7 @@
                 <li class="divider">
                 </li>
                 <li>
-                    <a data-ng-repeat="list in listDefinitions" data-ng-click="shoeLists(list)">{{list.name}}</a>
+                    <a data-ng-repeat="list in listDefinitions" data-ng-href="#/lists/{{currentProjectId}}/list/{{list._id}}">{{list.name}}</a>
                 </li>
             </ul>
         </div>

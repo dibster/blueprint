@@ -20,7 +20,7 @@ angular.module('myApp.controllers', [])
         $scope.object = {};
         $scope.newfield = {};
         $scope.data.selectedType="";
-        $scope.newfield.required = "Optional";
+
 
 //        $scope.focusInput="true";
 
@@ -611,31 +611,39 @@ angular.module('myApp.controllers', [])
                 $modalInstance.dismiss('cancel');
             };
 
-            }
+        }
 
 
     }])
 
 
-    .controller('ListsCtrl', ['$scope', '$modal','$log', 'KaboodleLists', 'KaboodleObjects', 'KaboodleListInstances',
-        function($scope, $modal, $log, KaboodleLists, KaboodleObjects,KaboodleListInstances) {
+    .controller('ListsCtrl', ['$scope', '$routeParams','$modal','$log', 'KaboodleLists', 'KaboodleObjects', 'KaboodleProjectInstances',
+        function($scope, $routeParams, $modal, $log, KaboodleLists, KaboodleObjects,KaboodleProjectInstances) {
         $scope.selectedList = "";
+        $scope.currentProject = {};
         $scope.listIinstances = {};
-        $scope.objectIinstances = {};
+        $scope.listName = "";
+        $scope.viewFields = {};
 
-        KaboodleObjects.query(function(response) {
-            $scope.objectInstances = _.filter(response, {"type" : "List", "template" : false});
+        // get the List MetaData
+
+        KaboodleObjects.get({id : $routeParams.name}, function(response) {
+            $scope.viewFields = response.views[4].fields;
+            $scope.listName = response.name;
         });
 
 
+        KaboodleProjectInstances.get({id : $routeParams.id},function(response) {
+            $scope.currentProject = response;
+            console.log($scope.currentProject);
+            console.log($scope.listName);
+            $scope.listInstances = $scope.currentProject[$scope.listName];
+            console.log($scope.listInstances);
+        });
 
-        $scope.showList = function(selectedList) {
+        // get views
 
-            KaboodleListInstances.query({id : selectedList.name},function(response) {
-                $scope.listInstances = response;
-                console.log(response);
-            });
-        }
+
 
 
 
