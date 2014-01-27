@@ -23,7 +23,9 @@ angular.module('myApp.services', ['ngResource'])
     .factory('KaboodleTags', function($resource){
         return $resource('http://localhost:3000/api/kaboodletags/:id', {id:'@_id'}, {})
     })
-
+    .factory('KaboodleTypes', function($resource){
+        return $resource('http://localhost:3000/api/kaboodletypes', {})
+    })
     .factory('KaboodleFieldTypes', function($resource){
         return $resource('http://localhost:3000/api/fieldtypes', {})
     })

@@ -608,39 +608,23 @@ angular.module('myApp.controllers', [])
     }])
 
 
-    .controller('ListsCtrl', ['$scope', '$modal','$log', 'KaboodleProjects','PrepareRecord', 'KaboodleProjectInstances','KaboodleTags',  function($scope, $modal, $log, KaboodleProjects,PrepareRecord, KaboodleProjectInstances, KaboodleTags) {
+    .controller('ListsCtrl', ['$scope', '$modal','$log', 'KaboodleLists','PrepareRecord',
+        function($scope, $modal, $log, KaboodleLists,PrepareRecord) {
         $scope.data = {};
         $scope.formItems = {};
         $scope.selectedType = "";
-        $scope.projectIinstances = {};
+        $scope.listIinstances = {};
         $scope.tagList = {};
-
-        KaboodleProjectInstances.query(function(response) {
-            $scope.projectInstances = response;
-        });
-
-        KaboodleProjects.query(function(response) {
-            $scope.projectTypes = response;
+        KaboodleLists.query({id : "Title And Something"},function(response) {
+            $scope.listInstances = response;
         });
 
 
-        $scope.saveFormDetails = function(formData) {
-            $log.info('in update');
-            $log.info($scope.selectedType);
-            var myRecord = PrepareRecord.getRecord(formData,$scope.selectedType);
-            var kaboodleproject = new KaboodleProjectInstances(myRecord);
-
-            $scope.data.project = kaboodleproject.$save(function(response) {
-                $scope.projectInstances.push(response);
-                //                return response;
-            });
-        };
-
-        $scope.openCreateProjectModal = function (selectedObject) {
+        $scope.openCreateListModal = function (selectedObject) {
             // get tags
             $scope.selectedType = selectedObject.name;
             var modalInstance = $modal.open({
-                templateUrl: 'partials/modalProjectCreate.html',
+                templateUrl: 'partials/modalListCreate.html',
                 controller: ModalInstanceCtrl,
                 resolve: {
                     items: function () {
