@@ -1,16 +1,20 @@
 <div class="row-fluid">
     <div class="span12">
-        <h3> Custom Lists</h3>
+        <h3>{{listName}}</h3>
     </div>
 </div>
 <div class="row-fluid">
     <div class="span12">
-    {{currentProject}}
-    instances
-    {{listInstances}}
-    <br>
-    {{viewFields}}
-    </div>
+        <table class="table table-condensed">
+            <tr>
+                <th data-ng-repeat="field in viewFields">{{field.name}}</th>
+            </tr>
+            <tr ng-repeat="listItem in listInstances">
+                <td data-ng-repeat="value in viewFields">
+                    <a data-ng-href="#/projects/{{object._id}}/edit">{{listItem[value.name]}}</a>
+                </td>
+            </tr>
+        </table>
     </div>
 </div>
 
