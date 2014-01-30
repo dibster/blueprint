@@ -4,8 +4,18 @@
     <title>Reports</title>
 </head>
 <body>
-
-`<highchart id="projectActivity" config="chartConfig"></highchart>`
+<div class="span2">
+    <div class="dropdown pull-left">
+        <button type="button" class="btn dropdown-toggle">Type</button>
+        <ul class="dropdown-menu">
+            <li ng-repeat="type in projectTypes">
+                <!--<a data-ng-click="projectFieldsForCreate(type)">{{ type.name }}</a>-->
+                <a ng-click="showChartDetails(type.name)">{{type.name}}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<highchart id="projectActivity" config="chartConfig"></highchart>`
 
 </body>
 </html>

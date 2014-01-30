@@ -704,48 +704,65 @@ angular.module('myApp.controllers', [])
 
     }])
 
-    .controller('ReportsCtrl', ['$scope', '$routeParams','KaboodleProjectInstances',
-        function($scope, $routeParams, KaboodleProjectInstances) {
-            $scope.allProjects = {};
+    .controller('ReportsCtrl', ['$scope', '$routeParams','KaboodleProjectInstances', 'KaboodleProjects',
+        function($scope, $routeParams, KaboodleProjectInstances, KaboodleProjects) {
 
-            KaboodleProjectInstances.query(function(response) {
-                $scope.allProjects = response;
+            $scope.allProjects = {};
+            var chartXAxis = [];
+            var chartTasks = [];
+            var chartAssets = [];
+
+            KaboodleProjects.query(function(response) {
+                $scope.projectTypes = response;
             });
 
-            // high charts data
+            $scope.showChartDetails = function (projectType) {
+                KaboodleProjectInstances.query(function(response) {
+                    $scope.allProjects = _.where(response, { 'Type': projectType });
+                    chartXAxis = _.pluck($scope.allProjects,"Title");
+                    console.log(chartXAxis);
+                    chartTasks = _.map($scope.allProjects, function(project) {
+                        if (_.has(project, "tasks")) {
+                            return project.tasks.length;
+                        }
+                        else {
+                            return 0;
+                        }
+                    });
 
-            $scope.chartSeries = [
+                    $scope.chartSeries = [
 //                {"name": "Some data", "data": [1, 2, 4, 7, 3]},
 //                {"name": "Some data 3", "data": [3, 1, null, 5, 2], connectNulls: true},
 //                {"name": "Some data 2", "data": [5, 2, 2, 3, 5], type: "column"},
-                {"name": "Tasks", "data": [1, 1, 2, 3, 2], type: "column"}
-            ];
+                        {"name": "Tasks", "data": chartTasks, type: "column"}
+                    ];
 
-            // config
-
-            $scope.chartConfig = {
-                options: {
-                    chart: {
-                        type: 'areaspline'
-                    },
-                    plotOptions: {
-                        series: {
-                            stacking: ''
-                        }
+                    $scope.chartConfig = {
+                        options: {
+                            chart: {
+                                type: 'areaspline'
+                            },
+                            plotOptions: {
+                                series: {
+                                    stacking: ''
+                                }
+                            }
+                        },
+                        series: $scope.chartSeries,
+                        xAxis: [{
+                            categories: chartXAxis
+                        }],
+                        title: {
+                            text: 'Project Activity Report'
+                        },
+                        credits: {
+                            enabled: false
+                        },
+                        loading: false
                     }
-                },
-                series: $scope.chartSeries,
-                xAxis: [{
-                    categories: ['p1','p2','p3','p4','p5']
-                }],
-                title: {
-                    text: 'Project Content Status Report'
-                },
-                credits: {
-                    enabled: false
-                },
-                loading: false
+                });
             }
+
 
         }])
 
