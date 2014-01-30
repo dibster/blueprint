@@ -708,10 +708,44 @@ angular.module('myApp.controllers', [])
         function($scope, $routeParams, KaboodleProjectInstances) {
             $scope.allProjects = {};
 
-
             KaboodleProjectInstances.query(function(response) {
                 $scope.allProjects = response;
             });
+
+            // high charts data
+
+            $scope.chartSeries = [
+//                {"name": "Some data", "data": [1, 2, 4, 7, 3]},
+//                {"name": "Some data 3", "data": [3, 1, null, 5, 2], connectNulls: true},
+//                {"name": "Some data 2", "data": [5, 2, 2, 3, 5], type: "column"},
+                {"name": "Tasks", "data": [1, 1, 2, 3, 2], type: "column"}
+            ];
+
+            // config
+
+            $scope.chartConfig = {
+                options: {
+                    chart: {
+                        type: 'areaspline'
+                    },
+                    plotOptions: {
+                        series: {
+                            stacking: ''
+                        }
+                    }
+                },
+                series: $scope.chartSeries,
+                xAxis: [{
+                    categories: ['p1','p2','p3','p4','p5']
+                }],
+                title: {
+                    text: 'Project Content Status Report'
+                },
+                credits: {
+                    enabled: false
+                },
+                loading: false
+            }
 
         }])
 

@@ -10,6 +10,7 @@ angular.module('myApp', [
   'myApp.controllers',
   'ui.bootstrap',
   'angularMoment',
+  'highcharts-ng',
   'ui.sortable'
 ])
 .config(['$routeProvider', function($routeProvider) {
