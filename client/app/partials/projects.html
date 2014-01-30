@@ -10,6 +10,11 @@
             </ul>
         </div>
      </div>
+    <div class="span8">
+    </div>
+    <div class="span2">
+        <input type="text" data-ng-model="search.type" value="Filter ...">
+    </div>
 </div>
 
 
@@ -33,7 +38,7 @@
 
             </tr>
             {{type.name}}
-            <tr ng-repeat="object in projectInstances">
+            <tr ng-repeat="object in projectInstances | filter:search.type">
                 <td>
                     <a data-ng-href="#/projects/{{object._id}}/edit">{{object.Title}}</a>
                 </td>

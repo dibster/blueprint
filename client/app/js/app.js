@@ -17,6 +17,9 @@ angular.module('myApp', [
       .when('/objects', {
           templateUrl: 'partials/allobjects.html',
           controller: 'ObjectsCtrl'})
+      .when('/Reports', {
+          templateUrl: 'partials/reports.html',
+          controller: 'ReportsCtrl'})
       .when('/objects/:id/edit', {
           templateUrl: 'partials/objectedit.html',
           controller: 'ObjectsCtrl'})

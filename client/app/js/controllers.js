@@ -704,4 +704,15 @@ angular.module('myApp.controllers', [])
 
     }])
 
+    .controller('ReportsCtrl', ['$scope', '$routeParams','KaboodleProjectInstances',
+        function($scope, $routeParams, KaboodleProjectInstances) {
+            $scope.allProjects = {};
+
+
+            KaboodleProjectInstances.query(function(response) {
+                $scope.allProjects = response;
+            });
+
+        }])
+
 ;
