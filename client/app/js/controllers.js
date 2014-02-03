@@ -370,6 +370,10 @@ angular.module('myApp.controllers', [])
                 });
             }
 
+            $scope.updateTask = function(task) {
+                console.log('update Task here');
+            }
+
             $scope.AddTask = function(task) {
 
                 if (!(_.has($scope.project, "tasks")))
@@ -492,9 +496,9 @@ angular.module('myApp.controllers', [])
         $scope.MyTasks = [];
         $scope.MyAssets = [];
         $scope.ShowHideButton = true;
-        $scope.Refresh = false;
+        $scope.Refresh = true;
 
-        $scope.refreshInterval = 60;
+        $scope.refreshInterval = 10;
 
         $scope.skipWeekends = true;
 
