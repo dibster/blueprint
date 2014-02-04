@@ -26,6 +26,9 @@ exports.emptyDB = function(req,res) {
     db.collection('kaboodlefieldtypes').remove({},function(err,numberRemoved){
         console.log("remove kaboodle field types");
     });
+    db.collection('kaboodleprojects').remove({},function(err,numberRemoved){
+        console.log("remove kaboodle projects");
+    });
     db.collection('kaboodletypes').remove({},function(err,numberRemoved){
         console.log("remove kaboodle types");
     });

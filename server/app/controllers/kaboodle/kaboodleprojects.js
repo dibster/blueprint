@@ -32,7 +32,7 @@ exports.findAll = function(req, res) {
 
 exports.findById = function(req, res) {
     var id = req.params.id;
-    console.log('Retrieving projects by User: ' + id);
+    console.log('Retrieving projects by Id: ' + id);
     db.collection('kaboodleprojects', function(err, collection) {
         collection.findOne({'_id': new BSON.ObjectID(id)}, function(err, item) {
             res.send(item);

@@ -372,6 +372,7 @@ angular.module('myApp.controllers', [])
 
             $scope.updateTask = function(task) {
                 console.log('update Task here');
+                console.log('task created date : ' + task.cd);
             }
 
             $scope.AddTask = function(task) {
