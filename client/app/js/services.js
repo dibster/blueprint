@@ -8,6 +8,9 @@ angular.module('myApp.services', ['ngResource'])
     .factory('KaboodleObjects', function($resource){
         return $resource('http://localhost:3000/api/objects/:id', {id:'@_id'}, {update:{method: 'PUT'}})
     })
+    .factory('KaboodleProjectTasks', function($resource){
+        return $resource('http://localhost:3000/api/kaboodleprojects/:id/tasks/:cd', {id:'@_id', cd : '@cd'}, {update:{method: 'PUT'}})
+    })
     .factory('KaboodleProjects', function($resource){
         return $resource('http://localhost:3000/api/projects', {})
     })

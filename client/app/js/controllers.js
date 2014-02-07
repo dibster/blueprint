@@ -317,10 +317,11 @@ angular.module('myApp.controllers', [])
         ['$scope',
          'KaboodleProjectInstances',
          'KaboodleListDefinitions',
+         'KaboodleProjectTasks',
          '$routeParams',
          '$location' ,
 
-         function($scope, KaboodleProjectInstances, KaboodleListDefinitions, $routeParams, $location) {
+         function($scope, KaboodleProjectInstances, KaboodleListDefinitions, KaboodleProjectTasks, $routeParams, $location) {
 
             // bad , but its just a demo .....
             filepicker.setKey('A329Dm8m7T5ies2SEBTtjz');
@@ -373,6 +374,11 @@ angular.module('myApp.controllers', [])
             $scope.updateTask = function(task) {
                 console.log('update Task here');
                 console.log('task created date : ' + task.cd);
+                console.log('project id' + $scope.currentProjectId );
+
+                KaboodleProjectTasks.update({id : $scope.currentProjectId, cd : task.cd},task,function(response) {
+                     console.log('Updated Task')
+                });
             }
 
             $scope.AddTask = function(task) {
