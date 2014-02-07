@@ -101,3 +101,42 @@ exports.remove = function(req, res) {
     });
 };
 
+// tasks
+
+exports.findAllTasks = function(req, res) {
+    var id = req.params.id;
+    res.send('Find all Tasks');
+};
+
+exports.findTasksById = function(req, res) {
+    var id = req.params.id;
+    res.send('Find Tasks by Id');
+};
+
+exports.addTask = function(req, res) {
+    var id = req.params.id;
+    res.send('Add a Task');
+};
+
+exports.updateTask = function(req, res) {
+    var id = req.params.id;
+    cd = req.params.cd;
+    var updatedTask = req.body;
+
+    db.collection('kaboodleprojects', function(err, collection) {
+        collection.update({'_id': new BSON.ObjectID(id), 'tasks.cd' : cd}, { $set : {'tasks.$' : updatedTask}}, {safe: true}, function(err, result) {
+            if (err) {
+                console.log('Error updating object: ' + err);
+                res.send({'error': 'An error has occurred'});
+            } else {
+                res.send('Task Updated');
+            }
+        });
+    });
+};
+
+exports.removeTask = function(req, res) {
+    var id = req.params.id;
+    res.send('Remove a Task');
+};
+

@@ -39,48 +39,6 @@ describe('Empty DB', function() {
 //    it('should add it and return 200', function() {
 //        console.log('3');
 //
-//        var newObject = {
-//            "Title" : "FaceBook Project",
-//            "Description": "Facebook Channel",
-//            "Channel Type " : "Facebook",
-//            "Type" : "Social Media",
-//            "Status" : "Open",
-//            "tasks" : [
-//                {
-//                    "name" : "Receive Brief",
-//                    "date" : "2014-01-16T00:00:00.000Z",
-//                    "who" : "Test",
-//                    "u" : 1,
-//                    "cd" : "2014-01-16T08:30:07.441Z",
-//                    "taskStatus" : "Open"
-//                },
-//                {
-//                    "name" : "Ingest Content",
-//                    "date" : "2014-01-16T00:00:00.000Z",
-//                    "who" : "Test",
-//                    "u" : 1,
-//                    "cd" : "2014-01-16T08:30:26.560Z",
-//                    "taskStatus" : "Open"
-//                },
-//                {
-//                    "name" : "Create Quote",
-//                    "date" : "2014-01-17T00:00:00.000Z",
-//                    "who" : "Test",
-//                    "u" : 1,
-//                    "cd" : "2014-01-16T08:30:51.238Z",
-//                    "taskStatus" : "Open"
-//                },
-//                {
-//                    "name" : "Produce Project Plan",
-//                    "date" : "2014-01-17T00:00:00.000Z",
-//                    "who" : "Test",
-//                    "u" : 1,
-//                    "cd" : "2014-01-16T08:31:12.820Z",
-//                    "taskStatus" : "Open"
-//                }
-//            ]
-//
-//        };
 //
 //        request(api)
 //            .post('/api/kaboodleprojects')
@@ -197,17 +155,17 @@ describe('Empty DB', function() {
 //describe('Get the Projects that a person has tasks on', function() {
 //    it('should return 1 object with 4 tasks on it', function() {
 //        console.log('10');
-//        request(api)
-//            .get('/api/kaboodleprojectsforuser/Test')
-//            .expect(200)
-//            .end(function(err, res) {
-//                if (err) {
-//                    throw err;
-//                }
-//                console.log(res.body);
-//                res.body[0].should.have.property('Title');
-//                res.body[0].tasks.length.should.eql(4);
-//            });
+        request(api)
+            .get('/api/kaboodleprojectsforuser/Test')
+            .expect(200)
+            .end(function(err, res) {
+                if (err) {
+                    throw err;
+                }
+                console.log(res.body);
+                res.body[0].should.have.property('Title');
+                res.body[0].tasks.length.should.eql(4);
+            });
 //    });
 //});
 //

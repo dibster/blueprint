@@ -53,6 +53,14 @@ app.post('/api/kaboodleprojects', kaboodleprojects.add);
 app.put('/api/kaboodleprojects/:id', kaboodleprojects.update);
 app.delete('/api/kaboodleprojects/:id', kaboodleprojects.remove);
 
+// Kaboodle Project Tasks
+
+app.get('/api/kaboodleprojects/:id/tasks', kaboodleprojects.findAllTasks);
+app.get('/api/kaboodleprojects/:id/tasks/:cd', kaboodleprojects.findTasksById);
+app.post('/api/kaboodleprojects/:id/tasks/:cd', kaboodleprojects.addTask);
+app.put('/api/kaboodleprojects/:id/tasks/:cd', kaboodleprojects.updateTask);
+app.delete('/api/kaboodleprojects/:id/tasks/:cd', kaboodleprojects.removeTask);
+
 // Kaboodle List Routes
 
 app.get('/api/kaboodlelists', kaboodlelists.findAll);
